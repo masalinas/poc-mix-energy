@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container-left-toolbar, .container-right-toolbar {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.container-filter-toolbar {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: center;
+}
+
+.container-status-row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
