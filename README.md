@@ -29,3 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Compile image for amd64 architecture
 
 `$ docker buildx build --platform linux/amd64 -t ofertoio/poc-mix-energy-amd64:1.1.0 .`
+
+![Mix Dashboard](./images/dashboard.png "Mix Dashboard")
