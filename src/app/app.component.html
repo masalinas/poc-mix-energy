@@ -133,4 +133,13 @@
   <ng-template #colorTemplate let-mixStatus>
     <div [style.background-color]="mixStatus.color" class="color-circle"></div>
   </ng-template>
+
+  <div class="container-bottom-bar">
+    <p-button 
+      label="Any comment email from this link" 
+      icon="pi pi-envelope" 
+      styleClass="p-button-text" 
+      (onClick)="openLink()">
+    </p-button>
+  </div>
 </div>

@@ -138,4 +138,8 @@ export class AppComponent {
         console.error('Error:', error);
       });
   }
+
+  openLink() {
+    window.open('mailto:masalinas.gancedo@gmail.com', '_self');
+  }
 }
