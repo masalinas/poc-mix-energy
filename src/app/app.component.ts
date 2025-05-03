@@ -53,30 +53,36 @@ registerLocaleData(localeEs);
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  languages: any = [];
-  selectedLanguage = this.languages[0]; // default Spanish
+  loading: boolean = false;  
+  
+  // app languages
+  languages: any[] = [];
+  language: any = {};
 
+  // table mix datasource
   mix: any[] = []
-  loading: boolean = false;
-  groups: any[] = [];
-  types: any[] = [];
+
+  // table mix filters
   timeTruncs: any[] = [];
- 
   timeTrunc: any = {};
   rangeDates: Date[] = [];
+
+  groups: any[] = [];
+  types: any[] = [];
 
   constructor(
     private translatorListService: TranslatorListService,
     public translate: TranslateService,          
     public primengConfig: PrimeNGConfig,
     public mixService: MixService) { 
-      // initialize localization and get default browser localize
+      // initialize language from default browser language
       this.translate.addLangs(['es', 'en']);
       this.translate.setDefaultLang('es');
     
       const browserLang = translate.getBrowserLang();
       let lang = browserLang?.match(/en|es/) ? browserLang : 'es';
-      this.changeLang(lang);
+      this.language = this.languages.find((lang) => lang.code == lang);
+      this.translate.use(lang);
 
       // listen for language changes
       this.translate.onLangChange.subscribe(() => {
@@ -94,11 +100,8 @@ export class AppComponent {
         // Additional translations for PrimeNG components if needed
       });
 
+      // initialize time trunc table filter 
       this.timeTrunc =this.timeTruncs[0];
-  }
-
-  private changeLang(lang: string) {
-    this.translate.use(lang);
   }
 
   private setLanguageTranslations() {
@@ -127,7 +130,10 @@ export class AppComponent {
   }
 
   onChangeLanguage(lang: any) {
-    this.translate.use(lang.code);
+    //const language = this.languages.find((lang) => lang.code == lang);
+    //this.selectedLanguage = language;
+
+    this.translate.use(lang.code);    
   }
   
   onClear(table: Table) {

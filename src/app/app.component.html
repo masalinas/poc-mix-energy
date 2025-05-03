@@ -4,11 +4,11 @@
       <div></div>
       <div>
         <p-dropdown 
-          placeholder="Select Language"      
-          [style]="{'margin-left': 'auto', 'width': '200px'}" 
-          [(ngModel)]="selectedLanguage"        
+          [placeholder]="translate.instant('LAN_SELECTOR')"      
+          [style]="{'margin-left': 'auto', 'width': '220px'}" 
+          [(ngModel)]="language"        
           [options]="languages"     
-          optionLabel="name" 
+          optionLabel="label"          
           (onChange)="onChangeLanguage($event.value)">
         </p-dropdown>        
     </div>
@@ -77,7 +77,7 @@
           <th pSortableColumn="group">
             <div class="table-filter-toolbar">
               <p-sortIcon field="group" />
-              {{'GROUP' | translate}}
+              {{'TABLE_COLUMNS.GROUP' | translate}}
               <p-columnFilter field="group" matchMode="equals" display="menu">
                 <ng-template pTemplate="filter" let-value let-filter="filterCallback">
                     <p-dropdown 
@@ -94,7 +94,7 @@
           </th>
           <th pSortableColumn="type">
             <p-sortIcon field="type" />
-            {{'TYPE' | translate}}
+            {{'TABLE_COLUMNS.TYPE' | translate}}
             <p-columnFilter field="type" matchMode="equals" display="menu">
               <ng-template pTemplate="filter" let-value let-filter="filterCallback">
                   <p-dropdown 
@@ -111,14 +111,14 @@
           <th pSortableColumn="value">
             <div class="table-filter-toolbar">
               <p-sortIcon field="value" />
-              {{'GENERATION' | translate}} 
+              {{'TABLE_COLUMNS.GENERATION' | translate}} 
               <p-columnFilter type="numeric" field="value" display="menu" />           
             </div>
           </th>
           <th pSortableColumn="percentage">
             <div class="table-filter-toolbar">
               <p-sortIcon field="percentage"/>
-              {{'PERTENTAGE' | translate}} 
+              {{'TABLE_COLUMNS.PERTENTAGE' | translate}} 
               <p-columnFilter type="numeric" field="percentage" matchMode="lte" display="menu">
                 <ng-template pTemplate="filter" let-value let-filter="filterCallback">
                   <p-inputNumber
@@ -134,7 +134,7 @@
           <th pSortableColumn="datetime">
             <div class="table-filter-toolbar">
               <p-sortIcon field="datetime" />
-              {{'DATETIME' | translate}} 
+              {{'TABLE_COLUMNS.DATETIME' | translate}} 
               <p-columnFilter type="date" field="datetime" display="menu" />
             </div>
           </th>

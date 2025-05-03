@@ -72,9 +72,7 @@ export const WIDGET: any[] = [
         {key: 'frontera-programados', label: 'FRONTERA_PROGRAMADOS'},
         {key: 'todas-fronteras-programdados', label: 'TODAS_FRONTERAS_PROGRAMDADOS'},
     ]},
-    {key: 'intercambios', widgets: [
-        {key: 'energia-no-suministrada-ens', label: 'ENERGIA_NO_SUMINISTRADA_ENS'},
-        {key: 'indice-indisponibilidad', label: 'INDICE_INDISPONIBILIDAD'},
+    {key: 'transporte', widgets: [
         {key: 'energia-no-suministrada-end', label: 'ENERGIA_NO_SUMINISTRADA_END'},
         {key: 'indice-indisponibilidad', label: 'INDICE_INDISPONIBILIDAD'},
         {key: 'tiempo-interrupcion-medio-tim', label: 'TIEMPO_INTERRUPCION_MEDIO_TIM'},
