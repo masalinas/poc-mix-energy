@@ -21,6 +21,15 @@ export class TranslatorListService {
     return translation;
   }
 
+  translatorByGroup(group:string, list: any) {
+    let translation  = list.map((item: any) => ({
+      label: this.translate.instant(group + "." + item.label),
+      key: item.key
+    }));
+
+    return translation;
+  }
+
   setLanguageTranslations() {
     return [
       { key:'LAN_SPANISH', label: this.translate.instant('LAN_SPANISH'), code: 'es', icon: 'flag-icon flag-icon-es' },

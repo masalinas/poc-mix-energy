@@ -21,7 +21,7 @@ import { MessageService } from 'primeng/api';
 
 import { TranslatorListService } from './share/services/translator-list.service';
 import { MixService } from './share/services/mix.service';
-import { GROUPS, TYPES, TIME_TRUNCS } from './share/enums/mix.pipe';
+import { CATEGORIES, WIDGETS, GROUPS, TYPES, TIME_TRUNCS, GEO_LIMITS } from './share/enums/mix.pipe';
 
 // Register the Spanish locale
 registerLocaleData(localeEs);
@@ -61,6 +61,17 @@ export class AppComponent {
   lastLanguageId: number = 0;
   language: any;
 
+  // table selectors filters
+  categories: any[] = [];
+  lastCategoryId: number = 0;
+  category: any;  
+  widgets: any[] = [];
+  lastWidgetId: number = 0;
+  widget: any;
+  geoLimits: any[] = [];
+  lastGeoLimitId: number = 0;
+  geoLimit: any;
+
   // table mix datasource
   mix: any[] = []
 
@@ -94,15 +105,21 @@ export class AppComponent {
         this.setPrimeNGTranslations();
 
         // initialize time trunc table filter
-        if (this.timeTrunc == undefined)
-          this.timeTrunc = this.timeTruncs[1]; 
-        else
-          this.timeTrunc = this.timeTruncs[this.lastTimeTruncId];
-
         if (this.language == undefined)
           this.language = this.languages[0];
         else      
           this.language = this.languages[this.lastLanguageId];    
+          
+        if (this.category != undefined)
+          this.category = this.categories[this.lastCategoryId];  
+
+        if (this.geoLimit != undefined)
+          this.geoLimit = this.geoLimits[this.lastGeoLimitId];  
+
+        if (this.timeTrunc == undefined)
+          this.timeTrunc = this.timeTruncs[1]; 
+        else
+          this.timeTrunc = this.timeTruncs[this.lastTimeTruncId];          
       });
 
       // Set PrimeNG locale to Spanish
@@ -120,6 +137,9 @@ export class AppComponent {
   }
 
   private setTranslateLists() {
+    this.categories = this.translatorListService.translatorByGroup("CATEGORY", CATEGORIES); 
+    //this.widgets = this.translatorListService.translatorByGroup("WIDGET", WIDGETS);    
+    this.geoLimits = this.translatorListService.translatorByGroup("GEO_LIMIT", GEO_LIMITS);
     this.timeTruncs = this.translatorListService.translator(TIME_TRUNCS);    
     this.groups = this.translatorListService.translator(GROUPS);
     this.types = this.translatorListService.translator(TYPES);
@@ -145,6 +165,18 @@ export class AppComponent {
     this.translate.use(lang.code);    
   }
 
+  onChangeCategory(category: any) {
+    this.lastCategoryId = this.categories.findIndex((item:any) => item.key == category.key);
+  }
+
+  onChangeWidget(widget: any) {
+    this.lastWidgetId = this.widgets.findIndex((item:any) => item.key == widget.key);
+  }
+
+  onChangeGeoLimit(geoLimit: any) {
+    this.lastGeoLimitId = this.geoLimits.findIndex((item:any) => item.key == geoLimit.key);
+  }
+
   onTimeTruncChange(timeTrunc: any) {
     this.lastTimeTruncId = this.timeTruncs.findIndex((item:any) => item.key == timeTrunc.key);
   }
@@ -162,7 +194,7 @@ export class AppComponent {
       this.formatDate(this.rangeDates[1]),
       this.timeTrunc.key, 
       undefined,
-      undefined, 
+      this.geoLimit?.key,
       undefined)
       .subscribe(mix => {
         this.loading = false;
@@ -188,7 +220,8 @@ export class AppComponent {
 
     // initialize filgters and data
     this.rangeDates = [];
-    this.timeTrunc = null;
+    this.timeTrunc = this.timeTruncs[1];
+    this.geoLimit = null;
     this.mix = [];
 
     // initialize table with default filter

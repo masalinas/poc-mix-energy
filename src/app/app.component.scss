@@ -12,6 +12,12 @@
 }
 
 .app-panel-selector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    gap: 5px;
 }
 
 .table-toolbar {

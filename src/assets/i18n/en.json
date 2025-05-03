@@ -7,6 +7,11 @@
     "EXPORT": "Export",
     "EMAIL_TEXT": "Send me and email",
     "GET_CODE": "Get the code",
+    "TABLE_SELECTORS": {
+        "CATEGORY_SELECTOR": "Select Category",
+        "WIDGET_SELECTOR": "Select Widget",
+        "GEO_LIMIT_SELECTOR": "Select Geolimit"
+    },    
     "TABLE_COLUMNS": {
         "GROUP": "Grupo",
         "TYPE": "Tipo",
@@ -58,6 +63,22 @@
         "FILTER_CLEAR": "Clear",
         "FILTER_CANCEL": "Cancel"         
     },  
+    "CATEGORY": {
+        "BALANCE": "Balance",
+        "DEMANDA": "Demand",
+        "GENERACION": "Generation",
+        "INTERCAMBIOS": "Exchanges",
+        "TRANSPORTE": "Transport",
+        "MERCADOS": "Markets"
+    },
+    "GEO_LIMIT": {
+        "PENINSULAR": "Peninsula",
+        "CANARIAS": "Canarias",
+        "BALEARES": "Baleares",
+        "CEUTA": "Ceuta",
+        "MELILLA": "Melilla",
+        "CCAA": "CCAA"
+    },        
     "DEMAND": {
         "EVOLUCION": "Evolution",
         "VARIACION_COMPONENTES": "Variation Components",
@@ -73,7 +94,28 @@
         "IRE_OTRAS": "IRE Others",
         "IRE_OTRAS_ANUAL": "IRE Others Annual",
         "IRE_OTRAS_MOVIL": "IRE Others Mobile"
-    }, 
+    },
+    "GENERATION": {
+        "DEMANDA_MAXIMA_DIARIA": "",
+        "VARIACION_MAXIMA_HORARIA": "",
+        "PERDIDAS_TRANSPORTE": "",
+        "POTENCIA_MAXIMA_INSTANTANEA": "",
+        "VARIACION_DEMANDA": "",
+        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION": "",
+        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION_HISTORICO": "",
+        "DEMANDA_TIEMPO_REAL": "",
+        "VARIACION_COMPONENTES_ANUAL": "",
+        "ESTRUCTURA_GENERACION": "",
+        "EVOLUCION_RENOVABLE_NO_RENOVABLE": "",
+        "ESTRUCTURA_RENOVABLES": "",
+        "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "",
+        "EVOLUCION_ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "",
+        "NO_RENOVABLES_DETALLE_EMISIONES_CO2": "",
+        "MAXIMA_RENOVABLE": "",
+        "POTENCIA_INSTALADA": "",
+        "MAXIMA_RENOVABLE_HISTORICO": "",
+        "MAXIMA_SIN_EMISIONES_HISTORICO": ""
+    },     
     "TRANSPORT": {
         "ENERGIA_NO_SUMINISTRADA_ENS": "Energy Not Supplied ENS",
         "INDICE_INDISPONIBILIDAD": "Unavailability",
@@ -83,5 +125,5 @@
         "NUMERO_CORTES": "Number of Outages",
         "ENS_TIM": "ENS TIM",
         "INDICE_DISPONIBILIDAD_TOTAL": "Total Availability Index"        
-    }    
+    }   
 }

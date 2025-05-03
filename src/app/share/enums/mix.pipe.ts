@@ -3,7 +3,7 @@ export const LANG: any[] = [
     {key: 'en', label: 'EN'},
 ]
 
-export const CATEGORY: any[] = [
+export const CATEGORIES: any[] = [
     {key: 'balance', label: 'BALANCE'},
     {key: 'demanda', label: 'DEMANDA'},
     {key: 'generacion', label: 'GENERACION'},
@@ -12,7 +12,7 @@ export const CATEGORY: any[] = [
     {key: 'mercados', label: 'MERCADOS'},
 ]
 
-export const WIDGET: any[] = [
+export const WIDGETS: any[] = [
     {key: 'balance', widgets: [
         {key: 'balance-electrico', label: 'BALANCE_ELETRCICO'}
     ]},
@@ -109,11 +109,11 @@ export const TIME_TRUNCS: any[] = [
     {key: 'year', label: 'YEARS'},
 ]
 
-export const GEO_TRUNC: any[] = [
+export const GEO_TRUNCS: any[] = [
     {key: 'electric_system', label: 'ELECTRIC_SYSTEM'},
 ]
 
-export const GEO_LIMIT: any[] = [
+export const GEO_LIMITS: any[] = [
     {key: 'peninsular', label: 'PENINSULAR'},
     {key: 'canarias', label: 'CANARIAS'},
     {key: 'baleares', label: 'BALEARES'},

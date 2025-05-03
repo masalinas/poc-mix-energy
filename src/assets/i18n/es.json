@@ -7,6 +7,11 @@
     "EXPORT": "Exportar",
     "EMAIL_TEXT": "Mándame un email",
     "GET_CODE": "Bajate el código",
+    "TABLE_SELECTORS": {
+        "CATEGORY_SELECTOR": "Selecciona Categoría",
+        "WIDGET_SELECTOR": "Selecciona Widget",
+        "GEO_LIMIT_SELECTOR": "Selecciona Geolimit"
+    },
     "TABLE_COLUMNS": {
         "GROUP": "Grupo",
         "TYPE": "Tipo",
@@ -58,6 +63,22 @@
         "FILTER_CLEAR": "Limpiar",
         "FILTER_CANCEL": "Cancelar"       
     },
+    "CATEGORY": {
+        "BALANCE": "Balance",
+        "DEMANDA": "Demanda",
+        "GENERACION": "Generación",
+        "INTERCAMBIOS": "Intercambios",
+        "TRANSPORTE": "Transporte",
+        "MERCADOS": "Mercados"
+    },
+    "GEO_LIMIT": {
+        "PENINSULAR": "Peninsula",
+        "CANARIAS": "Canarias",
+        "BALEARES": "Baleares",
+        "CEUTA": "Ceuta",
+        "MELILLA": "Melilla",
+        "CCAA": "CCAA"
+    },    
     "DEMAND": {
         "EVOLUCION": "Evolución",
         "VARIACION_COMPONENTES": "Variación Componentes",
@@ -104,5 +125,5 @@
         "NUMERO_CORTES": "Número Cortes",
         "ENS_TIM": "ENS TIM",
         "INDICE_DISPONIBILIDAD_TOTAL": "Índice Disponibilidad Total"
-    }
+    }   
 }
