@@ -183,8 +183,13 @@ export class AppComponent {
   }
 
   onClear(table: Table) {
-    // clear all filters
+    // clear all table filters
     table.clear();
+
+    // initialize filgters and data
+    this.rangeDates = [];
+    this.timeTrunc = null;
+    this.mix = [];
 
     // initialize table with default filter
     table.sortField = "datetime";
