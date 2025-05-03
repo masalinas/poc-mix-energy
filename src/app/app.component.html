@@ -54,7 +54,8 @@
                 [(ngModel)]="timeTrunc"
                 optionLabel="label" 
                 [style]="{'width': '290px'}"               
-                [placeholder]="translate.instant('SELECT_TIME_TRUNC')">
+                [placeholder]="translate.instant('SELECT_TIME_TRUNC')"
+                (onChange)="onTimeTruncChange($event.value)">
               </p-dropdown>                 
               <p-button 
                 [disabled]="rangeDates.length == 0 || timeTrunc == undefined"

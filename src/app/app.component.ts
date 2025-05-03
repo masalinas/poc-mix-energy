@@ -61,6 +61,7 @@ export class AppComponent {
   
   // app languages
   languages: any[] = [];
+  lastLanguageId: number = 0;
   language: any;
 
   // table mix datasource
@@ -68,6 +69,7 @@ export class AppComponent {
 
   // table mix filters
   timeTruncs: any[] = [];
+  lastTimeTruncId: number = 0;
   timeTrunc: any;
   rangeDates: Date[] = [];
 
@@ -86,7 +88,6 @@ export class AppComponent {
     
       const browserLang = translate.getBrowserLang();
       let lang = browserLang?.match(/en|es/) ? browserLang : 'es';
-      //this.language = this.languages.find((lang) => lang.code == lang);
       this.translate.use(lang);
 
       // listen for language changes
@@ -95,9 +96,16 @@ export class AppComponent {
         this.setTranslateLists();
         this.setPrimeNGTranslations();
 
-        // initialize time trunc table filter 
-        this.timeTrunc = this.timeTruncs[1]; 
-        this.language = this.languages[0];            
+        // initialize time trunc table filter
+        if (this.timeTrunc == undefined)
+          this.timeTrunc = this.timeTruncs[1]; 
+        else
+          this.timeTrunc = this.timeTruncs[this.lastTimeTruncId];
+
+        if (this.language == undefined)
+          this.language = this.languages[0];
+        else      
+          this.language = this.languages[this.lastLanguageId];    
       });
 
       // Set PrimeNG locale to Spanish
@@ -136,9 +144,14 @@ export class AppComponent {
   }
 
   onChangeLanguage(lang: any) {
+    this.lastLanguageId = this.languages.findIndex((item:any) => item.key == lang.key);
     this.translate.use(lang.code);    
   }
-    
+
+  onTimeTruncChange(timeTrunc: any) {
+    this.lastTimeTruncId = this.timeTruncs.findIndex((item:any) => item.key == timeTrunc.key);
+  }
+
   onPercentageInput(value: any, filterCallback: (val: number) => void) {
     const numericValue = Number(value) / 100;
     filterCallback(numericValue);
@@ -180,7 +193,7 @@ export class AppComponent {
     table.sortField = "datetime";
     table.sortSingle();
   }
-    
+
   onExport(table: Table) {
     // Get only filtered rows (or all if no filter)
     const rows = table.filteredValue ? table.filteredValue : table.value;
