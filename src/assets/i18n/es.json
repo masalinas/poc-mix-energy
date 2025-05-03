@@ -1,5 +1,5 @@
 {
-    "GET_MIX": "Recuperar Mix Enérgetico",
+    "GET_GENERATION_MIX": "Recuperar Mix Enérgetico",
     "CLEAR_FILTERS": "Borrrar Filtros",
     "EXPORT": "Exportar",
     "EMAIL_TEXT": "Mándame un email",
@@ -9,7 +9,8 @@
     "GENERATION": "Generación",
     "PERTENTAGE": "Porcentaje",
     "DATETIME": "Fecha",
-    "SELECT_INTERVAL": "Selecciona rango fechas",
+    "SELECT_INTERVAL": "Selecciona Rango Fechas",
+    "SELECT_TIME_TRUNC": "Selecciona Agrupación Fecha",
     "HOURS": "Horas",
     "DAYS": "Días",
     "MONTHS": "Meses",
@@ -31,5 +32,19 @@
     "WASTE_RENEWABLE": "Residuos Renovables",
     "TOTAL_GENERATION": "Generación Total",
     "RENOVABLE": "Renovable",
-    "NO_RENEWABLE": "No Renovable"
+    "NO_RENEWABLE": "No Renovable",
+    "FILTER_MATCH_ALL": "Coincidir todo",
+    "FILTER_MATCH_ANY": "Coincidir cualquiera",
+    "FILTER_EQUALS": "Igual",
+    "FILTER_CONTAINS": "Contiene",
+    "FILTER_STARTS_WITH": "Empieza con",
+    "FILTER_ENDS_WITH": "Termina con",
+    "FILTER_NOT_EQUALS": "No igual",
+    "FILTER_LESS_THAN": "Menor que",
+    "FILTER_LESS_THAN_OR_EQUALS": "Menor o igual que",
+    "FILTER_GREATER_THAN": "Mayor que",
+    "FILTER_GREATER_THAN_OR_EQUALS": "Mayor o igual que",    
+    "FILTER_APPLY": "Aplicar",
+    "FILTER_CLEAR": "Limpiar",
+    "FILTER_CANCEL": "Cancelar"    
 }

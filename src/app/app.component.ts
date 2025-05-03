@@ -80,6 +80,7 @@ export class AppComponent {
       // listen for language changes
       this.translate.onLangChange.subscribe(() => {
         this.translateLists();
+        this.setPrimeNGTranslations();
       });
 
       // Set PrimeNG locale to Spanish
@@ -91,7 +92,7 @@ export class AppComponent {
         // Additional translations for PrimeNG components if needed
       });
 
-      this.timeTrunc = TIME_TRUNCS[0];
+      this.timeTrunc =this.timeTruncs[0];
   }
 
   private changeLang(lang: string) {
@@ -102,6 +103,10 @@ export class AppComponent {
     this.timeTruncs = this.translatorListService.translator(TIME_TRUNCS);    
     this.groups = this.translatorListService.translator(GROUPS);
     this.types = this.translatorListService.translator(TYPES);
+  }
+
+  private setPrimeNGTranslations() {
+    this.translatorListService.setPrimeNGTranslations();  
   }
 
   private formatDate(date: any) {

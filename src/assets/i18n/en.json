@@ -10,6 +10,7 @@
     "PERTENTAGE": "Percentage",
     "DATETIME": "Date",
     "SELECT_INTERVAL": "Select Time Interval",
+    "SELECT_TIME_TRUNC": "Select Time Trunc",
     "HOURS": "Hours",
     "DAYS": "Days",
     "MONTHS": "Months",
@@ -31,5 +32,19 @@
     "WASTE_RENEWABLE": "Renewable Waste",
     "TOTAL_GENERATION": "Total Generation",
     "RENOVABLE": "Renewable",
-    "NO_RENEWABLE": "No RENEWABLE"
+    "NO_RENEWABLE": "No RENEWABLE",
+    "FILTER_MATCH_ALL": "Match All",
+    "FILTER_MATCH_ANY": "Match Any",
+    "FILTER_EQUALS": "Equals",
+    "FILTER_CONTAINS": "Contains",
+    "FILTER_STARTS_WITH": "Starts with",
+    "FILTER_ENDS_WITH": "Ends with",
+    "FILTER_NOT_EQUALS": "Not equals",
+    "FILTER_LESS_THAN": "Less than",
+    "FILTER_LESS_THAN_OR_EQUALS": "Less than or equals",
+    "FILTER_GREATER_THAN": "Greater than",
+    "FILTER_GREATER_THAN_OR_EQUALS": "Greater than or equals",     
+    "FILTER_APPLY": "Apply",
+    "FILTER_CLEAR": "Clear",
+    "FILTER_CANCEL": "Cancel"    
 }

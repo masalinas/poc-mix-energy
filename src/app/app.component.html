@@ -26,19 +26,19 @@
                 dateFormat="dd-mm-yy"
                 [showIcon]="true"
                 selectionMode="range"
-                [style]="{'width': '300px'}" 
+                [style]="{'width': '270px'}" 
                 [placeholder]="translate.instant('SELECT_INTERVAL')"
                 [readonlyInput]="true" /> 
               <p-dropdown 
                 [(ngModel)]="timeTrunc"
                 optionLabel="label"
                 [options]="timeTruncs" 
-                [style]="{'width': '210px'}"               
-                placeholder="Select Time Trunc">
+                [style]="{'width': '290px'}"               
+                [placeholder]="translate.instant('SELECT_TIME_TRUNC')">
               </p-dropdown>                 
               <p-button 
                 [disabled]="rangeDates.length == 0 || timeTrunc == undefined"
-                [label]="translate.instant('GET_MIX')"
+                [label]="translate.instant('GET_GENERATION_MIX')"
                 icon="pi pi-search" 
                 (onClick)="onGetMix($event)"/>                          
           </div>
