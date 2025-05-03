@@ -1,8 +1,14 @@
-<div class="container">
+<div class="app-container">
+  <div class="panel-api-filter">
+  </div>
+  <div class="panel-table-filter">
+  </div>  
   <p-table
     #mixTable
     [value]="mix"
     [loading]="loading"
+    scrollable="true"
+    scrollHeight="flex"
     [sortField]="'datetime'"
     selectionMode="single"
     [paginator]="true"
@@ -13,15 +19,15 @@
     [exportHeader]="'customExportHeader'"
     [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="caption">
-      <div class="container-toolbar">
-          <div class="container-left-toolbar">
+      <div class="table-toolbar">
+          <div class="table-left-toolbar">
              <p-calendar 
                 [(ngModel)]="rangeDates"
                 dateFormat="dd-mm-yy"
                 [showIcon]="true"
                 selectionMode="range"
                 [style]="{'width': '300px'}" 
-                placeholder="Select Time Interval"
+                [placeholder]="translate.instant('SELECT_INTERVAL')"
                 [readonlyInput]="true" /> 
               <p-dropdown 
                 [(ngModel)]="timeTrunc"
@@ -32,35 +38,37 @@
               </p-dropdown>                 
               <p-button 
                 [disabled]="rangeDates.length == 0 || timeTrunc == undefined"
-                label="Get Mix"
+                [label]="translate.instant('GET_MIX')"
                 icon="pi pi-search" 
                 (onClick)="onGetMix($event)"/>                          
           </div>
-          <div class="container-right-toolbar">       
-            <p-button 
-              label="Clear Filters"
+          <div class="table-right-toolbar">       
+            <p-button
+              [label]="translate.instant('CLEAR_FILTERS')"
               icon="pi pi-filter-slash"
               [outlined]="true"
               (onClick)="onClear(mixTable)" />
             <p-button 
+              [label]="translate.instant('EXPORT')"
               icon="pi pi-file-export"
               severity="success"
-              label="Export" 
-              (onClick)="exportCSVManual(mixTable)" />                
+              (onClick)="onExport(mixTable)" />                
           </div> 
       </div>
     </ng-template>    
     <ng-template pTemplate="header">
         <tr>
           <th pSortableColumn="group">
-            <div class="container-filter-toolbar">
+            <div class="table-filter-toolbar">
               <p-sortIcon field="group" />
-              Group 
+              {{'GROUP' | translate}}
               <p-columnFilter field="group" matchMode="equals" display="menu">
                 <ng-template pTemplate="filter" let-value let-filter="filterCallback">
                     <p-dropdown 
                       [ngModel]="value"
                       [options]="groups"
+                      optionLabel="label"
+                      optionValue="key"                      
                       (onChange)="filter($event.value)"
                       placeholder="Select Group">
                     </p-dropdown>
@@ -70,12 +78,14 @@
           </th>
           <th pSortableColumn="type">
             <p-sortIcon field="type" />
-            Type
+            {{'TYPE' | translate}}
             <p-columnFilter field="type" matchMode="equals" display="menu">
               <ng-template pTemplate="filter" let-value let-filter="filterCallback">
                   <p-dropdown 
                     [ngModel]="value"
                     [options]="types"
+                    optionLabel="label"
+                    optionValue="key"
                     (onChange)="filter($event.value)"
                     placeholder="Select Type">
                   </p-dropdown>
@@ -83,16 +93,16 @@
             </p-columnFilter>
           </th>
           <th pSortableColumn="value">
-            <div class="container-filter-toolbar">
+            <div class="table-filter-toolbar">
               <p-sortIcon field="value" />
-              Value 
+              {{'GENERATION' | translate}} 
               <p-columnFilter type="numeric" field="value" display="menu" />           
             </div>
           </th>
           <th pSortableColumn="percentage">
-            <div class="container-filter-toolbar">
+            <div class="table-filter-toolbar">
               <p-sortIcon field="percentage"/>
-              Percent
+              {{'PERTENTAGE' | translate}} 
               <p-columnFilter type="numeric" field="percentage" matchMode="lte" display="menu">
                 <ng-template pTemplate="filter" let-value let-filter="filterCallback">
                   <p-inputNumber
@@ -106,9 +116,9 @@
             </div>
           </th>
           <th pSortableColumn="datetime">
-            <div class="container-filter-toolbar">
+            <div class="table-filter-toolbar">
               <p-sortIcon field="datetime" />
-              Datetime
+              {{'DATETIME' | translate}} 
               <p-columnFilter type="date" field="datetime" display="menu" />
             </div>
           </th>
@@ -117,7 +127,7 @@
     <ng-template pTemplate="body" let-mix>
         <tr>
             <td>
-              <div class="container-status-row">
+              <div class="table-status-row">
                 <div [style.background-color]="mix.color" class="color-circle"></div>
                 {{ mix.group }}
               </div>
@@ -134,12 +144,12 @@
     <div [style.background-color]="mixStatus.color" class="color-circle"></div>
   </ng-template>
 
-  <div class="container-bottom-bar">
+  <div class="app-bottom-bar">
     <p-button 
-      label="Any comment email from this link" 
+      [label]="translate.instant('EMAIL_TEXT')"
       icon="pi pi-envelope" 
       styleClass="p-button-text" 
-      (onClick)="openLink()">
+      (onClick)="onSendEmail()">
     </p-button>
   </div>
 </div>

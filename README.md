@@ -1,6 +1,6 @@
-# PocMixEnergy
+# Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0. This project represente a portal where analize the REE data offer from  public API **apidatos.ree.es**
 
 ## Development server
 
@@ -31,3 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 `$ docker buildx build --platform linux/amd64 -t ofertoio/poc-mix-energy-amd64:1.1.0 .`
 
 ![Mix Dashboard](./images/dashboard.png "Mix Dashboard")
+
+## Some links
+
+- [REE API](https://www.ree.es/es/datos/apidatos) 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-import { map, mergeMap, toArray } from 'rxjs/operators';
+import { mergeMap, toArray } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +26,12 @@ export class MixService {
     if (geoLimit) params = params.set('geo_limit', geoLimit);
     if (geoIds) params = params.set('geo_ids', geoIds);
 
+    /* API definition 
+       GET /{lang}/datos/{category}/{widget}?[query]
+       lang: es,en
+       category: balance,demanda,generacion,intercambios,transporte,mercados
+       widget: balance[balance-electrico],
+    */
     return this.http.get<any>('https://apidatos.ree.es/es/datos/generacion/estructura-generacion', { params }).pipe(
         mergeMap((response) => response.included),
         mergeMap((item: any) => {

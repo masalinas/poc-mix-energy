@@ -1,29 +1,28 @@
-.container {
+.app-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-.container-toolbar {
+.table-toolbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.container-left-toolbar, .container-right-toolbar {
+.table-left-toolbar, .table-right-toolbar {
     display: flex;
     flex-direction: row;
     gap: 5px;
 }
 
-.container-filter-toolbar {
+.table-filter-toolbar {
     display: flex;
     flex-direction: row;
     gap: 2px;
     align-items: center;
 }
 
-.container-status-row {
+.table-status-row {
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -36,7 +35,7 @@
     display: inline-block;
 }
 
-.container-bottom-bar {
+.app-bottom-bar {
     position: fixed;
     bottom: 0;
     left: 0;
