@@ -43,7 +43,11 @@
     "FILTER_LESS_THAN": "Menor que",
     "FILTER_LESS_THAN_OR_EQUALS": "Menor o igual que",
     "FILTER_GREATER_THAN": "Mayor que",
-    "FILTER_GREATER_THAN_OR_EQUALS": "Mayor o igual que",    
+    "FILTER_GREATER_THAN_OR_EQUALS": "Mayor o igual que",
+    "FILTER_DATE_IS": "Fecha es",
+    "FILTER_DATE_IS_NOT": "Fecha no es",
+    "FILTER_DATE_IS_BEFORE": "Fecha es anterior a",
+    "FILTER_DATE_IS_AFTER": "Fechas es posterior a",
     "FILTER_APPLY": "Aplicar",
     "FILTER_CLEAR": "Limpiar",
     "FILTER_CANCEL": "Cancelar"    

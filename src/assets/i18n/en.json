@@ -44,6 +44,10 @@
     "FILTER_LESS_THAN_OR_EQUALS": "Less than or equals",
     "FILTER_GREATER_THAN": "Greater than",
     "FILTER_GREATER_THAN_OR_EQUALS": "Greater than or equals",     
+    "FILTER_DATE_IS": "Date is",
+    "FILTER_DATE_IS_NOT": "Date is not",
+    "FILTER_DATE_IS_BEFORE": "Date is before",
+    "FILTER_DATE_IS_AFTER": "Date is after",    
     "FILTER_APPLY": "Apply",
     "FILTER_CLEAR": "Clear",
     "FILTER_CANCEL": "Cancel"    
