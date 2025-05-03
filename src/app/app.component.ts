@@ -10,6 +10,7 @@ import { TranslateService } from "@ngx-translate/core";
 
 import { PrimeNGConfig } from 'primeng/api';
 
+import { ToastModule } from 'primeng/toast';
 import { ButtonGroupModule } from 'primeng/buttongroup';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
@@ -19,6 +20,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CalendarModule } from 'primeng/calendar';
 import { Table } from 'primeng/table';
+import { MessageService } from 'primeng/api';
 
 import { TranslatorListService } from './share/services/translator-list.service';
 import { MixService } from './share/services/mix.service';
@@ -34,6 +36,7 @@ registerLocaleData(localeEs);
     CommonModule,
     TranslateModule,
     FormsModule,
+    ToastModule,
     ButtonGroupModule,
     ButtonModule,
     TableModule,
@@ -48,6 +51,7 @@ registerLocaleData(localeEs);
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es' }, // Set default locale to Spanish
+    MessageService,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -72,6 +76,7 @@ export class AppComponent {
 
   constructor(
     private translatorListService: TranslatorListService,
+    private messageService: MessageService,
     public translate: TranslateService,          
     public primengConfig: PrimeNGConfig,
     public mixService: MixService) { 
@@ -89,6 +94,9 @@ export class AppComponent {
         this.setLanguageTranslations();
         this.translateLists();
         this.setPrimeNGTranslations();
+
+        // initialize time trunc table filter 
+        this.timeTrunc =this.timeTruncs[1];        
       });
 
       // Set PrimeNG locale to Spanish
@@ -99,9 +107,6 @@ export class AppComponent {
         monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
         // Additional translations for PrimeNG components if needed
       });
-
-      // initialize time trunc table filter 
-      this.timeTrunc =this.timeTruncs[0];
   }
 
   private setLanguageTranslations() {
@@ -166,6 +171,8 @@ export class AppComponent {
     a.download = 'export.csv';
     a.click();
     window.URL.revokeObjectURL(url);
+
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'File Exported' });
   }
 
   onGetMix(event: any) {
@@ -185,8 +192,14 @@ export class AppComponent {
         this.mix = mix;
       },
       error => {
+        this.mix = [];
+
         this.loading = false;
         console.error('Error:', error);
+
+        if (error.status == 500) {
+          this.messageService.add({ severity: 'error', summary: 'Error', detail: error.message });
+        }
       });
   }
 

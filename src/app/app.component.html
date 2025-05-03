@@ -1,3 +1,4 @@
+<p-toast />
 <div class="app-container">
   <!-- App Mix Top Bar -->
   <div class="app-panel-top-bar">
@@ -64,7 +65,8 @@
               icon="pi pi-filter-slash"
               [outlined]="true"
               (onClick)="onClear(mixTable)" />
-            <p-button 
+            <p-button
+              [disabled]="mix.length == 0"
               [label]="translate.instant('EXPORT')"
               icon="pi pi-file-export"
               severity="success"
