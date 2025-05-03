@@ -1,14 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, LOCALE_ID } from '@angular/core';
+import { CommonModule, DecimalPipe, DatePipe, PercentPipe, registerLocaleData } from '@angular/common';
 import { FormsModule} from '@angular/forms'
-import { CommonModule, DecimalPipe, DatePipe, PercentPipe } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+
 import { TranslateModule}  from "@ngx-translate/core";
-import { registerLocaleData } from '@angular/common';
-import { LOCALE_ID } from '@angular/core';
-import localeEs from '@angular/common/locales/es'; // Spanish locale
-
 import { TranslateService } from "@ngx-translate/core";
-
-import { PrimeNGConfig } from 'primeng/api';
 
 import { ToastModule } from 'primeng/toast';
 import { ButtonGroupModule } from 'primeng/buttongroup';
@@ -20,6 +16,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CalendarModule } from 'primeng/calendar';
 import { Table } from 'primeng/table';
+import { PrimeNGConfig } from 'primeng/api';
 import { MessageService } from 'primeng/api';
 
 import { TranslatorListService } from './share/services/translator-list.service';
