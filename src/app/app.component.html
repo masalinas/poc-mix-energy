@@ -1,8 +1,24 @@
 <div class="app-container">
-  <div class="panel-api-filter">
+  <!-- App Mix Top Bar -->
+  <div class="app-panel-top-bar">
+      <div></div>
+      <div>
+        <p-dropdown 
+          placeholder="Select Language"      
+          [style]="{'margin-left': 'auto', 'width': '200px'}" 
+          [(ngModel)]="selectedLanguage"        
+          [options]="languages"     
+          optionLabel="name" 
+          (onChange)="onChangeLanguage($event.value)">
+        </p-dropdown>        
+    </div>
   </div>
-  <div class="panel-table-filter">
-  </div>  
+
+  <!-- App Mix Panel Selector -->
+  <div class="app-panel-selector">
+  </div>
+
+  <!-- App Mix Table -->
   <p-table
     #mixTable
     [value]="mix"
@@ -144,6 +160,7 @@
     <div [style.background-color]="mixStatus.color" class="color-circle"></div>
   </ng-template>
 
+  <!-- App Mix Botton Bar -->
   <div class="app-bottom-bar">
     <p-button 
       [label]="translate.instant('EMAIL_TEXT')"

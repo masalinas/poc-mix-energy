@@ -11,6 +11,7 @@ export class TranslatorListService {
     private primengConfig: PrimeNGConfig,
   ) { }
 
+
   translator(list: any) {
     let translation  = list.map((item: any) => ({
       label: this.translate.instant(item.label),
@@ -18,6 +19,13 @@ export class TranslatorListService {
     }));
 
     return translation;
+  }
+
+  setLanguageTranslations() {
+    return [
+      { name: this.translate.instant('LAN_SPANISH'), code: 'es', icon: 'flag-icon flag-icon-es' },
+      { name: this.translate.instant('LAN_ENGLISH'), code: 'en', icon: 'flag-icon flag-icon-gb' }
+    ];
   }
 
   setPrimeNGTranslations() {

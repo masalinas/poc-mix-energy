@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule} from '@angular/forms'
-import { DecimalPipe, DatePipe, PercentPipe } from '@angular/common';
+import { CommonModule, DecimalPipe, DatePipe, PercentPipe } from '@angular/common';
 import { TranslateModule}  from "@ngx-translate/core";
 import { registerLocaleData } from '@angular/common';
 import { LOCALE_ID } from '@angular/core';
@@ -31,6 +31,7 @@ registerLocaleData(localeEs);
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
     TranslateModule,
     FormsModule,
     ButtonGroupModule,
@@ -52,6 +53,9 @@ registerLocaleData(localeEs);
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  languages: any = [];
+  selectedLanguage = this.languages[0]; // default Spanish
+
   mix: any[] = []
   loading: boolean = false;
   groups: any[] = [];
@@ -74,11 +78,9 @@ export class AppComponent {
       let lang = browserLang?.match(/en|es/) ? browserLang : 'es';
       this.changeLang(lang);
 
-      // translate lists
-      this.translateLists();
-
       // listen for language changes
       this.translate.onLangChange.subscribe(() => {
+        this.setLanguageTranslations();
         this.translateLists();
         this.setPrimeNGTranslations();
       });
@@ -97,6 +99,10 @@ export class AppComponent {
 
   private changeLang(lang: string) {
     this.translate.use(lang);
+  }
+
+  private setLanguageTranslations() {
+    this.languages = this.translatorListService.setLanguageTranslations();  
   }
 
   private translateLists() {
@@ -120,6 +126,10 @@ export class AppComponent {
     return `${day}-${month}-${year}T${hours}:${minutes}`;
   }
 
+  onChangeLanguage(lang: any) {
+    this.translate.use(lang.code);
+  }
+  
   onClear(table: Table) {
     // clear all filters
     table.clear();
