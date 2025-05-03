@@ -61,14 +61,14 @@ export class AppComponent {
   
   // app languages
   languages: any[] = [];
-  language: any = {};
+  language: any;
 
   // table mix datasource
   mix: any[] = []
 
   // table mix filters
   timeTruncs: any[] = [];
-  timeTrunc: any = {};
+  timeTrunc: any;
   rangeDates: Date[] = [];
 
   groups: any[] = [];
@@ -86,17 +86,18 @@ export class AppComponent {
     
       const browserLang = translate.getBrowserLang();
       let lang = browserLang?.match(/en|es/) ? browserLang : 'es';
-      this.language = this.languages.find((lang) => lang.code == lang);
+      //this.language = this.languages.find((lang) => lang.code == lang);
       this.translate.use(lang);
 
       // listen for language changes
       this.translate.onLangChange.subscribe(() => {
         this.setLanguageTranslations();
-        this.translateLists();
+        this.setTranslateLists();
         this.setPrimeNGTranslations();
 
         // initialize time trunc table filter 
-        this.timeTrunc =this.timeTruncs[1];        
+        this.timeTrunc = this.timeTruncs[1]; 
+        this.language = this.languages[0];            
       });
 
       // Set PrimeNG locale to Spanish
@@ -113,7 +114,7 @@ export class AppComponent {
     this.languages = this.translatorListService.setLanguageTranslations();  
   }
 
-  private translateLists() {
+  private setTranslateLists() {
     this.timeTruncs = this.translatorListService.translator(TIME_TRUNCS);    
     this.groups = this.translatorListService.translator(GROUPS);
     this.types = this.translatorListService.translator(TYPES);
@@ -135,44 +136,12 @@ export class AppComponent {
   }
 
   onChangeLanguage(lang: any) {
-    //const language = this.languages.find((lang) => lang.code == lang);
-    //this.selectedLanguage = language;
-
     this.translate.use(lang.code);    
   }
-  
-  onClear(table: Table) {
-    // clear all filters
-    table.clear();
-
-    // initialize table with default filter
-    table.sortField = "datetime";
-    table.sortSingle();
-  }
-  
+    
   onPercentageInput(value: any, filterCallback: (val: number) => void) {
     const numericValue = Number(value) / 100;
     filterCallback(numericValue);
-  }
-
-  onExport(table: Table) {
-    // Get only filtered rows (or all if no filter)
-    const rows = table.filteredValue ? table.filteredValue : table.value;
-
-    let csv = 'Group,Type,Value,Percentage,Datetime\n';
-    for (const row of rows) {
-      csv += `${row.group},${row.type},${row.value},${row.percentage},${row.datetime}\n`;
-    }
-  
-    const blob = new Blob([csv], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'export.csv';
-    a.click();
-    window.URL.revokeObjectURL(url);
-
-    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'File Exported' });
   }
 
   onGetMix(event: any) {
@@ -201,6 +170,35 @@ export class AppComponent {
           this.messageService.add({ severity: 'error', summary: 'Error', detail: error.message });
         }
       });
+  }
+
+  onClear(table: Table) {
+    // clear all filters
+    table.clear();
+
+    // initialize table with default filter
+    table.sortField = "datetime";
+    table.sortSingle();
+  }
+    
+  onExport(table: Table) {
+    // Get only filtered rows (or all if no filter)
+    const rows = table.filteredValue ? table.filteredValue : table.value;
+
+    let csv = 'Group,Type,Value,Percentage,Datetime\n';
+    for (const row of rows) {
+      csv += `${row.group},${row.type},${row.value},${row.percentage},${row.datetime}\n`;
+    }
+  
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'export.csv';
+    a.click();
+    window.URL.revokeObjectURL(url);
+
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'File Exported' });
   }
 
   onSendEmail() {
