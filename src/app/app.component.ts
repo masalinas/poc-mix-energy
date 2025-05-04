@@ -64,7 +64,8 @@ export class AppComponent {
   // table selectors filters
   categories: any[] = [];
   lastCategoryId: number = 0;
-  category: any;  
+  category: any;
+  categorySelected: any;
   widgets: any[] = [];
   lastWidgetId: number = 0;
   widget: any;
@@ -100,11 +101,12 @@ export class AppComponent {
 
       // listen for language changes
       this.translate.onLangChange.subscribe(() => {
+        // translate app and table lists
         this.setLanguageTranslations();
         this.setTranslateLists();
         this.setPrimeNGTranslations();
 
-        // initialize time trunc table filter
+        // set app and table localized selectors and filters
         if (this.language == undefined)
           this.language = this.languages[0];
         else      
@@ -116,13 +118,13 @@ export class AppComponent {
         if (this.widget != undefined)
           this.widget = this.widgets[this.lastWidgetId];  
 
-        if (this.geoLimit != undefined)
-          this.geoLimit = this.geoLimits[this.lastGeoLimitId];  
-
         if (this.timeTrunc == undefined)
           this.timeTrunc = this.timeTruncs[1]; 
         else
-          this.timeTrunc = this.timeTruncs[this.lastTimeTruncId];          
+          this.timeTrunc = this.timeTruncs[this.lastTimeTruncId];  
+
+        if (this.geoLimit != undefined)
+          this.geoLimit = this.geoLimits[this.lastGeoLimitId];          
       });
 
       // Set PrimeNG locale to Spanish
@@ -140,11 +142,13 @@ export class AppComponent {
   }
 
   private setTranslateLists() {
-    this.categories = this.translatorListService.translatorByGroup("CATEGORY", CATEGORIES);   
-    this.geoLimits = this.translatorListService.translatorByGroup("GEO_LIMIT", GEO_LIMITS);   
+    this.categories = this.translatorListService.translatorByGroup("CATEGORY", CATEGORIES);
+    if (this.categorySelected)    
+      this.widgets = this.translatorListService.translatorByGroup(this.categorySelected.key.toUpperCase(), this.categorySelected.widgets); 
     this.groups = this.translatorListService.translatorByGroup("GROUP", GROUPS);
     this.types = this.translatorListService.translatorByGroup("TYPE", TYPES);
     this.timeTruncs = this.translatorListService.translatorByGroup("TIME_TRUNC", TIME_TRUNCS);
+    this.geoLimits = this.translatorListService.translatorByGroup("GEO_LIMIT", GEO_LIMITS);      
   }
 
   private setPrimeNGTranslations() {
@@ -168,8 +172,8 @@ export class AppComponent {
   }
 
   onChangeCategory(category: any) {
-    let categorySelect = WIDGETS.find(widget => widget.key == category.key);
-    this.widgets = this.translatorListService.translatorByGroup(category.key.toUpperCase(), categorySelect.widgets);  
+    this.categorySelected = WIDGETS.find(widget => widget.key == category.key);
+    this.widgets = this.translatorListService.translatorByGroup(category.key.toUpperCase(), this.categorySelected.widgets);  
 
     this.lastCategoryId = this.categories.findIndex((item:any) => item.key == category.key);
   }
