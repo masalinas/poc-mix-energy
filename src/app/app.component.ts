@@ -113,6 +113,9 @@ export class AppComponent {
         if (this.category != undefined)
           this.category = this.categories[this.lastCategoryId];  
 
+        if (this.widget != undefined)
+          this.widget = this.widgets[this.lastWidgetId];  
+
         if (this.geoLimit != undefined)
           this.geoLimit = this.geoLimits[this.lastGeoLimitId];  
 
@@ -137,12 +140,11 @@ export class AppComponent {
   }
 
   private setTranslateLists() {
-    this.categories = this.translatorListService.translatorByGroup("CATEGORY", CATEGORIES); 
-    //this.widgets = this.translatorListService.translatorByGroup("WIDGET", WIDGETS);    
-    this.geoLimits = this.translatorListService.translatorByGroup("GEO_LIMIT", GEO_LIMITS);
-    this.timeTruncs = this.translatorListService.translator(TIME_TRUNCS);    
-    this.groups = this.translatorListService.translator(GROUPS);
-    this.types = this.translatorListService.translator(TYPES);
+    this.categories = this.translatorListService.translatorByGroup("CATEGORY", CATEGORIES);   
+    this.geoLimits = this.translatorListService.translatorByGroup("GEO_LIMIT", GEO_LIMITS);   
+    this.groups = this.translatorListService.translatorByGroup("GROUP", GROUPS);
+    this.types = this.translatorListService.translatorByGroup("TYPE", TYPES);
+    this.timeTruncs = this.translatorListService.translatorByGroup("TIME_TRUNC", TIME_TRUNCS);
   }
 
   private setPrimeNGTranslations() {
@@ -166,6 +168,9 @@ export class AppComponent {
   }
 
   onChangeCategory(category: any) {
+    let categorySelect = WIDGETS.find(widget => widget.key == category.key);
+    this.widgets = this.translatorListService.translatorByGroup(category.key.toUpperCase(), categorySelect.widgets);  
+
     this.lastCategoryId = this.categories.findIndex((item:any) => item.key == category.key);
   }
 
@@ -173,12 +178,12 @@ export class AppComponent {
     this.lastWidgetId = this.widgets.findIndex((item:any) => item.key == widget.key);
   }
 
-  onChangeGeoLimit(geoLimit: any) {
-    this.lastGeoLimitId = this.geoLimits.findIndex((item:any) => item.key == geoLimit.key);
-  }
-
   onTimeTruncChange(timeTrunc: any) {
     this.lastTimeTruncId = this.timeTruncs.findIndex((item:any) => item.key == timeTrunc.key);
+  }
+
+  onChangeGeoLimit(geoLimit: any) {
+    this.lastGeoLimitId = this.geoLimits.findIndex((item:any) => item.key == geoLimit.key);
   }
 
   onPercentageInput(value: any, filterCallback: (val: number) => void) {

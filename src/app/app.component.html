@@ -23,7 +23,7 @@
       [(ngModel)]="category"             
       optionLabel="label" 
       [placeholder]="translate.instant('TABLE_SELECTORS.CATEGORY_SELECTOR')"      
-      [style]="{'margin-left': 'auto', 'width': '220px'}"                    
+      [style]="{'width': '230px'}"                  
       (onChange)="onChangeCategory($event.value)">
     </p-dropdown>       
     <p-dropdown 
@@ -31,7 +31,7 @@
       [(ngModel)]="widget"             
       optionLabel="label" 
       [placeholder]="translate.instant('TABLE_SELECTORS.WIDGET_SELECTOR')"      
-      [style]="{'margin-left': 'auto', 'width': '220px'}"                    
+      [style]="{'width': '220px'}"                    
       (onChange)="onChangeWidget($event.value)">
     </p-dropdown>      
   </div>
@@ -56,21 +56,21 @@
       <!-- Table Mix Tool Bar -->
       <div class="table-toolbar">
           <div class="table-left-toolbar">
-            <!-- Table Mix Panel Filters -->
-             <p-calendar 
+              <!-- Table Mix Panel Filters -->
+              <p-calendar 
                 [(ngModel)]="rangeDates"
                 dateFormat="dd-mm-yy"
                 [showIcon]="true"
                 selectionMode="range"
-                [style]="{'width': '270px'}" 
-                [placeholder]="translate.instant('SELECT_INTERVAL')"
+                [style]="{'width': '270px'}"
+                [placeholder]="translate.instant('TABLE_FILTERS.SELECT_INTERVAL')"
                 [readonlyInput]="true" /> 
               <p-dropdown 
                 [options]="timeTruncs"              
                 [(ngModel)]="timeTrunc"
                 optionLabel="label" 
                 [style]="{'width': '290px'}"               
-                [placeholder]="translate.instant('SELECT_TIME_TRUNC')"
+                [placeholder]="translate.instant('TABLE_FILTERS.SELECT_TIME_TRUNC')"
                 (onChange)="onTimeTruncChange($event.value)">
               </p-dropdown>
               <p-dropdown 
@@ -78,7 +78,7 @@
                 [(ngModel)]="geoLimit"             
                 optionLabel="label" 
                 [placeholder]="translate.instant('TABLE_SELECTORS.GEO_LIMIT_SELECTOR')"      
-                [style]="{'width': '240px'}"   
+                [style]="{'width': '240px'}"
                 showClear="true"                   
                 (onChange)="onChangeGeoLimit($event.value)">
               </p-dropdown>                                  

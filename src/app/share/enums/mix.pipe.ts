@@ -14,12 +14,12 @@ export const CATEGORIES: any[] = [
 
 export const WIDGETS: any[] = [
     {key: 'balance', widgets: [
-        {key: 'balance-electrico', label: 'BALANCE_ELETRCICO'}
+        {key: 'balance-electrico', label: 'BALANCE_ELETRICO'}
     ]},
     {key: 'demanda', widgets: [
         {key: 'evolucion', label: 'EVOLUCION'},
-        {key: 'variacion-componentes', label: 'VARAICION_COMPONENTES'},
-        {key: 'variacion-componetes-movil', label: 'VARAICION_COMPONENTES_MOVIL'},
+        {key: 'variacion-componentes', label: 'VARIACION_COMPONENTES'},
+        {key: 'variacion-componetes-movil', label: 'VARIACION_COMPONENTES_MOVIL'},
         {key: 'ire-general', label: 'IRE_GENERAL'},
         {key: 'ire-general-anual', label: 'IRE_GENERAL_ANUAL'},
         {key: 'ire-general-movil', label: 'IRE_GENERAL_MOVIL'},
@@ -70,10 +70,10 @@ export const WIDGETS: any[] = [
         {key: 'frontera-fisicos', label: 'FRONTERA_FISICOS'},
         {key: 'todas-fronteras-fisicos', label: 'TODAS_FRONTERAS_FISICOS'},
         {key: 'frontera-programados', label: 'FRONTERA_PROGRAMADOS'},
-        {key: 'todas-fronteras-programdados', label: 'TODAS_FRONTERAS_PROGRAMDADOS'},
+        {key: 'todas-fronteras-programdados', label: 'TODAS_FRONTERAS_PROGRAMADADOS'},
     ]},
     {key: 'transporte', widgets: [
-        {key: 'energia-no-suministrada-end', label: 'ENERGIA_NO_SUMINISTRADA_END'},
+        {key: 'energia-no-suministrada-end', label: 'ENERGIA_NO_SUMINISTRADA_ENS'},
         {key: 'indice-indisponibilidad', label: 'INDICE_INDISPONIBILIDAD'},
         {key: 'tiempo-interrupcion-medio-tim', label: 'TIEMPO_INTERRUPCION_MEDIO_TIM'},
         {key: 'kilometros-lineas', label: 'KILOMETROS_LINEAS'},

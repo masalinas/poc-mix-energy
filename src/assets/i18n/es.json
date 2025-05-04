@@ -1,7 +1,7 @@
 {
+    "LAN_SELECTOR": "Selecciona Idioma",
     "LAN_SPANISH": "Español",
     "LAN_ENGLISH": "Inglés",
-    "LAN_SELECTOR": "Selecciona Idioma",
     "GET_GENERATION_MIX": "Recuperar Mix Enérgetico",
     "CLEAR_FILTERS": "Borrrar Filtros",
     "EXPORT": "Exportar",
@@ -12,6 +12,10 @@
         "WIDGET_SELECTOR": "Selecciona Widget",
         "GEO_LIMIT_SELECTOR": "Selecciona Geolimit"
     },
+    "TABLE_FILTERS": {
+        "SELECT_INTERVAL": "Selecciona Rango Fechas",
+        "SELECT_TIME_TRUNC": "Selecciona Agrupación Fecha"
+    },
     "TABLE_COLUMNS": {
         "GROUP": "Grupo",
         "TYPE": "Tipo",
@@ -19,30 +23,43 @@
         "PERTENTAGE": "Porcentaje",
         "DATETIME": "Fecha"
     },
-    "SELECT_INTERVAL": "Selecciona Rango Fechas",
-    "SELECT_TIME_TRUNC": "Selecciona Agrupación Fecha",
-    "HOURS": "Horas",
-    "DAYS": "Días",
-    "MONTHS": "Meses",
-    "YEARS": "Años",
-    "HYDRAULIC": "Hidráulica",
-    "NUCLEAR": "Nuclear",
-    "COAL": "Carbón",
-    "DIESEL_ENGINE": "Motores Diésel",
-    "GAS_TURBINE": "Turbina de Gas",
-    "STEAM_TURBINE": "Turbina de Vapor",
-    "COMBINED_CYCLE": "Ciclo Combinado",
-    "HYDROWIND": "Hidroeólica",
-    "WIND": "Eólica",
-    "DOLAR_PHOTOVOLTAIC": "Solar Fotovoltaica",
-    "COLAR_THERMAL": "Solar Térmica",
-    "OTHER_RENEWABLES": "Otras Renovables",
-    "COGENERATION": "Cogeneración",
-    "NON_RENEWABLE": "Residuos no Renovables",
-    "WASTE_RENEWABLE": "Residuos Renovables",
-    "TOTAL_GENERATION": "Generación Total",
-    "RENOVABLE": "Renovable",
-    "NO_RENEWABLE": "No Renovable",
+    "TIME_TRUNC": {
+        "HOURS": "Horas",
+        "DAYS": "Días",
+        "MONTHS": "Meses",
+        "YEARS": "Años"
+    },
+    "GROUP": {
+        "HYDRAULIC": "Hidráulica",
+        "NUCLEAR": "Nuclear",
+        "COAL": "Carbón",
+        "DIESEL_ENGINE": "Motores Diésel",
+        "GAS_TURBINE": "Turbina de Gas",
+        "STEAM_TURBINE": "Turbina de Vapor",
+        "COMBINED_CYCLE": "Ciclo Combinado",
+        "HYDROWIND": "Hidroeólica",
+        "WIND": "Eólica",
+        "DOLAR_PHOTOVOLTAIC": "Solar Fotovoltaica",
+        "COLAR_THERMAL": "Solar Térmica",
+        "OTHER_RENEWABLES": "Otras Renovables",
+        "COGENERATION": "Cogeneración",
+        "NON_RENEWABLE": "Residuos no Renovables",
+        "WASTE_RENEWABLE": "Residuos Renovables",
+        "TOTAL_GENERATION": "Generación Total"
+    },
+    "TYPE": {
+        "RENOVABLE": "Renovable",
+        "NO_RENEWABLE": "No Renovable",
+        "TOTAL_GENERATION": "Generación Total"
+    },
+    "GEO_LIMIT": {
+        "PENINSULAR": "Peninsula",
+        "CANARIAS": "Canarias",
+        "BALEARES": "Baleares",
+        "CEUTA": "Ceuta",
+        "MELILLA": "Melilla",
+        "CCAA": "CCAA"
+    },    
     "FILTER_TABLES": {
         "FILTER_MATCH_ALL": "Coincidir todo",
         "FILTER_MATCH_ANY": "Coincidir cualquiera",
@@ -71,15 +88,10 @@
         "TRANSPORTE": "Transporte",
         "MERCADOS": "Mercados"
     },
-    "GEO_LIMIT": {
-        "PENINSULAR": "Peninsula",
-        "CANARIAS": "Canarias",
-        "BALEARES": "Baleares",
-        "CEUTA": "Ceuta",
-        "MELILLA": "Melilla",
-        "CCAA": "CCAA"
-    },    
-    "DEMAND": {
+    "BALANCE": {
+        "BALANCE_ELETRICO": "Balance Eléctrico"
+    },
+    "DEMANDA": {
         "EVOLUCION": "Evolución",
         "VARIACION_COMPONENTES": "Variación Componentes",
         "VARIACION_COMPONENTES_MOVIL": "Variación Movil Componentes",
@@ -94,29 +106,48 @@
         "IRE_OTRAS": "IRE Otras",
         "IRE_OTRAS_ANUAL": "IRE Otras Anual",
         "IRE_OTRAS_MOVIL": "IRE Otras Móvil"
-    },
-    "GENERATION": {
-        "DEMANDA_MAXIMA_DIARIA": "",
-        "VARIACION_MAXIMA_HORARIA": "",
-        "PERDIDAS_TRANSPORTE": "",
-        "POTENCIA_MAXIMA_INSTANTANEA": "",
-        "VARIACION_DEMANDA": "",
-        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION": "",
-        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION_HISTORICO": "",
-        "DEMANDA_TIEMPO_REAL": "",
-        "VARIACION_COMPONENTES_ANUAL": "",
-        "ESTRUCTURA_GENERACION": "",
-        "EVOLUCION_RENOVABLE_NO_RENOVABLE": "",
-        "ESTRUCTURA_RENOVABLES": "",
-        "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "",
-        "EVOLUCION_ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "",
-        "NO_RENOVABLES_DETALLE_EMISIONES_CO2": "",
-        "MAXIMA_RENOVABLE": "",
-        "POTENCIA_INSTALADA": "",
-        "MAXIMA_RENOVABLE_HISTORICO": "",
-        "MAXIMA_SIN_EMISIONES_HISTORICO": ""
     },    
-    "TRANSPORT": {
+    "GENERACION": {
+        "DEMANDA_MAXIMA_DIARIA": "Demanda Máxima Diaria",
+        "VARIACION_MAXIMA_HORARIA": "Variación Máxima Horaria",
+        "PERDIDAS_TRANSPORTE": "Perdidas Trasnporte",
+        "POTENCIA_MAXIMA_INSTANTANEA": "Potencia Máxima Instantanea",
+        "VARIACION_DEMANDA": "Varaición Demanda",
+        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION": "Potencia Máxima Instantanea Variación",
+        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION_HISTORICO": "Potencia Máxima Instantanea Variación Histórica",
+        "DEMANDA_TIEMPO_REAL": "Demanda Tiempo Real",
+        "VARIACION_COMPONENTES_ANUAL": "Variación Componentes Real",
+        "ESTRUCTURA_GENERACION": "Estructura Generacion",
+        "EVOLUCION_RENOVABLE_NO_RENOVABLE": "Evolución Renovables No Renonavables",
+        "ESTRUCTURA_RENOVABLES": "Estructura Renovables",
+        "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Estructura Generación Emisiones Asociadas",
+        "EVOLUCION_ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Evolución Estructura Generación Emisiones Asociadas",
+        "NO_RENOVABLES_DETALLE_EMISIONES_CO2": "No Renovables Detalle Emisiones CO2",
+        "MAXIMA_RENOVABLE": "Máxima Renovable",
+        "POTENCIA_INSTALADA": "Potencia Instalada",
+        "MAXIMA_RENOVABLE_HISTORICO": "Máxima Renovable Histórico",
+        "MAXIMA_SIN_EMISIONES_HISTORICO": "Máxima Sin Emisiones Histórico"
+    },
+    "INTERCAMBIOS": {
+        "FRANCIA_FRONTERA": "Francia Frontera",
+        "PORTUGAL_FRONTERA": "Portugal Frontera",
+        "MARRUECOS_FRONTERA": "Marruecos Frontera",
+        "ANDORRA_FRONTERA": "Andorra Frontera",
+        "LINEAS_FRANCIA": "Líneas Francia",
+        "LINEAS_PORTUGAL": "Líneas Portugal",
+        "LINEAS_MARRUECOS": "Líneas Marruecos",
+        "LINEAS_ANDORRA": "Líneas Andorra",
+        "FRANCIA_FRONTERA_PROGRAMDAS": "Francia Frontera Programadas",
+        "PORTUGAL_FRONTERA_PROGRAMDAS": "Portugal Frontera Programadas",
+        "MARRUECOS_FRONTERA_PROGRAMDAS": "Marruecos Frontera Programadas",
+        "ANDORRA_FRONTERA_PROGRAMDAS": "Andorra Frontera Programadas",
+        "ENLACE_BALEARES": "Enlace Baleares",
+        "FRONTERA_FISICOS": "Frontera Físicos",
+        "TODAS_FRONTERAS_FISICOS": "Todas Fronteras Físicos",
+        "FRONTERA_PROGRAMADOS": "Frontera Programados",
+        "TODAS_FRONTERAS_PROGRAMADADOS": "Todas Frontera Programdos"
+    },
+    "TRANSPORTE": {
         "ENERGIA_NO_SUMINISTRADA_ENS": "Energía No Suministrada ENS",
         "INDICE_INDISPONIBILIDAD": "Indisponibilidad",
         "TIEMPO_INTERRUPCION_MEDIO_TIM": "Tiempo Interrupción Medio TIM",
@@ -125,5 +156,23 @@
         "NUMERO_CORTES": "Número Cortes",
         "ENS_TIM": "ENS TIM",
         "INDICE_DISPONIBILIDAD_TOTAL": "Índice Disponibilidad Total"
-    }   
+    },
+    "MERCADOS": {     
+        "COMPONENTES_PRECIO_ENERGIA_CIERRE_DESGLOSE": "Componentes Precio Energía Cierre Desglose",
+        "COMPONENTES_PRECIO": "Componentes Precio",
+        "ENERGIA_GESTIONADA_SERVICIOS_AJUSTE": "Energia Gestionada Servicios Ajuste",
+        "ENERGIA_RESTRICCIONES": "Energia Restricciones",
+        "PRECIOS_RESTRICCIONES": "Precios  Restricciones",
+        "RESERVA_POTENCIA_ADICIONAL": "Reserva Potencia Adicional",
+        "BANDA_REGULACION_SECUNDARIA": "Banda Regulación Secundaria",
+        "ENERGIA_PRECIOS_REGULACION_SECUNDARIA": "Energía Precios Regulación Secundaria",
+        "ENERGIA_PRECIOS_REGULACION_TERCIARIA": "Energía Precios Regulación Terciaria",
+        "ENERGIA_PRECIOS_GESTION_DESVIOS": "Energía Precios Gestión Desvíos",
+        "COSTE_SERVICIOS_AJUSTE": "Coste Servicios Ajuste",
+        "VOLUMEN_ENERGIA_SERVICIOS_AJUSTE_VARIACION": "Volumen Energía Servicios Ajuste Variación",
+        "PRECIOS_MERCADOS_TIEMPO_REAL": "Precios Mercados Tiempo Real",
+        "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS_BEFORE": "Energía Precios Ponderados Gestión Desvíos Before",
+        "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS": "Energía Precios Ponderados Gestión Desvíos",
+        "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS_AFTER": "Energía Precios Ponderados Gestión Desvíos After"
+    }
 }

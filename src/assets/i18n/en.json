@@ -1,7 +1,7 @@
 {
+    "LAN_SELECTOR": "Select Language",    
     "LAN_SPANISH": "Spanish",
     "LAN_ENGLISH": "English",
-    "LAN_SELECTOR": "Select Language",
     "GET_GENERATION_MIX": "Get Energetic Mix",
     "CLEAR_FILTERS": "Clear Filters",
     "EXPORT": "Export",
@@ -11,7 +11,11 @@
         "CATEGORY_SELECTOR": "Select Category",
         "WIDGET_SELECTOR": "Select Widget",
         "GEO_LIMIT_SELECTOR": "Select Geolimit"
-    },    
+    },
+    "TABLE_FILTERS": {
+        "SELECT_INTERVAL": "Select Time Interval",
+        "SELECT_TIME_TRUNC": "Select Time Trunc"
+    },        
     "TABLE_COLUMNS": {
         "GROUP": "Grupo",
         "TYPE": "Tipo",
@@ -19,30 +23,43 @@
         "PERTENTAGE": "Porcentaje",
         "DATETIME": "Fecha"
     },
-    "SELECT_INTERVAL": "Select Time Interval",
-    "SELECT_TIME_TRUNC": "Select Time Trunc",
-    "HOURS": "Hours",
-    "DAYS": "Days",
-    "MONTHS": "Months",
-    "YEARS": "Years",
-    "HYDRAULIC": "Hydraulic",
-    "NUCLEAR": "Nuclear",
-    "COAL": "Coal",
-    "DIESEL_ENGINE": "Diesel Engines",
-    "GAS_TURBINE": "Gas Turbine",
-    "STEAM_TURBINE": "Steam Turbine",
-    "COMBINED_CYCLE": "Combined Cycle",
-    "HYDROWIND": "Hydrowind",
-    "WIND": "Wind",
-    "SOLAR_PHOTOVOLTAIC": "Solar Photovoltaic",
-    "SOLAR_THERMAL": "Solar Thermal",
-    "OTHER_RENEWABLES": "Other Renewables",
-    "COGENERATION": "Cogeneration",
-    "NON_RENEWABLE": "Non-Renewable Waste",
-    "WASTE_RENEWABLE": "Renewable Waste",
-    "TOTAL_GENERATION": "Total Generation",
-    "RENOVABLE": "Renewable",
-    "NO_RENEWABLE": "No RENEWABLE",
+    "TIME_TRUNC": {
+        "HOURS": "Hours",
+        "DAYS": "Days",
+        "MONTHS": "Months",
+        "YEARS": "Years"
+    },
+    "GROUP": {
+        "HYDRAULIC": "Hydraulic",
+        "NUCLEAR": "Nuclear",
+        "COAL": "Coal",
+        "DIESEL_ENGINE": "Diesel Engines",
+        "GAS_TURBINE": "Gas Turbine",
+        "STEAM_TURBINE": "Steam Turbine",
+        "COMBINED_CYCLE": "Combined Cycle",
+        "HYDROWIND": "Hydrowind",
+        "WIND": "Wind",
+        "SOLAR_PHOTOVOLTAIC": "Solar Photovoltaic",
+        "SOLAR_THERMAL": "Solar Thermal",
+        "OTHER_RENEWABLES": "Other Renewables",
+        "COGENERATION": "Cogeneration",
+        "NON_RENEWABLE": "Non-Renewable Waste",
+        "WASTE_RENEWABLE": "Renewable Waste",
+        "TOTAL_GENERATION": "Total Generation"
+    },
+    "TYPE": {
+        "RENOVABLE": "Renewable",
+        "NO_RENEWABLE": "No RENEWABLE",
+        "TOTAL_GENERATION": "Total Generation"
+    },
+    "GEO_LIMIT": {
+        "PENINSULAR": "Peninsula",
+        "CANARIAS": "Canarias",
+        "BALEARES": "Baleares",
+        "CEUTA": "Ceuta",
+        "MELILLA": "Melilla",
+        "CCAA": "CCAA"
+    },    
     "FILTER_TABLES": {
         "FILTER_MATCH_ALL": "Match All",
         "FILTER_MATCH_ANY": "Match Any",
@@ -70,16 +87,11 @@
         "INTERCAMBIOS": "Exchanges",
         "TRANSPORTE": "Transport",
         "MERCADOS": "Markets"
+    },      
+    "BALANCE": {
+        "BALANCE_ELETRICO": "Electric Balance"
     },
-    "GEO_LIMIT": {
-        "PENINSULAR": "Peninsula",
-        "CANARIAS": "Canarias",
-        "BALEARES": "Baleares",
-        "CEUTA": "Ceuta",
-        "MELILLA": "Melilla",
-        "CCAA": "CCAA"
-    },        
-    "DEMAND": {
+    "DEMANDA": {
         "EVOLUCION": "Evolution",
         "VARIACION_COMPONENTES": "Variation Components",
         "VARIACION_COMPONENTES_MOVIL": "Variation Mobile",
@@ -94,29 +106,48 @@
         "IRE_OTRAS": "IRE Others",
         "IRE_OTRAS_ANUAL": "IRE Others Annual",
         "IRE_OTRAS_MOVIL": "IRE Others Mobile"
+    },    
+    "GENERACION": {
+        "DEMANDA_MAXIMA_DIARIA": "Maximun Daily Damand",
+        "VARIACION_MAXIMA_HORARIA": "Maximun Hourly Variation",
+        "PERDIDAS_TRANSPORTE": "Transport Losses",
+        "POTENCIA_MAXIMA_INSTANTANEA": "MAximun Instantaneous Power",
+        "VARIACION_DEMANDA": "Deman Variation",
+        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION": "Maximun Instantaneous Power Variation",
+        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION_HISTORICO": "Maximun Instantaneous Power Historical Variation",
+        "DEMANDA_TIEMPO_REAL": "Real Time Demand",
+        "VARIACION_COMPONENTES_ANUAL": "Annual Component Variation",
+        "ESTRUCTURA_GENERACION": "Generation Structure",
+        "EVOLUCION_RENOVABLE_NO_RENOVABLE": "Renewable Non Renewable Evolution",
+        "ESTRUCTURA_RENOVABLES": "Rnewable Structure",
+        "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Generation Structure Associated Emissiones",
+        "EVOLUCION_ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Evolution Structure Generation Associated Emissions",
+        "NO_RENOVABLES_DETALLE_EMISIONES_CO2": "Renewable CO2 Emissions Detail",
+        "MAXIMA_RENOVABLE": "Maximun Renewable",
+        "POTENCIA_INSTALADA": "Installed Power",
+        "MAXIMA_RENOVABLE_HISTORICO": "Maxikun Renewable Historical",
+        "MAXIMA_SIN_EMISIONES_HISTORICO": "Maximun Non Emissions Historical"
     },
-    "GENERATION": {
-        "DEMANDA_MAXIMA_DIARIA": "",
-        "VARIACION_MAXIMA_HORARIA": "",
-        "PERDIDAS_TRANSPORTE": "",
-        "POTENCIA_MAXIMA_INSTANTANEA": "",
-        "VARIACION_DEMANDA": "",
-        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION": "",
-        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION_HISTORICO": "",
-        "DEMANDA_TIEMPO_REAL": "",
-        "VARIACION_COMPONENTES_ANUAL": "",
-        "ESTRUCTURA_GENERACION": "",
-        "EVOLUCION_RENOVABLE_NO_RENOVABLE": "",
-        "ESTRUCTURA_RENOVABLES": "",
-        "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "",
-        "EVOLUCION_ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "",
-        "NO_RENOVABLES_DETALLE_EMISIONES_CO2": "",
-        "MAXIMA_RENOVABLE": "",
-        "POTENCIA_INSTALADA": "",
-        "MAXIMA_RENOVABLE_HISTORICO": "",
-        "MAXIMA_SIN_EMISIONES_HISTORICO": ""
-    },     
-    "TRANSPORT": {
+    "INTERCAMBIOS": {
+        "FRANCIA_FRONTERA": "France Border",
+        "PORTUGAL_FRONTERA": "Portugal Border",
+        "MARRUECOS_FRONTERA": "Morocco Border",
+        "ANDORRA_FRONTERA": "Andorra Border",
+        "LINEAS_FRANCIA": "France Lines",
+        "LINEAS_PORTUGAL": "Portugal Lines",
+        "LINEAS_MARRUECOS": "Morocco Lines",
+        "LINEAS_ANDORRA": "Andorra Lines",
+        "FRANCIA_FRONTERA_PROGRAMDAS": "France Border Programmed",
+        "PORTUGAL_FRONTERA_PROGRAMDAS": "Portugal Border Programmed",
+        "MARRUECOS_FRONTERA_PROGRAMDAS": "Morocco Border Programmed",
+        "ANDORRA_FRONTERA_PROGRAMDAS": "Andorra Border Programmed",
+        "ENLACE_BALEARES": "Balearic Link",
+        "FRONTERA_FISICOS": "Physical Border",
+        "TODAS_FRONTERAS_FISICOS": "All Physical Borders",
+        "FRONTERA_PROGRAMADOS": "Scheduled Border",
+        "TODAS_FRONTERAS_PROGRAMADADOS": "All Scheduled Borders"
+    },
+    "TRANSPORTE": {
         "ENERGIA_NO_SUMINISTRADA_ENS": "Energy Not Supplied ENS",
         "INDICE_INDISPONIBILIDAD": "Unavailability",
         "TIEMPO_INTERRUPCION_MEDIO_TIM": "Average Interruption Time TIM",
@@ -125,5 +156,23 @@
         "NUMERO_CORTES": "Number of Outages",
         "ENS_TIM": "ENS TIM",
         "INDICE_DISPONIBILIDAD_TOTAL": "Total Availability Index"        
-    }   
+    }, 
+    "MERCADOS": { 
+        "COMPONENTES_PRECIO_ENERGIA_CIERRE_DESGLOSE": "Energy Price Components Closing Breakdown",
+        "COMPONENTES_PRECIO": "Price Components",
+        "ENERGIA_GESTIONADA_SERVICIOS_AJUSTE": "Managed Energy Services Adjustment",
+        "ENERGIA_RESTRICCIONES": "Energy Restrictions",
+        "PRECIOS_RESTRICCIONES": "Prices Restrictions",
+        "RESERVA_POTENCIA_ADICIONAL": "Additional Power Reserve",
+        "BANDA_REGULACION_SECUNDARIA": "Secondary Regulation Band",
+        "ENERGIA_PRECIOS_REGULACION_SECUNDARIA": "Energy Secondary Regulation Prices",
+        "ENERGIA_PRECIOS_REGULACION_TERCIARIA": "Energy Tertiary Regulation Prices",
+        "ENERGIA_PRECIOS_GESTION_DESVIOS": "Energy Prices Deviation Management",
+        "COSTE_SERVICIOS_AJUSTE": "Services Cost Adjustment",
+        "VOLUMEN_ENERGIA_SERVICIOS_AJUSTE_VARIACION": "Energy Services Volume Adjustment Variation",
+        "PRECIOS_MERCADOS_TIEMPO_REAL": "Real-Time Market Prices",
+        "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS_BEFORE": "Energy Weighted Prices Deviation Management Before",
+        "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS": "Energy Weighted Prices Deviation Management",
+        "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS_AFTER": "Energy Weighted Prices Deviation Management After"               
+    }      
 }
