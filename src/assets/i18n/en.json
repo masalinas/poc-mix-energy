@@ -2,7 +2,7 @@
     "LAN_SELECTOR": "Select Language",    
     "LAN_SPANISH": "Spanish",
     "LAN_ENGLISH": "English",
-    "GET_GENERATION_MIX": "Get Energetic Mix",
+    "GET_GENERATION_MIX": "Get Data",
     "CLEAR_FILTERS": "Clear Filters",
     "EXPORT": "Export",
     "EMAIL_TEXT": "Send me and email",
@@ -17,11 +17,11 @@
         "SELECT_TIME_TRUNC": "Select Time Trunc"
     },        
     "TABLE_COLUMNS": {
-        "GROUP": "Grupo",
-        "TYPE": "Tipo",
-        "GENERATION": "Generación",
-        "PERTENTAGE": "Porcentaje",
-        "DATETIME": "Fecha"
+        "GROUP": "Group",
+        "TYPE": "Type",
+        "GENERATION": "Generation",
+        "PERTENTAGE": "Percentage",
+        "DATETIME": "Date"
     },
     "TIME_TRUNC": {
         "HOURS": "Hours",

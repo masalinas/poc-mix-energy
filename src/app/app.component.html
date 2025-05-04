@@ -112,7 +112,7 @@
           <th pSortableColumn="group">
             <div class="table-filter-toolbar">
               <p-sortIcon field="group" />
-              {{'TABLE_COLUMNS.GROUP' | translate}}
+              {{'TABLE_COLUMNS.GROUP' | translate}}
               <p-columnFilter field="group" matchMode="equals" display="menu">
                 <ng-template pTemplate="filter" let-value let-filter="filterCallback">
                     <p-dropdown 
@@ -129,7 +129,7 @@
           </th>
           <th pSortableColumn="type">
             <p-sortIcon field="type" />
-            {{'TABLE_COLUMNS.TYPE' | translate}}
+            {{'TABLE_COLUMNS.TYPE' | translate}}
             <p-columnFilter field="type" matchMode="equals" display="menu">
               <ng-template pTemplate="filter" let-value let-filter="filterCallback">
                   <p-dropdown 
@@ -146,14 +146,14 @@
           <th pSortableColumn="value">
             <div class="table-filter-toolbar">
               <p-sortIcon field="value" />
-              {{'TABLE_COLUMNS.GENERATION' | translate}} 
+              {{'TABLE_COLUMNS.GENERATION' | translate}} 
               <p-columnFilter type="numeric" field="value" display="menu" />           
             </div>
           </th>
           <th pSortableColumn="percentage">
             <div class="table-filter-toolbar">
               <p-sortIcon field="percentage"/>
-              {{'TABLE_COLUMNS.PERTENTAGE' | translate}} 
+              {{'TABLE_COLUMNS.PERTENTAGE' | translate}} 
               <p-columnFilter type="numeric" field="percentage" matchMode="lte" display="menu">
                 <ng-template pTemplate="filter" let-value let-filter="filterCallback">
                   <p-inputNumber
@@ -169,7 +169,7 @@
           <th pSortableColumn="datetime">
             <div class="table-filter-toolbar">
               <p-sortIcon field="datetime" />
-              {{'TABLE_COLUMNS.DATETIME' | translate}} 
+              {{'TABLE_COLUMNS.DATETIME' | translate}} 
               <p-columnFilter type="date" field="datetime" display="menu" />
             </div>
           </th>
