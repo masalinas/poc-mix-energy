@@ -7,14 +7,6 @@
     "EXPORT": "Exportar",
     "EMAIL_TEXT": "Mándame un email",
     "GET_CODE": "Bájate el código",
-    "TABLE_TITLES": {
-        "BALANCE_ENERGETICO_ESPANOL": "Balance Energético Español",
-        "DEMANDA_ENERGETICA_ESPANOLA": "Demanda Energética Española",
-        "GENERACION_ENERGETICA_ESPANOLA": "Generación Energética Española",
-        "INTERCAMBIOS_ENERGETICOS_ESPANOLA": "Intercambio Enérgetico Español",
-        "TRANSPORTE_ENERGETICO_ESPANOL": "Transporte Energético Español",
-        "MERCADO_ENERGETICO_ESPANOLA": "Mercado Energético Español"
-    },
     "TABLE_SELECTORS": {
         "CATEGORY_SELECTOR": "Selecciona Categoría",
         "WIDGET_SELECTOR": "Selecciona Widget",
