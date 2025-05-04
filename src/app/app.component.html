@@ -73,7 +73,7 @@
                 [placeholder]="translate.instant('TABLE_FILTERS.SELECT_TIME_TRUNC')"
                 (onChange)="onTimeTruncChange($event.value)">
               </p-dropdown>
-              <p-dropdown 
+              <!--<p-dropdown 
                 [options]="geoLimits"      
                 [(ngModel)]="geoLimit"             
                 optionLabel="label" 
@@ -81,7 +81,7 @@
                 [style]="{'width': '240px'}"
                 showClear="true"                   
                 (onChange)="onChangeGeoLimit($event.value)">
-              </p-dropdown>                                  
+              </p-dropdown>-->                                  
               <p-button 
                 [disabled]="rangeDates.length == 0 || timeTrunc == undefined"
                 [label]="translate.instant('GET_GENERATION_MIX')"

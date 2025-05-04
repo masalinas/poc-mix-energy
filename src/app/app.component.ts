@@ -124,7 +124,11 @@ export class AppComponent {
           this.timeTrunc = this.timeTruncs[this.lastTimeTruncId];  
 
         if (this.geoLimit != undefined)
-          this.geoLimit = this.geoLimits[this.lastGeoLimitId];          
+          this.geoLimit = this.geoLimits[this.lastGeoLimitId];
+
+        // initialize category
+        //this.category = this.categories[0];
+        //this.onChangeCategory(this.category);
       });
 
       // Set PrimeNG locale to Spanish
@@ -176,6 +180,9 @@ export class AppComponent {
     this.widgets = this.translatorListService.translatorByGroup(category.key.toUpperCase(), this.categorySelected.widgets);  
 
     this.lastCategoryId = this.categories.findIndex((item:any) => item.key == category.key);
+    
+    // initialize widget
+    //this.widget = this.widgets[0]; 
   }
 
   onChangeWidget(widget: any) {
@@ -263,6 +270,6 @@ export class AppComponent {
   }
 
   onGetCode() {
-    window.open('https://github.com/masalinas/poc-mix-energy', '_self');
+    window.open('https://github.com/masalinas/poc-mix-energy', '_blank');
   }
 }
