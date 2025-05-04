@@ -6,7 +6,15 @@
     "CLEAR_FILTERS": "Borrrar Filtros",
     "EXPORT": "Exportar",
     "EMAIL_TEXT": "Mándame un email",
-    "GET_CODE": "Bajate el código",
+    "GET_CODE": "Bájate el código",
+    "TABLE_TITLES": {
+        "BALANCE_ENERGETICO_ESPANOL": "Balance Energético Español",
+        "DEMANDA_ENERGETICA_ESPANOLA": "Demanda Energética Española",
+        "GENERACION_ENERGETICA_ESPANOLA": "Generación Energética Española",
+        "INTERCAMBIOS_ENERGETICOS_ESPANOLA": "Intercambio Enérgetico Español",
+        "TRANSPORTE_ENERGETICO_ESPANOL": "Transporte Energético Español",
+        "MERCADO_ENERGETICO_ESPANOLA": "Mercado Energético Español"
+    },
     "TABLE_SELECTORS": {
         "CATEGORY_SELECTOR": "Selecciona Categoría",
         "WIDGET_SELECTOR": "Selecciona Widget",
@@ -110,15 +118,15 @@
     "GENERACION": {
         "DEMANDA_MAXIMA_DIARIA": "Demanda Máxima Diaria",
         "VARIACION_MAXIMA_HORARIA": "Variación Máxima Horaria",
-        "PERDIDAS_TRANSPORTE": "Perdidas Trasnporte",
+        "PERDIDAS_TRANSPORTE": "Párdidas Trasnporte",
         "POTENCIA_MAXIMA_INSTANTANEA": "Potencia Máxima Instantanea",
-        "VARIACION_DEMANDA": "Varaición Demanda",
-        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION": "Potencia Máxima Instantanea Variación",
-        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION_HISTORICO": "Potencia Máxima Instantanea Variación Histórica",
+        "VARIACION_DEMANDA": "Variación Demanda",
+        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION": "Variación Potencia Máxima Instantanea",
+        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION_HISTORICO": "Variación Histórica Potencia Máxima Instantanea",
         "DEMANDA_TIEMPO_REAL": "Demanda Tiempo Real",
         "VARIACION_COMPONENTES_ANUAL": "Variación Componentes Real",
         "ESTRUCTURA_GENERACION": "Estructura Generacion",
-        "EVOLUCION_RENOVABLE_NO_RENOVABLE": "Evolución Renovables No Renonavables",
+        "EVOLUCION_RENOVABLE_NO_RENOVABLE": "Evolución Renovables No Renovables",
         "ESTRUCTURA_RENOVABLES": "Estructura Renovables",
         "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Estructura Generación Emisiones Asociadas",
         "EVOLUCION_ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Evolución Estructura Generación Emisiones Asociadas",
@@ -145,7 +153,7 @@
         "FRONTERA_FISICOS": "Frontera Físicos",
         "TODAS_FRONTERAS_FISICOS": "Todas Fronteras Físicos",
         "FRONTERA_PROGRAMADOS": "Frontera Programados",
-        "TODAS_FRONTERAS_PROGRAMADADOS": "Todas Frontera Programdos"
+        "TODAS_FRONTERAS_PROGRAMADADOS": "Todas Frontera Programados"
     },
     "TRANSPORTE": {
         "ENERGIA_NO_SUMINISTRADA_ENS": "Energía No Suministrada ENS",
@@ -160,8 +168,8 @@
     "MERCADOS": {     
         "COMPONENTES_PRECIO_ENERGIA_CIERRE_DESGLOSE": "Componentes Precio Energía Cierre Desglose",
         "COMPONENTES_PRECIO": "Componentes Precio",
-        "ENERGIA_GESTIONADA_SERVICIOS_AJUSTE": "Energia Gestionada Servicios Ajuste",
-        "ENERGIA_RESTRICCIONES": "Energia Restricciones",
+        "ENERGIA_GESTIONADA_SERVICIOS_AJUSTE": "Energía Gestionada Servicios Ajuste",
+        "ENERGIA_RESTRICCIONES": "Energía Restricciones",
         "PRECIOS_RESTRICCIONES": "Precios  Restricciones",
         "RESERVA_POTENCIA_ADICIONAL": "Reserva Potencia Adicional",
         "BANDA_REGULACION_SECUNDARIA": "Banda Regulación Secundaria",

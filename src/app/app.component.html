@@ -10,7 +10,7 @@
           [(ngModel)]="language"             
           optionLabel="label" 
           [placeholder]="translate.instant('LAN_SELECTOR')"      
-          [style]="{'margin-left': 'auto', 'width': '220px'}"                    
+          [style]="{'margin-left': 'auto', 'width': '150px'}"                    
           (onChange)="onChangeLanguage($event.value)">
         </p-dropdown>        
     </div>
@@ -52,8 +52,9 @@
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     [exportHeader]="'customExportHeader'"
     [tableStyle]="{ 'min-width': '50rem' }">
+    <!-- Table Mix Tool Bar -->    
     <ng-template pTemplate="caption">
-      <!-- Table Mix Tool Bar -->
+      <h1>{{ tableTitle | translate }}</h1>
       <div class="table-toolbar">
           <div class="table-left-toolbar">
               <!-- Table Mix Panel Filters -->
@@ -198,5 +199,12 @@
       styleClass="p-button-text" 
       (onClick)="onSendEmail()">
     </p-button>
+    <p-button 
+      [label]="translate.instant('GET_CODE')"
+      icon="pi pi-github" 
+      severity="contrast"
+      styleClass="p-button-text" 
+      (onClick)="onGetCode()">
+    </p-button>    
   </div>
 </div>

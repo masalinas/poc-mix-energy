@@ -62,6 +62,7 @@ export class AppComponent {
   language: any;
 
   // table selectors filters
+  tableTitle!: string;
   categories: any[] = [];
   lastCategoryId: number = 0;
   category: any;
@@ -166,6 +167,21 @@ export class AppComponent {
     return `${day}-${month}-${year}T${hours}:${minutes}`;
   }
 
+  private getTableTitle() {
+    if (this.categorySelected.key == "balance")
+      this.tableTitle = "TABLE_TITLES.BALANCE_ENERGETICO_ESPANOL";
+    else if (this.categorySelected.key == "demanda")
+      this.tableTitle = "TABLE_TITLES.DEMANDA_ENERGETICA_ESPANOLA";
+    else if (this.categorySelected.key == "generacion")
+      this.tableTitle = "TABLE_TITLES.GENERACION_ENERGETICA_ESPANOLA";
+    else if (this.categorySelected.key == "intercambios")
+      this.tableTitle = "TABLE_TITLES.INTERCAMBIOS_ENERGETICOS_ESPANOLA";
+    else if (this.categorySelected.key == "transporte")
+      this.tableTitle = "TABLE_TITLES.TRANSPORTE_ENERGETICO_ESPANOL";    
+    else if (this.categorySelected.key == "mercados")
+      this.tableTitle = "TABLE_TITLES.MERCADO_ENERGETICO_ESPANOLA";
+  }
+
   onChangeLanguage(lang: any) {
     this.lastLanguageId = this.languages.findIndex((item:any) => item.key == lang.key);
     this.translate.use(lang.code);    
@@ -176,6 +192,8 @@ export class AppComponent {
     this.widgets = this.translatorListService.translatorByGroup(category.key.toUpperCase(), this.categorySelected.widgets);  
 
     this.lastCategoryId = this.categories.findIndex((item:any) => item.key == category.key);
+
+    this.getTableTitle();
   }
 
   onChangeWidget(widget: any) {
@@ -260,5 +278,9 @@ export class AppComponent {
 
   onSendEmail() {
     window.open('mailto:masalinas.gancedo@gmail.com', '_self');
+  }
+
+  onGetCode() {
+    window.open('https://github.com/masalinas/poc-mix-energy', '_self');
   }
 }

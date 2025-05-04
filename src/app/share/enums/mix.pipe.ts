@@ -1,8 +1,3 @@
-export const LANG: any[] = [
-    {key: 'es', label: 'ES'},
-    {key: 'en', label: 'EN'},
-]
-
 export const CATEGORIES: any[] = [
     {key: 'balance', label: 'BALANCE'},
     {key: 'demanda', label: 'DEMANDA'},
