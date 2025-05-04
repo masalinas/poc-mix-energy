@@ -29,7 +29,9 @@
     <p-dropdown 
       [options]="widgets"        
       [(ngModel)]="widget"             
-      optionLabel="label" 
+      optionLabel="label"
+      [pTooltip]="widgetTooltip"
+      tooltipPosition="bottom"
       [placeholder]="translate.instant('TABLE_SELECTORS.WIDGET_SELECTOR')"      
       [style]="{'width': '500px'}"                    
       (onChange)="onChangeWidget($event.value)">

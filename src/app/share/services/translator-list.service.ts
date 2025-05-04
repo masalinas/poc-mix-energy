@@ -15,7 +15,8 @@ export class TranslatorListService {
   translator(list: any) {
     let translation  = list.map((item: any) => ({
       label: this.translate.instant(item.label),
-      key: item.key
+      key: item.key,
+      description: item.description
     }));
 
     return translation;
@@ -24,7 +25,8 @@ export class TranslatorListService {
   translatorByGroup(group:string, list: any) {
     let translation  = list.map((item: any) => ({
       label: this.translate.instant(group + "." + item.label),
-      key: item.key
+      key: item.key,
+      description: item.description
     }));
 
     return translation;

@@ -37,7 +37,7 @@ export const WIDGETS: any[] = [
         {key: 'potencia-maxima-instantanea-variacion-historico', label: 'POTENCIA_MAXIMA_INSTANTANEA_VARIACION_HISTORICO'},
         {key: 'demanda-tiempo-real', label: 'DEMANDA_TIEMPO_REAL'},
         {key: 'variacion-componentes-anual', label: 'VARIACION_COMPONENTES_ANUAL'},
-        {key: 'estructura-generacion', label: 'ESTRUCTURA_GENERACION'},
+        {key: 'estructura-generacion', label: 'ESTRUCTURA_GENERACION', description: 'ESTRUCTURA_GENERACION_DESC'},
         {key: 'evolucion-renovable-no-renovable', label: 'EVOLUCION_RENOVABLE_NO_RENOVABLE'},
         {key: 'estructura-renovables', label: 'ESTRUCTURA_RENOVABLES'},
         {key: 'estructura-generacion-emisiones-asociadas', label: 'ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS'},
@@ -109,12 +109,32 @@ export const GEO_TRUNCS: any[] = [
 ]
 
 export const GEO_LIMITS: any[] = [
-    {key: 'peninsular', label: 'PENINSULAR'},
-    {key: 'canarias', label: 'CANARIAS'},
-    {key: 'baleares', label: 'BALEARES'},
-    {key: 'ceuta', label: 'CEUTA'},
-    {key: 'melilla', label: 'MELILLA'},
-    {key: 'ccaa', label: 'CCAA'},
+    {key: 'peninsular', label: 'PENINSULAR', geoId: 8741},
+    {key: 'canarias', label: 'CANARIAS', geoId: 8742},
+    {key: 'baleares', label: 'BALEARES', geoId: 8743},
+    {key: 'ceuta', label: 'CEUTA', geoId: 8744},
+    {key: 'melilla', label: 'MELILLA', geoId: 8745},
+    {key: 'ccaa', label: 'CCAA', regions: [
+        { key: "andalucia", label: "Andalucía", geoId: 4 },
+        { key: "aragon", label: "Aragón", geoId: 5 },
+        { key: "cantabria", label: "Cantabría", geoId: 6 },
+        { key: "castilla_mancha", label: "Castilla la Mancha", geoId: 7 },
+        { key: "castilla_leon", label: "Castilla León", geoId: 8 },
+        { key: "cataluna", label: "Cataluña", geoId: 9},
+        { key: "pais_vasco", label: "País Vasco", geoId: 10 },
+        { key: "asturias", label: "Principado de Asturias", geoId: 11 },
+        { key: "comunidad_ceuta", label: "Comunidad de Ceuta", geoId: 8744 },
+        { key: "comunidad_melilla", label: "Comunidad de Melilla", geoId: 8745 },
+        { key: "comunidad_madrid", label: "Comunidad de Madrid", geoId: 13 },
+        { key: "comunidad_navarra", label: "Comunidad de Navarra", eoId: 14 },
+        { key: "comunidad_valencia", label: "Comunidad de Valencia", geoId: 15 },
+        { key: "extremadura", label: "Extremadura", geoId: 16 },
+        { key: "galicia", label: "Galicia", geoId: 17 },
+        { key: "islas_baleares", label: "Islas Baleares", geoId: 8743 },
+        { key: "islas_canarias", label: "Islas Canarias", geoId: 8742 },
+        { key: "la_rioja", label: "La Rioja", geoId: 20},
+        { key: "regios_murcia", label: "Región de Murcia", geoId: 21 },
+    ]},
 ]
 
 export const GROUPS: any[] = [

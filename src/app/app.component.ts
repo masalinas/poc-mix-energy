@@ -15,6 +15,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CalendarModule } from 'primeng/calendar';
+import { TooltipModule } from 'primeng/tooltip';
 import { Table } from 'primeng/table';
 import { PrimeNGConfig } from 'primeng/api';
 import { MessageService } from 'primeng/api';
@@ -42,6 +43,7 @@ registerLocaleData(localeEs);
     InputNumberModule,
     InputTextModule,
     CalendarModule,
+    TooltipModule,
     DecimalPipe,
     DatePipe,
     PercentPipe
@@ -69,6 +71,7 @@ export class AppComponent {
   widgets: any[] = [];
   lastWidgetId: number = 0;
   widget: any;
+  widgetTooltip!: string;
   geoLimits: any[] = [];
   lastGeoLimitId: number = 0;
   geoLimit: any;
@@ -187,6 +190,8 @@ export class AppComponent {
 
   onChangeWidget(widget: any) {
     this.lastWidgetId = this.widgets.findIndex((item:any) => item.key == widget.key);
+
+    this.widgetTooltip = this.translate.instant(this.categorySelected.key.toUpperCase() + "." + this.widget.description);
   }
 
   onTimeTruncChange(timeTrunc: any) {

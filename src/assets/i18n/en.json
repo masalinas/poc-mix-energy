@@ -118,6 +118,7 @@
         "DEMANDA_TIEMPO_REAL": "Real Time Demand",
         "VARIACION_COMPONENTES_ANUAL": "Annual Component Variation",
         "ESTRUCTURA_GENERACION": "Generation Structure",
+        "ESTRUCTURA_GENERACION_DESC": "Electricity balance: allocation of production units according to main fuel",
         "EVOLUCION_RENOVABLE_NO_RENOVABLE": "Renewable Non Renewable Evolution",
         "ESTRUCTURA_RENOVABLES": "Rnewable Structure",
         "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Generation Structure Associated Emissiones",

@@ -118,6 +118,7 @@
         "DEMANDA_TIEMPO_REAL": "Demanda Tiempo Real",
         "VARIACION_COMPONENTES_ANUAL": "Variación Componentes Real",
         "ESTRUCTURA_GENERACION": "Estructura Generación",
+        "ESTRUCTURA_GENERACION_DESC": "Balance eléctrico: asignación de unidades de producción según combustible principal",
         "EVOLUCION_RENOVABLE_NO_RENOVABLE": "Evolución Renovables No Renovables",
         "ESTRUCTURA_RENOVABLES": "Estructura Renovables",
         "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Estructura Generación Emisiones Asociadas",
