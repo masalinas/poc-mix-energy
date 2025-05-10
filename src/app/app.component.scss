@@ -1,34 +1,111 @@
-.app-container {
+.app-container-main {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    height: 100vh;
 }
 
-.app-panel-top-bar {
+.app-container-topbar {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-right: 5px;
 }
 
-.app-panel-selector {
+.app-container-selectors {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding-left: 15px;
+    padding-top: 5px;
     padding-bottom: 5px;
     gap: 5px;
+    padding-left: 5px;
+}
+
+.app-container-table {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex: 1;
+    overflow: auto;
+}
+
+.app-container-bottombar {
+    display: flex;
+    justify-content: flex-end;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #f4f4f4;
+    padding: 5px;    
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+::ng-deep .app-panel-header-filter {
+    padding-left: 5px;
+    
+    .p-panel {
+        display: flex;        
+        flex-direction: column;
+        height: 100%;
+
+        .p-toggleable-content {
+            display: flex;        
+            flex-direction: column;
+            height: 100%;    
+
+            .p-panel-content {
+                height: 100%;
+                margin-bottom: 10px;
+            }
+        }        
+    }
+        
+    .p-panel-header {
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+}
+
+.app-panel-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+}
+
+::ng-deep .app-panel-table {
+    padding-right: 5px;
+
+    .p-panel {
+        display: flex;        
+        flex-direction: column;
+        height: 100%;
+
+        .p-toggleable-content {
+            display: flex;        
+            flex-direction: column;
+            height: 100%;    
+
+            .p-panel-content {
+                height: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    width: 100%;
 }
 
 .table-toolbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 5px;
+    width: 100%;
 }
 
-.table-left-toolbar, .table-right-toolbar {
+.table-toolbar-left {
     display: flex;
-    flex-direction: row;
     gap: 5px;
 }
 
@@ -50,15 +127,4 @@
     height: 20px;
     border-radius: 50%;
     display: inline-block;
-}
-
-.app-bottom-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #f4f4f4;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }

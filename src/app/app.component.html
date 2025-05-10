@@ -1,23 +1,21 @@
-<p-toast />
-
-<div class="app-container">
+<div class="app-container-main">
   <!-- App Mix Top Bar -->
-  <div class="app-panel-top-bar">
-      <div></div>
-      <div>
-        <p-dropdown 
-          [options]="languages"        
-          [(ngModel)]="language"             
-          optionLabel="label" 
-          [placeholder]="translate.instant('LAN_SELECTOR')"      
-          [style]="{'margin-left': 'auto', 'width': '150px'}"                    
-          (onChange)="onChangeLanguage($event.value)">
-        </p-dropdown>        
+  <div class="app-container-topbar">
+    <div></div>
+    <div>
+      <p-dropdown 
+        [options]="languages"        
+        [(ngModel)]="language"             
+        optionLabel="label" 
+        [placeholder]="translate.instant('LAN_SELECTOR')"      
+        [style]="{'margin-left': 'auto', 'width': '150px'}"                    
+        (onChange)="onChangeLanguage($event.value)">
+      </p-dropdown>        
     </div>
   </div>
 
-  <!-- App Mix Panel Selector -->
-  <div class="app-panel-selector">
+  <!-- App Mix Selectors Container -->
+  <div class="app-container-selectors">
     <p-dropdown 
       [options]="categories"        
       [(ngModel)]="category"             
@@ -38,161 +36,176 @@
     </p-dropdown>      
   </div>
 
-  <!-- App Mix Table -->
-  <p-table
-    #mixTable
-    [value]="mix"
-    [loading]="loading"
-    scrollable="true"
-    scrollHeight="flex"
-    [sortField]="'datetime'"
-    selectionMode="single"
-    [paginator]="true"
-    [rows]="250"
-    [rowsPerPageOptions]="[100, 250, 500]"
-    [showCurrentPageReport]="true"
-    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-    [exportHeader]="'customExportHeader'"
-    [tableStyle]="{ 'min-width': '50rem' }">
-    <!-- Table Mix Tool Bar -->    
-    <ng-template pTemplate="caption">
-      <div class="table-toolbar">
-          <div class="table-left-toolbar">
-              <!-- Table Mix Panel Filters -->
-              <p-calendar 
-                [(ngModel)]="rangeDates"
-                dateFormat="dd-mm-yy"
-                [showIcon]="true"
-                selectionMode="range"
-                [style]="{'width': '270px'}"
-                [placeholder]="translate.instant('TABLE_FILTERS.SELECT_INTERVAL')"
-                [readonlyInput]="true" /> 
-              <p-dropdown 
-                [options]="timeTruncs"              
-                [(ngModel)]="timeTrunc"
-                optionLabel="label" 
-                [style]="{'width': '290px'}"               
-                [placeholder]="translate.instant('TABLE_FILTERS.SELECT_TIME_TRUNC')"
-                (onChange)="onTimeTruncChange($event.value)">
-              </p-dropdown>
-              <!--<p-dropdown 
-                [options]="geoLimits"      
-                [(ngModel)]="geoLimit"             
-                optionLabel="label" 
-                [placeholder]="translate.instant('TABLE_SELECTORS.GEO_LIMIT_SELECTOR')"      
-                [style]="{'width': '240px'}"
-                showClear="true"                   
-                (onChange)="onChangeGeoLimit($event.value)">
-              </p-dropdown>-->                                  
-              <p-button 
-                [disabled]="rangeDates.length == 0 || timeTrunc == undefined"
-                [label]="translate.instant('GET_GENERATION_MIX')"
-                icon="pi pi-search" 
-                (onClick)="onGetMix($event)"/>                          
-          </div>
-          <div class="table-right-toolbar">       
+  <!-- App Mix Main Container -->
+  <div class="app-container-table">
+    <!-- App Mix Table Filters Panel -->
+    <p-panel [header]="translate.instant('FILTERS')" class="app-panel-header-filter">
+      <div class="app-panel-filter">  
+          <p-dropdown 
+          [options]="timeTruncs"              
+          [(ngModel)]="timeTrunc"
+          optionLabel="label" 
+          [style]="{'width': '290px'}"               
+          [placeholder]="translate.instant('TABLE_FILTERS.SELECT_TIME_TRUNC')"
+          (onChange)="onTimeTruncChange($event.value)">
+          </p-dropdown>               
+          <p-calendar 
+            [(ngModel)]="rangeDates"
+            dateFormat="dd-mm-yy"
+            [showIcon]="true"
+            selectionMode="range"
+            [style]="{'width': '100%'}"
+            [placeholder]="translate.instant('TABLE_FILTERS.SELECT_INTERVAL')"
+            [readonlyInput]="true"> 
+          </p-calendar>
+          <!--<p-dropdown 
+            [options]="geoLimits"      
+            [(ngModel)]="geoLimit"             
+            optionLabel="label" 
+            [placeholder]="translate.instant('TABLE_SELECTORS.GEO_LIMIT_SELECTOR')"      
+            [style]="{'width': '240px'}"
+            showClear="true"                   
+            (onChange)="onChangeGeoLimit($event.value)">
+          </p-dropdown>-->                                  
+      </div>
+    </p-panel>
+    <!-- App Mix Table Panel -->
+    <p-panel class="app-panel-table">
+      <!-- Table Mix Tool Bar -->
+      <ng-template pTemplate="header">
+        <div class="table-toolbar">
+          <div class="table-toolbar-left">
+            <p-button 
+              [disabled]="rangeDates.length == 0 || timeTrunc == undefined"
+              [label]="translate.instant('GET_GENERATION_MIX')"
+              icon="pi pi-search" 
+              (onClick)="onGetMix($event)">    
+            </p-button>              
             <p-button
               [label]="translate.instant('CLEAR_FILTERS')"
               icon="pi pi-filter-slash"
               [outlined]="true"
-              (onClick)="onClear(mixTable)" />
+              (onClick)="onClear(mixTable)">
+            </p-button>
+          </div>
+          <div>
             <p-button
               [disabled]="mix.length == 0"
               [label]="translate.instant('EXPORT')"
               icon="pi pi-file-export"
               severity="success"
-              (onClick)="onExport(mixTable)" />                
-          </div> 
+              (onClick)="onExport(mixTable)">
+            </p-button>
+          </div>
+        </div>
+      </ng-template>      
+      <!-- Table Mix Data -->
+      <div #tableContent style="height: 100%">
+        <p-table
+          #mixTable
+          [value]="mix"
+          [loading]="loading"
+          [scrollable]="true"
+          [scrollHeight]="scrollHeight"
+          selectionMode="single"        
+          [sortField]="'datetime'"
+          [paginator]="true"
+          [rows]="100"
+          [rowsPerPageOptions]="[50, 100, 200]"
+          [showCurrentPageReport]="true"
+          currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+          [exportHeader]="'customExportHeader'">           
+        <!-- Table Mix Columns -->
+        <ng-template pTemplate="header">
+            <tr>
+              <th pSortableColumn="group">
+                <div class="table-filter-toolbar">
+                  <p-sortIcon field="group" />
+                  {{'TABLE_COLUMNS.GROUP' | translate}}
+                  <p-columnFilter field="group" matchMode="equals" display="menu">
+                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                        <p-dropdown 
+                          [ngModel]="value"
+                          [options]="groups"
+                          optionLabel="label"
+                          optionValue="key"                      
+                          (onChange)="filter($event.value)"
+                          placeholder="Select Group">
+                        </p-dropdown>
+                    </ng-template>
+                  </p-columnFilter>
+                </div>
+              </th>
+              <th pSortableColumn="type">
+                <p-sortIcon field="type" />
+                {{'TABLE_COLUMNS.TYPE' | translate}}
+                <p-columnFilter field="type" matchMode="equals" display="menu">
+                  <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                      <p-dropdown 
+                        [ngModel]="value"
+                        [options]="types"
+                        optionLabel="label"
+                        optionValue="key"
+                        (onChange)="filter($event.value)"
+                        placeholder="Select Type">
+                      </p-dropdown>
+                  </ng-template>
+                </p-columnFilter>
+              </th>
+              <th pSortableColumn="value">
+                <div class="table-filter-toolbar">
+                  <p-sortIcon field="value" />
+                  {{'TABLE_COLUMNS.GENERATION' | translate}} 
+                  <p-columnFilter type="numeric" field="value" display="menu" />           
+                </div>
+              </th>
+              <th pSortableColumn="percentage">
+                <div class="table-filter-toolbar">
+                  <p-sortIcon field="percentage"/>
+                  {{'TABLE_COLUMNS.PERTENTAGE' | translate}} 
+                  <p-columnFilter type="numeric" field="percentage" matchMode="lte" display="menu">
+                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                      <p-inputNumber
+                        [showButtons]="true"
+                        [ngModel]="value * 100"
+                        (onInput)="onPercentageInput($event.value, filter)"
+                        placeholder="Enter Percentage"
+                      ></p-inputNumber>
+                    </ng-template>
+                  </p-columnFilter>
+                </div>
+              </th>
+              <th pSortableColumn="datetime">
+                <div class="table-filter-toolbar">
+                  <p-sortIcon field="datetime" />
+                  {{'TABLE_COLUMNS.DATETIME' | translate}} 
+                  <p-columnFilter type="date" field="datetime" display="menu" />
+                </div>
+              </th>
+            </tr>
+        </ng-template>
+        <!-- Table Mix Rows -->
+        <ng-template pTemplate="body" let-mix>
+            <tr>
+                <td>
+                  <div class="table-status-row">
+                    <div [style.background-color]="mix.color" class="color-circle"></div>
+                    {{ mix.group }}
+                  </div>
+                </td>
+                <td>{{ mix.type }}</td>
+                <td>{{ mix.value | number: '1.0-0' }}</td>
+                <td>{{ mix.percentage | percent: '1.0-1' }}</td>
+                <td>{{ mix.datetime | date: 'dd/MM/yyyy'}}</td>
+            </tr>
+        </ng-template>
+        </p-table>
       </div>
-    </ng-template>    
-    <!-- Table Mix Columns -->
-    <ng-template pTemplate="header">
-        <tr>
-          <th pSortableColumn="group">
-            <div class="table-filter-toolbar">
-              <p-sortIcon field="group" />
-              {{'TABLE_COLUMNS.GROUP' | translate}}
-              <p-columnFilter field="group" matchMode="equals" display="menu">
-                <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                    <p-dropdown 
-                      [ngModel]="value"
-                      [options]="groups"
-                      optionLabel="label"
-                      optionValue="key"                      
-                      (onChange)="filter($event.value)"
-                      placeholder="Select Group">
-                    </p-dropdown>
-                </ng-template>
-              </p-columnFilter>
-            </div>
-          </th>
-          <th pSortableColumn="type">
-            <p-sortIcon field="type" />
-            {{'TABLE_COLUMNS.TYPE' | translate}}
-            <p-columnFilter field="type" matchMode="equals" display="menu">
-              <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                  <p-dropdown 
-                    [ngModel]="value"
-                    [options]="types"
-                    optionLabel="label"
-                    optionValue="key"
-                    (onChange)="filter($event.value)"
-                    placeholder="Select Type">
-                  </p-dropdown>
-              </ng-template>
-            </p-columnFilter>
-          </th>
-          <th pSortableColumn="value">
-            <div class="table-filter-toolbar">
-              <p-sortIcon field="value" />
-              {{'TABLE_COLUMNS.GENERATION' | translate}} 
-              <p-columnFilter type="numeric" field="value" display="menu" />           
-            </div>
-          </th>
-          <th pSortableColumn="percentage">
-            <div class="table-filter-toolbar">
-              <p-sortIcon field="percentage"/>
-              {{'TABLE_COLUMNS.PERTENTAGE' | translate}} 
-              <p-columnFilter type="numeric" field="percentage" matchMode="lte" display="menu">
-                <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                  <p-inputNumber
-                    [showButtons]="true"
-                    [ngModel]="value * 100"
-                    (onInput)="onPercentageInput($event.value, filter)"
-                    placeholder="Enter Percentage"
-                  ></p-inputNumber>
-                </ng-template>
-              </p-columnFilter>
-            </div>
-          </th>
-          <th pSortableColumn="datetime">
-            <div class="table-filter-toolbar">
-              <p-sortIcon field="datetime" />
-              {{'TABLE_COLUMNS.DATETIME' | translate}} 
-              <p-columnFilter type="date" field="datetime" display="menu" />
-            </div>
-          </th>
-        </tr>
-    </ng-template>
-    <!-- Table Mix Rows -->
-    <ng-template pTemplate="body" let-mix>
-        <tr>
-            <td>
-              <div class="table-status-row">
-                <div [style.background-color]="mix.color" class="color-circle"></div>
-                {{ mix.group }}
-              </div>
-            </td>
-            <td>{{ mix.type }}</td>
-            <td>{{ mix.value | number: '1.0-0' }}</td>
-            <td>{{ mix.percentage | percent: '1.0-1' }}</td>
-            <td>{{ mix.datetime | date: 'dd/MM/yyyy'}}</td>
-        </tr>
-    </ng-template>
-  </p-table>
+    </p-panel>
+  </div>
 
   <!-- App Mix Botton Bar -->
-  <div class="app-bottom-bar">
+  <div class="app-container-bottombar">
     <p-button 
       [label]="translate.instant('EMAIL_TEXT')"
       icon="pi pi-envelope" 
@@ -208,3 +221,5 @@
     </p-button>    
   </div>
 </div>
+
+<p-toast />

@@ -2,6 +2,7 @@
     "LAN_SELECTOR": "Select Language",    
     "LAN_SPANISH": "Spanish",
     "LAN_ENGLISH": "English",
+    "FILTERS": "Filters",
     "GET_GENERATION_MIX": "Get Data",
     "CLEAR_FILTERS": "Clear Filters",
     "EXPORT": "Export",

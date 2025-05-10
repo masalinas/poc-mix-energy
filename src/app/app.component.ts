@@ -1,4 +1,4 @@
-import { Component, LOCALE_ID } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, LOCALE_ID, ViewChild } from '@angular/core';
 import { CommonModule, DecimalPipe, DatePipe, PercentPipe, registerLocaleData } from '@angular/common';
 import { FormsModule} from '@angular/forms'
 import localeEs from '@angular/common/locales/es';
@@ -16,6 +16,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CalendarModule } from 'primeng/calendar';
 import { TooltipModule } from 'primeng/tooltip';
+import { PanelModule } from 'primeng/panel';
+import { FieldsetModule } from 'primeng/fieldset';
 import { Table } from 'primeng/table';
 import { PrimeNGConfig } from 'primeng/api';
 import { MessageService } from 'primeng/api';
@@ -44,6 +46,8 @@ registerLocaleData(localeEs);
     InputTextModule,
     CalendarModule,
     TooltipModule,
+    PanelModule,
+    FieldsetModule,
     DecimalPipe,
     DatePipe,
     PercentPipe
@@ -55,9 +59,12 @@ registerLocaleData(localeEs);
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   loading: boolean = false;  
   
+  @ViewChild('tableContent') tableContent!: ElementRef;
+  scrollHeight: string = "flex";
+
   // app languages
   languages: any[] = [];
   lastLanguageId: number = 0;
@@ -142,6 +149,18 @@ export class AppComponent {
         monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
         // Additional translations for PrimeNG components if needed
       });
+  }
+
+  // Optional: Recalculate on window resize
+  @HostListener('window:resize')
+  onResize() {
+    this.ngAfterViewInit();
+  }
+    
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.scrollHeight = (this.tableContent.nativeElement.offsetHeight - 80) + 'px'
+    });
   }
 
   private setLanguageTranslations() {
