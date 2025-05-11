@@ -137,7 +137,7 @@ export const GEO_LIMITS: any[] = [
     ]},
 ]
 
-export const GROUPS: any[] = [
+export const TECHNOLOGIES: any[] = [
     {key: 'Hidráulica', label: 'HYDRAULIC'},
     {key: 'Nuclear', label: 'NUCLEAR'},
     {key: 'Carbón', label: 'COAL'},

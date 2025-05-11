@@ -1,7 +1,9 @@
 <div class="app-container-main">
   <!-- App Mix Top Bar -->
   <div class="app-container-topbar">
-    <div></div>
+    <div>
+      <img src="assets/images/logo-icon.png" width="110" height="40" />
+    </div>
     <div>
       <p-dropdown 
         [options]="languages"        
@@ -40,34 +42,12 @@
   <div class="app-container-table">
     <!-- App Mix Table Filters Panel -->
     <p-panel [header]="translate.instant('FILTERS')" class="app-panel-header-filter">
-      <div class="app-panel-filter">  
-          <p-dropdown 
-          [options]="timeTruncs"              
-          [(ngModel)]="timeTrunc"
-          optionLabel="label" 
-          [style]="{'width': '290px'}"               
-          [placeholder]="translate.instant('TABLE_FILTERS.SELECT_TIME_TRUNC')"
-          (onChange)="onTimeTruncChange($event.value)">
-          </p-dropdown>               
-          <p-calendar 
-            [(ngModel)]="rangeDates"
-            dateFormat="dd-mm-yy"
-            [showIcon]="true"
-            selectionMode="range"
-            [style]="{'width': '100%'}"
-            [placeholder]="translate.instant('TABLE_FILTERS.SELECT_INTERVAL')"
-            [readonlyInput]="true"> 
-          </p-calendar>
-          <!--<p-dropdown 
-            [options]="geoLimits"      
-            [(ngModel)]="geoLimit"             
-            optionLabel="label" 
-            [placeholder]="translate.instant('TABLE_SELECTORS.GEO_LIMIT_SELECTOR')"      
-            [style]="{'width': '240px'}"
-            showClear="true"                   
-            (onChange)="onChangeGeoLimit($event.value)">
-          </p-dropdown>-->                                  
-      </div>
+      <app-mix-filter
+        #mixFilter
+        [category]="category"
+        [widget]="widget"
+        (filterChange)="onFilterChange($event)">
+      </app-mix-filter>
     </p-panel>
     <!-- App Mix Table Panel -->
     <p-panel class="app-panel-table">
@@ -76,7 +56,7 @@
         <div class="table-toolbar">
           <div class="table-toolbar-left">
             <p-button 
-              [disabled]="rangeDates.length == 0 || timeTrunc == undefined"
+              [disabled]="isStatusValidGetMix()"
               [label]="translate.instant('GET_GENERATION_MIX')"
               icon="pi pi-search" 
               (onClick)="onGetMix($event)">    
@@ -118,19 +98,19 @@
         <!-- Table Mix Columns -->
         <ng-template pTemplate="header">
             <tr>
-              <th pSortableColumn="group">
+              <th pSortableColumn="technology">
                 <div class="table-filter-toolbar">
-                  <p-sortIcon field="group" />
-                  {{'TABLE_COLUMNS.GROUP' | translate}}
-                  <p-columnFilter field="group" matchMode="equals" display="menu">
+                  <p-sortIcon field="technology" />
+                  {{'TABLE_COLUMNS.TECHNOLOGY' | translate}}
+                  <p-columnFilter field="technology" matchMode="equals" display="menu">
                     <ng-template pTemplate="filter" let-value let-filter="filterCallback">
                         <p-dropdown 
                           [ngModel]="value"
-                          [options]="groups"
+                          [options]="technologies"
                           optionLabel="label"
                           optionValue="key"                      
                           (onChange)="filter($event.value)"
-                          placeholder="Select Group">
+                          placeholder="Select Tecnología">
                         </p-dropdown>
                     </ng-template>
                   </p-columnFilter>
@@ -190,7 +170,7 @@
                 <td>
                   <div class="table-status-row">
                     <div [style.background-color]="mix.color" class="color-circle"></div>
-                    {{ mix.group }}
+                    {{ mix.technology }}
                   </div>
                 </td>
                 <td>{{ mix.type }}</td>

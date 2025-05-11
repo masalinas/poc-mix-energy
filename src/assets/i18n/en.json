@@ -18,7 +18,7 @@
         "SELECT_TIME_TRUNC": "Select Time Trunc"
     },        
     "TABLE_COLUMNS": {
-        "GROUP": "Group",
+        "TECHNOLOGY": "Technology",
         "TYPE": "Type",
         "GENERATION": "Generation",
         "PERTENTAGE": "Percentage",
@@ -30,7 +30,7 @@
         "MONTHS": "Months",
         "YEARS": "Years"
     },
-    "GROUP": {
+    "TECHNOLOGY": {
         "HYDRAULIC": "Hydraulic",
         "NUCLEAR": "Nuclear",
         "COAL": "Coal",

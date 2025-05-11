@@ -1,0 +1,29 @@
+<div class="app-panel-filter">  
+    <p-dropdown 
+      [(ngModel)]="timeTrunc"
+      [options]="timeTruncs"              
+      optionLabel="label" 
+      [style]="{'width': '290px'}"               
+      [placeholder]="translate.instant('TABLE_FILTERS.SELECT_TIME_TRUNC')"
+      (onChange)="onTimeTruncChange(timeTrunc)">
+    </p-dropdown>               
+    <p-calendar 
+      [(ngModel)]="rangeDates"
+      dateFormat="dd-mm-yy"
+      [showIcon]="true"
+      [readonlyInput]="true"      
+      selectionMode="range"
+      [style]="{'width': '100%'}"
+      [placeholder]="translate.instant('TABLE_FILTERS.SELECT_INTERVAL')"
+      (onSelect)="onRangeDatesChange(rangeDates)"> 
+    </p-calendar>
+    <!--<p-dropdown 
+      [options]="geoLimits"      
+      [(ngModel)]="geoLimit"             
+      optionLabel="label" 
+      [placeholder]="translate.instant('TABLE_SELECTORS.GEO_LIMIT_SELECTOR')"      
+      [style]="{'width': '240px'}"
+      showClear="true"                   
+      (onChange)="onChangeGeoLimit($event.value)">
+    </p-dropdown>-->                                  
+</div>

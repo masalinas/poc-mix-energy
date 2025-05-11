@@ -24,7 +24,10 @@ import { MessageService } from 'primeng/api';
 
 import { TranslatorListService } from './share/services/translator-list.service';
 import { MixService } from './share/services/mix.service';
-import { CATEGORIES, WIDGETS, GROUPS, TYPES, TIME_TRUNCS, GEO_LIMITS } from './share/enums/mix.pipe';
+import { CATEGORIES, WIDGETS, TECHNOLOGIES, TYPES } from './share/enums/mix.enum';
+
+import { MixFilterComponent } from './share/components/mix-filter/mix-filter.component';
+import { MixFilter } from './share/models/mix-filter.model';
 
 // Register the Spanish locale
 registerLocaleData(localeEs);
@@ -50,7 +53,8 @@ registerLocaleData(localeEs);
     FieldsetModule,
     DecimalPipe,
     DatePipe,
-    PercentPipe
+    PercentPipe,
+    MixFilterComponent
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es' }, // Set default locale to Spanish
@@ -65,6 +69,8 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('tableContent') tableContent!: ElementRef;
   scrollHeight: string = "flex";
 
+  @ViewChild('mixFilter') mixFilterComponent!: MixFilterComponent;  
+
   // app languages
   languages: any[] = [];
   lastLanguageId: number = 0;
@@ -72,27 +78,19 @@ export class AppComponent implements AfterViewInit {
 
   // table selectors filters
   categories: any[] = [];
-  lastCategoryId: number = 0;
   category: any;
+  lastCategoryId: number = 0;
   categorySelected: any;
   widgets: any[] = [];
-  lastWidgetId: number = 0;
   widget: any;
+  lastWidgetId: number = 0;
   widgetTooltip!: string;
-  geoLimits: any[] = [];
-  lastGeoLimitId: number = 0;
-  geoLimit: any;
 
   // table mix datasource
+  mixFilter!: MixFilter;
   mix: any[] = []
 
-  // table mix filters
-  timeTruncs: any[] = [];
-  lastTimeTruncId: number = 0;
-  timeTrunc: any;
-  rangeDates: Date[] = [];
-
-  groups: any[] = [];
+  technologies: any[] = [];
   types: any[] = [];
 
   constructor(
@@ -126,15 +124,9 @@ export class AppComponent implements AfterViewInit {
           this.category = this.categories[this.lastCategoryId];  
 
         if (this.widget != undefined)
-          this.widget = this.widgets[this.lastWidgetId];  
+          this.widget = this.widgets[this.lastWidgetId];
 
-        if (this.timeTrunc == undefined)
-          this.timeTrunc = this.timeTruncs[1]; 
-        else
-          this.timeTrunc = this.timeTruncs[this.lastTimeTruncId];  
-
-        if (this.geoLimit != undefined)
-          this.geoLimit = this.geoLimits[this.lastGeoLimitId];
+        this.mixFilterComponent.onLangChange();
 
         // initialize category
         //this.category = this.categories[0];
@@ -171,10 +163,8 @@ export class AppComponent implements AfterViewInit {
     this.categories = this.translatorListService.translatorByGroup("CATEGORY", CATEGORIES);
     if (this.categorySelected)    
       this.widgets = this.translatorListService.translatorByGroup(this.categorySelected.key.toUpperCase(), this.categorySelected.widgets); 
-    this.groups = this.translatorListService.translatorByGroup("GROUP", GROUPS);
-    this.types = this.translatorListService.translatorByGroup("TYPE", TYPES);
-    this.timeTruncs = this.translatorListService.translatorByGroup("TIME_TRUNC", TIME_TRUNCS);
-    this.geoLimits = this.translatorListService.translatorByGroup("GEO_LIMIT", GEO_LIMITS);      
+    this.technologies = this.translatorListService.translatorByGroup("TECHNOLOGY", TECHNOLOGIES);
+    this.types = this.translatorListService.translatorByGroup("TYPE", TYPES);   
   }
 
   private setPrimeNGTranslations() {
@@ -192,6 +182,19 @@ export class AppComponent implements AfterViewInit {
     return `${day}-${month}-${year}T${hours}:${minutes}`;
   }
 
+  isStatusValidGetMix() : boolean {
+    if (this.category &&
+        this.widget &&
+        this.mixFilter &&
+        this.mixFilter.timeTruncId !== null &&
+        this.mixFilter.rangeDates &&
+        this.mixFilter.rangeDates![0] !== null &&
+        this.mixFilter.rangeDates![1] !== null)        
+        return false;
+    
+    return true;
+  }
+
   onChangeLanguage(lang: any) {
     this.lastLanguageId = this.languages.findIndex((item:any) => item.key == lang.key);
     this.translate.use(lang.code);    
@@ -202,23 +205,12 @@ export class AppComponent implements AfterViewInit {
     this.widgets = this.translatorListService.translatorByGroup(category.key.toUpperCase(), this.categorySelected.widgets);  
 
     this.lastCategoryId = this.categories.findIndex((item:any) => item.key == category.key);
-    
-    // initialize widget
-    //this.widget = this.widgets[0]; 
   }
 
   onChangeWidget(widget: any) {
     this.lastWidgetId = this.widgets.findIndex((item:any) => item.key == widget.key);
 
     this.widgetTooltip = this.translate.instant(this.categorySelected.key.toUpperCase() + "." + this.widget.description);
-  }
-
-  onTimeTruncChange(timeTrunc: any) {
-    this.lastTimeTruncId = this.timeTruncs.findIndex((item:any) => item.key == timeTrunc.key);
-  }
-
-  onChangeGeoLimit(geoLimit: any) {
-    this.lastGeoLimitId = this.geoLimits.findIndex((item:any) => item.key == geoLimit.key);
   }
 
   onPercentageInput(value: any, filterCallback: (val: number) => void) {
@@ -230,15 +222,16 @@ export class AppComponent implements AfterViewInit {
     this.loading = true;
 
     this.mixService.getMixFiltered(
-      this.formatDate(this.rangeDates[0]),
-      this.formatDate(this.rangeDates[1]),
-      this.timeTrunc.key, 
+      this.category.key,
+      this.widget.key,
+      this.formatDate(this.mixFilter.rangeDates![0]),
+      this.formatDate(this.mixFilter.rangeDates![1]),
+      this.mixFilter.timeTruncId,
       undefined,
-      this.geoLimit?.key,
+      this.mixFilter.geoLimitId,
       undefined)
       .subscribe(mix => {
         this.loading = false;
-        //console.log(mix);
 
         this.mix = mix;
       },
@@ -259,14 +252,18 @@ export class AppComponent implements AfterViewInit {
     table.clear();
 
     // initialize filgters and data
-    this.rangeDates = [];
-    this.timeTrunc = this.timeTruncs[1];
-    this.geoLimit = null;
     this.mix = [];
+    this.mixFilterComponent.onClear();
 
     // initialize table with default filter
     table.sortField = "datetime";
     table.sortSingle();
+  }
+
+  onFilterChange(mixFilter: MixFilter) {
+    this.mixFilter = mixFilter;
+
+    this.isStatusValidGetMix();
   }
 
   onExport(table: Table) {
@@ -275,7 +272,7 @@ export class AppComponent implements AfterViewInit {
 
     let csv = 'Group,Type,Value,Percentage,Datetime\n';
     for (const row of rows) {
-      csv += `${row.group},${row.type},${row.value},${row.percentage},${row.datetime}\n`;
+      csv += `${row.technology},${row.type},${row.value},${row.percentage},${row.datetime}\n`;
     }
   
     const blob = new Blob([csv], { type: 'text/csv' });

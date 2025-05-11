@@ -18,7 +18,7 @@
         "SELECT_TIME_TRUNC": "Selecciona Agrupación Fecha"
     },
     "TABLE_COLUMNS": {
-        "GROUP": "Grupo",
+        "TECHNOLOGY": "Tecnología",
         "TYPE": "Tipo",
         "GENERATION": "Generación",
         "PERTENTAGE": "Porcentaje",
@@ -30,7 +30,7 @@
         "MONTHS": "Meses",
         "YEARS": "Años"
     },
-    "GROUP": {
+    "TECHNOLOGY": {
         "HYDRAULIC": "Hidráulica",
         "NUCLEAR": "Nuclear",
         "COAL": "Carbón",
@@ -54,7 +54,7 @@
         "TOTAL_GENERATION": "Generación Total"
     },
     "GEO_LIMIT": {
-        "PENINSULAR": "Peninsula",
+        "PENINSULAR": "Península",
         "CANARIAS": "Canarias",
         "BALEARES": "Baleares",
         "CEUTA": "Ceuta",
@@ -111,7 +111,7 @@
     "GENERACION": {
         "DEMANDA_MAXIMA_DIARIA": "Demanda Máxima Diaria",
         "VARIACION_MAXIMA_HORARIA": "Variación Máxima Horaria",
-        "PERDIDAS_TRANSPORTE": "Párdidas Trasnporte",
+        "PERDIDAS_TRANSPORTE": "Pérdidas Transporte",
         "POTENCIA_MAXIMA_INSTANTANEA": "Potencia Máxima Instantanea",
         "VARIACION_DEMANDA": "Variación Demanda",
         "POTENCIA_MAXIMA_INSTANTANEA_VARIACION": "Variación Potencia Máxima Instantanea",
@@ -119,7 +119,7 @@
         "DEMANDA_TIEMPO_REAL": "Demanda Tiempo Real",
         "VARIACION_COMPONENTES_ANUAL": "Variación Componentes Real",
         "ESTRUCTURA_GENERACION": "Estructura Generación",
-        "ESTRUCTURA_GENERACION_DESC": "Balance eléctrico: asignación de unidades de producción según combustible principal",
+        "ESTRUCTURA_GENERACION_DESC": "Balance Eléctrico: asignación de unidades de producción según combustible principal",
         "EVOLUCION_RENOVABLE_NO_RENOVABLE": "Evolución Renovables No Renovables",
         "ESTRUCTURA_RENOVABLES": "Estructura Renovables",
         "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Estructura Generación Emisiones Asociadas",
@@ -164,7 +164,7 @@
         "COMPONENTES_PRECIO": "Componentes Precio",
         "ENERGIA_GESTIONADA_SERVICIOS_AJUSTE": "Energía Gestionada Servicios Ajuste",
         "ENERGIA_RESTRICCIONES": "Energía Restricciones",
-        "PRECIOS_RESTRICCIONES": "Precios  Restricciones",
+        "PRECIOS_RESTRICCIONES": "Precios Restricciones",
         "RESERVA_POTENCIA_ADICIONAL": "Reserva Potencia Adicional",
         "BANDA_REGULACION_SECUNDARIA": "Banda Regulación Secundaria",
         "ENERGIA_PRECIOS_REGULACION_SECUNDARIA": "Energía Precios Regulación Secundaria",
