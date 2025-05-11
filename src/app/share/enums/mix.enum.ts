@@ -108,6 +108,11 @@ export const GEO_TRUNCS: any[] = [
     {key: 'electric_system', label: 'ELECTRIC_SYSTEM'},
 ]
 
+export const GEO_TYPES: any[] = [
+    {key: 'sistema_electrico', label: 'SISTEMA_ELECTRICO'},
+    {key: 'comunidades_autonomas', label: 'COMUNIDADES_AUTONOMNAS'}
+]
+
 export const GEO_LIMITS: any[] = [
     {key: 'peninsular', label: 'PENINSULAR', geoId: 8741},
     {key: 'canarias', label: 'CANARIAS', geoId: 8742},

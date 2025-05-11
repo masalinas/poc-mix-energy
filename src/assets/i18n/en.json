@@ -14,8 +14,11 @@
         "GEO_LIMIT_SELECTOR": "Select Geolimit"
     },
     "TABLE_FILTERS": {
-        "SELECT_INTERVAL": "Select Time Interval",
-        "SELECT_TIME_TRUNC": "Select Time Trunc"
+        "SELECT_ELECTRIC_SYSTEM": "Electricv System",
+        "SELECT_COUNTY": "Autonomous community",
+        "SELECT_TECHNOLOGY": "Technology",
+        "SELECT_INTERVAL": "Time interval",
+        "SELECT_TIME_TRUNC": "Time trunc"
     },        
     "TABLE_COLUMNS": {
         "TECHNOLOGY": "Technology",
@@ -53,6 +56,10 @@
         "NO_RENEWABLE": "No RENEWABLE",
         "TOTAL_GENERATION": "Total Generation"
     },
+    "GEO_TYPE": {
+        "SISTEMA_ELECTRICO": "Electrical system",
+        "COMUNIDADES_AUTONOMNAS": "Autonomous communities"
+    },    
     "GEO_LIMIT": {
         "PENINSULAR": "Peninsula",
         "CANARIAS": "Canarias",

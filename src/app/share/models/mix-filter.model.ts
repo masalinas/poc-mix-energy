@@ -1,6 +1,9 @@
 export interface MixFilter {
-  tecnoSelectId?: string;
+  tecnologyId?: string;
+  systemElectricId?: string;
+  countyId?: string;
   geoLimitId?: string;
+  technologyId?: string;
   timeTruncId?: string;
   rangeDates?: Date[];
 }

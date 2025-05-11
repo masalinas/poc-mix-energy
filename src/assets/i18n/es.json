@@ -14,8 +14,11 @@
         "GEO_LIMIT_SELECTOR": "Selecciona Geolimit"
     },
     "TABLE_FILTERS": {
-        "SELECT_INTERVAL": "Selecciona Rango Fechas",
-        "SELECT_TIME_TRUNC": "Selecciona Agrupación Fecha"
+        "SELECT_ELECTRIC_SYSTEM": "Sistema eléctrico",
+        "SELECT_COUNTY": "Comunidades autónomas",
+        "SELECT_TECHNOLOGY": "Tecnología",
+        "SELECT_INTERVAL": "Rango fechas",
+        "SELECT_TIME_TRUNC": "Agrupación fecha"
     },
     "TABLE_COLUMNS": {
         "TECHNOLOGY": "Tecnología",
@@ -40,8 +43,8 @@
         "COMBINED_CYCLE": "Ciclo Combinado",
         "HYDROWIND": "Hidroeólica",
         "WIND": "Eólica",
-        "DOLAR_PHOTOVOLTAIC": "Solar Fotovoltaica",
-        "COLAR_THERMAL": "Solar Térmica",
+        "SOLAR_PHOTOVOLTAIC": "Solar Fotovoltaica",
+        "SOLAR_THERMAL": "Solar Térmica",
         "OTHER_RENEWABLES": "Otras Renovables",
         "COGENERATION": "Cogeneración",
         "NON_RENEWABLE": "Residuos no Renovables",
@@ -52,6 +55,10 @@
         "RENOVABLE": "Renovable",
         "NO_RENEWABLE": "No Renovable",
         "TOTAL_GENERATION": "Generación Total"
+    },
+    "GEO_TYPE": {
+        "SISTEMA_ELECTRICO": "Sistema eléctrico",
+        "COMUNIDADES_AUTONOMNAS": "Comunidades autónomas"
     },
     "GEO_LIMIT": {
         "PENINSULAR": "Península",
