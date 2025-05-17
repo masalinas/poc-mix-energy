@@ -89,16 +89,14 @@
         "FILTER_CANCEL": "Cancel"         
     },  
     "CATEGORY": {
-        "BALANCE": "Balance",
         "DEMANDA": "Demand",
         "GENERACION": "Generation",
+        "ALMACENAMIENTO": "Storage",    
         "INTERCAMBIOS": "Exchanges",
-        "TRANSPORTE": "Transport",
-        "MERCADOS": "Markets"
+        "BALANCE": "Wlectrical balance",    
+        "MERCADOS": "Markets",
+        "TRANSPORTE": "Wransportation network"
     },      
-    "BALANCE": {
-        "BALANCE_ELETRICO": "Electric Balance"
-    },
     "DEMANDA": {
         "EVOLUCION": "Evolution",
         "VARIACION_COMPONENTES": "Variation Components",
@@ -137,6 +135,10 @@
         "MAXIMA_RENOVABLE_HISTORICO": "Maxikun Renewable Historical",
         "MAXIMA_SIN_EMISIONES_HISTORICO": "Maximun Non Emissions Historical"
     },
+    "ALMACENAMIENTO": {
+        "ENERGIA_ALMACENAMIENTO": "Energy storage",
+        "POTENCIA_INSTALADA": "Installed Power"
+    },    
     "INTERCAMBIOS": {
         "FRANCIA_FRONTERA": "France Border",
         "PORTUGAL_FRONTERA": "Portugal Border",
@@ -156,16 +158,9 @@
         "FRONTERA_PROGRAMADOS": "Scheduled Border",
         "TODAS_FRONTERAS_PROGRAMADADOS": "All Scheduled Borders"
     },
-    "TRANSPORTE": {
-        "ENERGIA_NO_SUMINISTRADA_ENS": "Energy Not Supplied ENS",
-        "INDICE_INDISPONIBILIDAD": "Unavailability",
-        "TIEMPO_INTERRUPCION_MEDIO_TIM": "Average Interruption Time TIM",
-        "KILOMETROS_LINEAS": "Line Kilometers",
-        "INDICE_DISPONIBILIDAD": "Availability Index",
-        "NUMERO_CORTES": "Number of Outages",
-        "ENS_TIM": "ENS TIM",
-        "INDICE_DISPONIBILIDAD_TOTAL": "Total Availability Index"        
-    }, 
+    "BALANCE": {
+        "BALANCE_ELETRICO": "Electric Balance"
+    },    
     "MERCADOS": { 
         "COMPONENTES_PRECIO_ENERGIA_CIERRE_DESGLOSE": "Energy Price Components Closing Breakdown",
         "COMPONENTES_PRECIO": "Price Components",
@@ -183,5 +178,15 @@
         "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS_BEFORE": "Energy Weighted Prices Deviation Management Before",
         "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS": "Energy Weighted Prices Deviation Management",
         "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS_AFTER": "Energy Weighted Prices Deviation Management After"               
+    },    
+    "TRANSPORTE": {
+        "ENERGIA_NO_SUMINISTRADA_ENS": "Energy Not Supplied ENS",
+        "INDICE_INDISPONIBILIDAD": "Unavailability",
+        "TIEMPO_INTERRUPCION_MEDIO_TIM": "Average Interruption Time TIM",
+        "KILOMETROS_LINEAS": "Line Kilometers",
+        "INDICE_DISPONIBILIDAD": "Availability Index",
+        "NUMERO_CORTES": "Number of Outages",
+        "ENS_TIM": "ENS TIM",
+        "INDICE_DISPONIBILIDAD_TOTAL": "Total Availability Index"        
     }      
 }

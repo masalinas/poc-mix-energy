@@ -8,7 +8,7 @@ import { TranslateService } from "@ngx-translate/core";
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
-import { CalendarModule } from 'primeng/calendar';
+import { CalendarModule, CalendarTypeView } from 'primeng/calendar';
 import { RadioButtonModule } from 'primeng/radiobutton';
 
 import { TranslatorListService } from '../../services/translator-list.service';
@@ -60,6 +60,8 @@ export class MixFilterComponent {
   lastTimeTruncId: number = 0;
   timeTrunc: any;
 
+  calendarView: CalendarTypeView = "date";
+  calendarDateFormat: string = "dd-mm-yy";
   rangeDates: Date[] = [];
 
   mixFilter: MixFilter = {};
@@ -120,6 +122,18 @@ export class MixFilterComponent {
   }
 
   onTimeTruncChange(timeTrunc: any) {
+    // configure calendar
+    if (this.timeTrunc.key == "day") {
+      this.calendarView="date";
+      this.calendarDateFormat="dd/mm/yy"; 
+    } else if (this.timeTrunc.key == "month") {
+      this.calendarView="month";
+      this.calendarDateFormat="mm/yy"; 
+    } else if (this.timeTrunc.key == "year") {
+      this.calendarView="year";
+      this.calendarDateFormat="yy"; 
+    }
+
     this.lastTimeTruncId = this.timeTruncs.findIndex((item:any) => item.key == timeTrunc.key);
 
     this.mixFilter.timeTruncId = timeTrunc.key;

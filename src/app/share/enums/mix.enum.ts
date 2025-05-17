@@ -1,16 +1,14 @@
 export const CATEGORIES: any[] = [
-    {key: 'balance', label: 'BALANCE'},
     {key: 'demanda', label: 'DEMANDA'},
     {key: 'generacion', label: 'GENERACION'},
+    {key: 'almacenamiento', label: 'ALMACENAMIENTO'},
     {key: 'intercambios', label: 'INTERCAMBIOS'},
-    {key: 'transporte', label: 'TRANSPORTE'},
+    {key: 'balance', label: 'BALANCE'},
     {key: 'mercados', label: 'MERCADOS'},
+    {key: 'transporte', label: 'TRANSPORTE'}
 ]
 
 export const WIDGETS: any[] = [
-    {key: 'balance', widgets: [
-        {key: 'balance-electrico', label: 'BALANCE_ELETRICO'}
-    ]},
     {key: 'demanda', widgets: [
         {key: 'evolucion', label: 'EVOLUCION'},
         {key: 'variacion-componentes', label: 'VARIACION_COMPONENTES'},
@@ -48,6 +46,10 @@ export const WIDGETS: any[] = [
         {key: 'maxima-renovable-historico', label: 'MAXIMA_RENOVABLE_HISTORICO'},
         {key: 'maxima-sin-emisiones-historico', label: 'MAXIMA_SIN_EMISIONES_HISTORICO'},
     ]},
+    {key: 'almacenamiento', widgets: [
+        {key: 'energia-almacenamiento', label: 'ENERGIA_ALMACENAMIENTO'},
+        {key: 'potencia_instalada', label: 'POTENCIA_INSTALADA'},
+    ]},    
     {key: 'intercambios', widgets: [
         {key: 'francia-frontera', label: 'FRANCIA_FRONTERA'},
         {key: 'portugal-frontera', label: 'PORTUGAL_FRONTERA'},
@@ -77,6 +79,9 @@ export const WIDGETS: any[] = [
         {key: 'ens-tim', label: 'ENS_TIM'},
         {key: 'indice-disponibilidad-total', label: 'INDICE_DISPONIBILIDAD_TOTAL'},
     ]},
+    {key: 'balance', widgets: [
+        {key: 'balance-electrico', label: 'BALANCE_ELETRICO'}
+    ]},    
     {key: 'mercados', widgets: [
         {key: 'componentes-precio-energia-cierre-desglose', label: 'COMPONENTES_PRECIO_ENERGIA_CIERRE_DESGLOSE'},
         {key: 'componentes-precio', label: 'COMPONENTES_PRECIO'},
@@ -98,7 +103,6 @@ export const WIDGETS: any[] = [
 ]    
 
 export const TIME_TRUNCS: any[] = [
-    {key: 'hour', label: 'HOURS'},
     {key: 'day', label: 'DAYS'},
     {key: 'month', label: 'MONTHS'},
     {key: 'year', label: 'YEARS'},

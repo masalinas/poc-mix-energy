@@ -46,7 +46,8 @@
     </p-dropdown>               
     <p-calendar 
       [(ngModel)]="rangeDates"
-      dateFormat="dd-mm-yy"
+      [view]="calendarView"
+      [dateFormat]="calendarDateFormat"
       [showIcon]="true"
       [readonlyInput]="true"      
       selectionMode="range"

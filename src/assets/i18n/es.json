@@ -89,15 +89,13 @@
         "FILTER_CANCEL": "Cancelar"       
     },
     "CATEGORY": {
-        "BALANCE": "Balance",
         "DEMANDA": "Demanda",
         "GENERACION": "Generación",
+        "ALMACENAMIENTO": "Almacenamiento",
         "INTERCAMBIOS": "Intercambios",
-        "TRANSPORTE": "Transporte",
-        "MERCADOS": "Mercados"
-    },
-    "BALANCE": {
-        "BALANCE_ELETRICO": "Balance Eléctrico"
+        "BALANCE": "Balance eléctrico",
+        "MERCADOS": "Mercados",
+        "TRANSPORTE": "Red de transporte"
     },
     "DEMANDA": {
         "EVOLUCION": "Evolución",
@@ -137,6 +135,10 @@
         "MAXIMA_RENOVABLE_HISTORICO": "Máxima Renovable Histórico",
         "MAXIMA_SIN_EMISIONES_HISTORICO": "Máxima Sin Emisiones Histórico"
     },
+    "ALMACENAMIENTO": {
+        "ENERGIA_ALMACENAMIENTO": "Energía Almacenamiento",
+        "POTENCIA_INSTALADA": "Potencia Instalada"
+    },
     "INTERCAMBIOS": {
         "FRANCIA_FRONTERA": "Francia Frontera",
         "PORTUGAL_FRONTERA": "Portugal Frontera",
@@ -156,16 +158,9 @@
         "FRONTERA_PROGRAMADOS": "Frontera Programados",
         "TODAS_FRONTERAS_PROGRAMADADOS": "Todas Frontera Programados"
     },
-    "TRANSPORTE": {
-        "ENERGIA_NO_SUMINISTRADA_ENS": "Energía No Suministrada ENS",
-        "INDICE_INDISPONIBILIDAD": "Indisponibilidad",
-        "TIEMPO_INTERRUPCION_MEDIO_TIM": "Tiempo Interrupción Medio TIM",
-        "KILOMETROS_LINEAS": "Kilómetros Líneas",
-        "INDICE_DISPONIBILIDAD": "Índice Disponibilidad",
-        "NUMERO_CORTES": "Número Cortes",
-        "ENS_TIM": "ENS TIM",
-        "INDICE_DISPONIBILIDAD_TOTAL": "Índice Disponibilidad Total"
-    },
+    "BALANCE": {
+        "BALANCE_ELETRICO": "Balance Eléctrico"
+    },    
     "MERCADOS": {     
         "COMPONENTES_PRECIO_ENERGIA_CIERRE_DESGLOSE": "Componentes Precio Energía Cierre Desglose",
         "COMPONENTES_PRECIO": "Componentes Precio",
@@ -183,5 +178,15 @@
         "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS_BEFORE": "Energía Precios Ponderados Gestión Desvíos Before",
         "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS": "Energía Precios Ponderados Gestión Desvíos",
         "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS_AFTER": "Energía Precios Ponderados Gestión Desvíos After"
-    }
+    },
+    "TRANSPORTE": {
+        "ENERGIA_NO_SUMINISTRADA_ENS": "Energía No Suministrada ENS",
+        "INDICE_INDISPONIBILIDAD": "Indisponibilidad",
+        "TIEMPO_INTERRUPCION_MEDIO_TIM": "Tiempo Interrupción Medio TIM",
+        "KILOMETROS_LINEAS": "Kilómetros Líneas",
+        "INDICE_DISPONIBILIDAD": "Índice Disponibilidad",
+        "NUMERO_CORTES": "Número Cortes",
+        "ENS_TIM": "ENS TIM",
+        "INDICE_DISPONIBILIDAD_TOTAL": "Índice Disponibilidad Total"
+    }    
 }

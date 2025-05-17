@@ -64,12 +64,14 @@ registerLocaleData(localeEs);
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements AfterViewInit {
-  loading: boolean = false;  
-  
-  @ViewChild('tableContent') tableContent!: ElementRef;
-  scrollHeight: string = "flex";
+  @ViewChild('tableContent')
+  tableContent!: ElementRef;
 
-  @ViewChild('mixFilter') mixFilterComponent!: MixFilterComponent;  
+  @ViewChild('mixFilter')
+  mixFilterComponent!: MixFilterComponent;  
+
+  loading: boolean = false;  
+  scrollHeight: string = "flex";
 
   // app languages
   languages: any[] = [];
@@ -143,7 +145,7 @@ export class AppComponent implements AfterViewInit {
       });
   }
 
-  // Optional: Recalculate on window resize
+  // Recalculate on window resize
   @HostListener('window:resize')
   onResize() {
     this.ngAfterViewInit();
@@ -190,7 +192,7 @@ export class AppComponent implements AfterViewInit {
         this.mixFilter.rangeDates &&
         this.mixFilter.rangeDates![0] !== null &&
         this.mixFilter.rangeDates![1] !== null)        
-        return false;
+      return false;
     
     return true;
   }
@@ -263,6 +265,8 @@ export class AppComponent implements AfterViewInit {
   onFilterChange(mixFilter: MixFilter) {
     this.mixFilter = mixFilter;
 
+    console.log(mixFilter);
+
     this.isStatusValidGetMix();
   }
 
@@ -270,7 +274,7 @@ export class AppComponent implements AfterViewInit {
     // Get only filtered rows (or all if no filter)
     const rows = table.filteredValue ? table.filteredValue : table.value;
 
-    let csv = 'Group,Type,Value,Percentage,Datetime\n';
+    let csv = 'Technologia,Tipo,Valor,Percentage,Fecha\n';
     for (const row of rows) {
       csv += `${row.technology},${row.type},${row.value},${row.percentage},${row.datetime}\n`;
     }
