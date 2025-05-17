@@ -15,17 +15,17 @@ export class TranslatorListService {
   translator(list: any) {
     let translation  = list.map((item: any) => ({
       label: this.translate.instant(item.label),
-      key: item.key,
+      id: item.id,
       description: item.description
     }));
 
     return translation;
   }
 
-  translatorByGroup(group:string, list: any) {
+  translatorByGroup(group: string, list: any) {
     let translation  = list.map((item: any) => ({
       label: this.translate.instant(group + "." + item.label),
-      key: item.key,
+      id: item.id,
       description: item.description
     }));
 
@@ -34,8 +34,8 @@ export class TranslatorListService {
 
   setLanguageTranslations() {
     return [
-      { key:'LAN_SPANISH', label: this.translate.instant('LAN_SPANISH'), code: 'es', icon: 'flag-icon flag-icon-es' },
-      { key:'LAN_ENGLISH', label: this.translate.instant('LAN_ENGLISH'), code: 'en', icon: 'flag-icon flag-icon-gb' }
+      { id:'LAN_SPANISH', label: this.translate.instant('LAN_SPANISH'), code: 'es', icon: 'flag-icon flag-icon-es' },
+      { id:'LAN_ENGLISH', label: this.translate.instant('LAN_ENGLISH'), code: 'en', icon: 'flag-icon flag-icon-gb' }
     ];
   }
 

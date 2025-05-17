@@ -59,7 +59,7 @@
               [disabled]="isStatusValidGetMix()"
               [label]="translate.instant('GET_GENERATION_MIX')"
               icon="pi pi-search" 
-              (onClick)="onGetMix($event)">    
+              (onClick)="onGetApiMix($event)">    
             </p-button>              
             <p-button
               [label]="translate.instant('CLEAR_FILTERS')"
@@ -108,7 +108,7 @@
                           [ngModel]="value"
                           [options]="technologies"
                           optionLabel="label"
-                          optionValue="key"                      
+                          optionValue="id"                      
                           (onChange)="filter($event.value)"
                           placeholder="Select Tecnología">
                         </p-dropdown>
@@ -125,7 +125,7 @@
                         [ngModel]="value"
                         [options]="types"
                         optionLabel="label"
-                        optionValue="key"
+                        optionValue="id"
                         (onChange)="filter($event.value)"
                         placeholder="Select Type">
                       </p-dropdown>

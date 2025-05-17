@@ -22,9 +22,9 @@ import { Table } from 'primeng/table';
 import { PrimeNGConfig } from 'primeng/api';
 import { MessageService } from 'primeng/api';
 
-import { TranslatorListService } from './share/services/translator-list.service';
-import { MixService } from './share/services/mix.service';
-import { CATEGORIES, WIDGETS, TECHNOLOGIES, TYPES } from './share/enums/mix.enum';
+import { TranslatorListService } from './share/services/mix-translator.service';
+import { MixModelService } from './share/services/mix-model.service';
+import { MixService } from './share/services/mix-api.service';
 
 import { MixFilterComponent } from './share/components/mix-filter/mix-filter.component';
 import { MixFilter } from './share/models/mix-filter.model';
@@ -100,7 +100,8 @@ export class AppComponent implements AfterViewInit {
     private messageService: MessageService,
     public translate: TranslateService,          
     public primengConfig: PrimeNGConfig,
-    public mixService: MixService) { 
+    public mixService: MixService,
+    private mixModelService: MixModelService) { 
       // initialize language from default browser language
       this.translate.addLangs(['es', 'en']);
       this.translate.setDefaultLang('es');
@@ -162,11 +163,11 @@ export class AppComponent implements AfterViewInit {
   }
 
   private setTranslateLists() {
-    this.categories = this.translatorListService.translatorByGroup("CATEGORY", CATEGORIES);
-    if (this.categorySelected)    
-      this.widgets = this.translatorListService.translatorByGroup(this.categorySelected.key.toUpperCase(), this.categorySelected.widgets); 
-    this.technologies = this.translatorListService.translatorByGroup("TECHNOLOGY", TECHNOLOGIES);
-    this.types = this.translatorListService.translatorByGroup("TYPE", TYPES);   
+    this.categories = this.translatorListService.translatorByGroup("CATEGORY", this.mixModelService.getCategories());
+    if (this.categorySelected)
+      this.widgets = this.translatorListService.translatorByGroup(this.categorySelected.id.toUpperCase(), this.mixModelService.getWidgetsByCategoryId(this.categorySelected.id));
+    this.technologies = this.translatorListService.translatorByGroup("TECHNOLOGY", this.mixModelService.getTechnologies());
+    this.types = this.translatorListService.translatorByGroup("TYPE", this.mixModelService.getTypes());   
   }
 
   private setPrimeNGTranslations() {
@@ -198,21 +199,21 @@ export class AppComponent implements AfterViewInit {
   }
 
   onChangeLanguage(lang: any) {
-    this.lastLanguageId = this.languages.findIndex((item:any) => item.key == lang.key);
+    this.lastLanguageId = this.languages.findIndex((item: any) => item.id == lang.id);
     this.translate.use(lang.code);    
   }
 
   onChangeCategory(category: any) {
-    this.categorySelected = WIDGETS.find(widget => widget.key == category.key);
-    this.widgets = this.translatorListService.translatorByGroup(category.key.toUpperCase(), this.categorySelected.widgets);  
+    this.categorySelected = category;
+    this.widgets = this.translatorListService.translatorByGroup(category.id.toUpperCase(), this.mixModelService.getWidgetsByCategoryId(category.id));
 
-    this.lastCategoryId = this.categories.findIndex((item:any) => item.key == category.key);
+    this.lastCategoryId = this.categories.findIndex((item: any) => item.id == category.id);
   }
 
   onChangeWidget(widget: any) {
-    this.lastWidgetId = this.widgets.findIndex((item:any) => item.key == widget.key);
+    this.lastWidgetId = this.widgets.findIndex((item: any) => item.id == widget.id);
 
-    this.widgetTooltip = this.translate.instant(this.categorySelected.key.toUpperCase() + "." + this.widget.description);
+    this.widgetTooltip = this.translate.instant(this.categorySelected.id.toUpperCase() + "." + this.widget.description);
   }
 
   onPercentageInput(value: any, filterCallback: (val: number) => void) {
@@ -220,12 +221,18 @@ export class AppComponent implements AfterViewInit {
     filterCallback(numericValue);
   }
 
-  onGetMix(event: any) {
+  onFilterChange(mixFilter: MixFilter) {
+    this.mixFilter = mixFilter;
+
+    this.isStatusValidGetMix();
+  }
+
+  onGetApiMix(event: any) {
     this.loading = true;
 
     this.mixService.getMixFiltered(
-      this.category.key,
-      this.widget.key,
+      this.category.id,
+      this.widget.id,
       this.formatDate(this.mixFilter.rangeDates![0]),
       this.formatDate(this.mixFilter.rangeDates![1]),
       this.mixFilter.timeTruncId,
@@ -260,14 +267,6 @@ export class AppComponent implements AfterViewInit {
     // initialize table with default filter
     table.sortField = "datetime";
     table.sortSingle();
-  }
-
-  onFilterChange(mixFilter: MixFilter) {
-    this.mixFilter = mixFilter;
-
-    console.log(mixFilter);
-
-    this.isStatusValidGetMix();
   }
 
   onExport(table: Table) {

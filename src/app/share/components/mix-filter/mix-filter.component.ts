@@ -11,8 +11,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CalendarModule, CalendarTypeView } from 'primeng/calendar';
 import { RadioButtonModule } from 'primeng/radiobutton';
 
-import { TranslatorListService } from '../../services/translator-list.service';
-import { GEO_TYPES, TIME_TRUNCS, GEO_LIMITS, TECHNOLOGIES } from '../../enums/mix.enum';
+import { TranslatorListService } from '../../services/mix-translator.service';
+import { GEO_TYPES, TIME_TRUNCS, GEO_LIMITS, TECHNOLOGIES } from '../../models/mix-domain.model';
 
 import { MixFilter } from '../../../share/models/mix-filter.model';
 
@@ -73,11 +73,11 @@ export class MixFilterComponent {
   }
 
   private getElectricSystems() {
-    return GEO_LIMITS.filter(geoLimit => geoLimit.key !== "ccaa");
+    return GEO_LIMITS.filter(geoLimit => geoLimit.id !== "ccaa");
   }
 
   private getAutonomousCommunities() {
-    return GEO_LIMITS.filter(geoLimit => geoLimit.key == "ccaa")[0].regions;         
+    return GEO_LIMITS.filter(geoLimit => geoLimit.id == "ccaa")[0].regions;         
   }
 
   private setTranslateLists() {
@@ -107,46 +107,46 @@ export class MixFilterComponent {
   }
 
   onGeoTypeChange(event: any) {
-    if (event.value.key == "sistema_electrico") {
+    if (event.value.id == "sistema_electrico") {
       this.timeTruncsByGeoType = this.timeTruncs;
 
-    } else if (event.value.key == "comunidades_autonomas") {
-      this.timeTruncsByGeoType = this.timeTruncs.filter(timeTrunc => timeTrunc.key !== "day");
+    } else if (event.value.id == "comunidades_autonomas") {
+      this.timeTruncsByGeoType = this.timeTruncs.filter(timeTrunc => timeTrunc.id !== "day");
     }
   }
 
   onElectricSystemChange(systemElectric: any) {
-    this.lastSystemElectricId = this.systemElectrics.findIndex((item:any) => item.key == systemElectric.key);
+    this.lastSystemElectricId = this.systemElectrics.findIndex((item:any) => item.id == systemElectric.id);
 
-    this.mixFilter.systemElectricId = systemElectric.key;
+    this.mixFilter.systemElectricId = systemElectric.id;
 
     this.filterChange.emit(this.mixFilter);
   }
 
   onAutonomousCommunityChange(county: any) {
-    this.lastCountyId = this.counties.findIndex((item:any) => item.key == county.key);
+    this.lastCountyId = this.counties.findIndex((item:any) => item.id == county.id);
 
-    this.mixFilter.countyId = county.key;
+    this.mixFilter.countyId = county.id;
 
     this.filterChange.emit(this.mixFilter);
   }
 
   onTimeTruncChange(timeTrunc: any) {
     // configure calendar
-    if (this.timeTrunc.key == "day") {
+    if (this.timeTrunc.id == "day") {
       this.calendarView="date";
       this.calendarDateFormat="dd/mm/yy"; 
-    } else if (this.timeTrunc.key == "month") {
+    } else if (this.timeTrunc.id == "month") {
       this.calendarView="month";
       this.calendarDateFormat="mm/yy"; 
-    } else if (this.timeTrunc.key == "year") {
+    } else if (this.timeTrunc.id == "year") {
       this.calendarView="year";
       this.calendarDateFormat="yy"; 
     }
 
-    this.lastTimeTruncId = this.timeTruncs.findIndex((item:any) => item.key == timeTrunc.key);
+    this.lastTimeTruncId = this.timeTruncs.findIndex((item:any) => item.id == timeTrunc.id);
 
-    this.mixFilter.timeTruncId = timeTrunc.key;
+    this.mixFilter.timeTruncId = timeTrunc.id;
 
     this.filterChange.emit(this.mixFilter);
   }
@@ -160,9 +160,9 @@ export class MixFilterComponent {
   }
 
   onTechnologyChange(technology: any) {
-    this.lastTechnologyId = this.technologies.findIndex((item:any) => item.key == technology.key);
+    this.lastTechnologyId = this.technologies.findIndex((item:any) => item.id == technology.id);
 
-    this.mixFilter.technologyId = technology.key;
+    this.mixFilter.technologyId = technology.id;
 
     this.filterChange.emit(this.mixFilter);
   }
