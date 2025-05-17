@@ -102,12 +102,6 @@ export const WIDGETS: any[] = [
     ]},                      
 ]    
 
-export const TIME_TRUNCS: any[] = [
-    {key: 'day', label: 'DAYS'},
-    {key: 'month', label: 'MONTHS'},
-    {key: 'year', label: 'YEARS'},
-]
-
 export const GEO_TRUNCS: any[] = [
     {key: 'electric_system', label: 'ELECTRIC_SYSTEM'},
 ]
@@ -144,6 +138,12 @@ export const GEO_LIMITS: any[] = [
         { key: "la_rioja", label: "La Rioja", geoId: 20},
         { key: "regios_murcia", label: "Región de Murcia", geoId: 21 },
     ]},
+]
+
+export const TIME_TRUNCS: any[] = [
+    {key: 'day', label: 'DAYS'},
+    {key: 'month', label: 'MONTHS'},
+    {key: 'year', label: 'YEARS'},
 ]
 
 export const TECHNOLOGIES: any[] = [
