@@ -118,6 +118,7 @@ export const GEO_LIMITS: any[] = [
     {key: 'ceuta', label: 'CEUTA', geoId: 8744},
     {key: 'melilla', label: 'MELILLA', geoId: 8745},
     {key: 'ccaa', label: 'CCAA', regions: [
+        { key: "todas", label: "Todas las comunidades", geoId: 4 },
         { key: "andalucia", label: "Andalucía", geoId: 4 },
         { key: "aragon", label: "Aragón", geoId: 5 },
         { key: "cantabria", label: "Cantabría", geoId: 6 },

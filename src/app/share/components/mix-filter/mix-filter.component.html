@@ -4,7 +4,8 @@
         [inputId]="geoType.key"
         name="geoType"
         [value]="geoType"
-        [(ngModel)]="selectedGeoType">
+        [(ngModel)]="selectedGeoType"
+        (onClick)="onGeoTypeChange($event)">
       </p-radioButton>
       <label>
         {{ geoType.label | translate }}
@@ -38,7 +39,7 @@
     </p-dropdown>                
     <p-dropdown 
       [(ngModel)]="timeTrunc"
-      [options]="timeTruncs"              
+      [options]="timeTruncsByGeoType"              
       optionLabel="label" 
       [style]="{'width': '290px'}"               
       [placeholder]="translate.instant('TABLE_FILTERS.SELECT_TIME_TRUNC')"

@@ -57,6 +57,7 @@ export class MixFilterComponent {
   technology: any = null;
 
   timeTruncs: any[] = [];
+  timeTruncsByGeoType: any[] = [];
   lastTimeTruncId: number = 0;
   timeTrunc: any;
 
@@ -103,6 +104,15 @@ export class MixFilterComponent {
 
     if (this.technology != undefined)
       this.technology = this.technologies[this.lastTechnologyId];        
+  }
+
+  onGeoTypeChange(event: any) {
+    if (event.value.key == "sistema_electrico") {
+      this.timeTruncsByGeoType = this.timeTruncs;
+
+    } else if (event.value.key == "comunidades_autonomas") {
+      this.timeTruncsByGeoType = this.timeTruncs.filter(timeTrunc => timeTrunc.key !== "day");
+    }
   }
 
   onElectricSystemChange(systemElectric: any) {
