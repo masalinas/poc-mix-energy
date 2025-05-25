@@ -68,7 +68,7 @@ export class MixFilterComponent implements OnChanges {
   mixFilter: MixFilter = {};
 
   constructor(
-    private translate: TranslateService,
+    private translateService: TranslateService,
     private mixTranslateService: MixTranslateService,
     private mixModelService: MixModelService) {    
   }
@@ -82,11 +82,11 @@ export class MixFilterComponent implements OnChanges {
   }
 
   private setTranslateLists() {
-    this.geoTypes = this.mixTranslateService.translatorByGroup("GEO_TYPE", GEO_TYPES);
-    this.timeTruncs = this.mixTranslateService.translatorByGroup("TIME_TRUNC", TIME_TRUNCS);
-    this.systemElectrics = this.mixTranslateService.translatorByGroup("GEO_LIMIT", this.getElectricSystems());
+    this.geoTypes = this.mixTranslateService.translateByGroup("GEO_TYPE", GEO_TYPES);
+    this.timeTruncs = this.mixTranslateService.translateByGroup("TIME_TRUNC", TIME_TRUNCS);
+    this.systemElectrics = this.mixTranslateService.translateByGroup("GEO_LIMIT", this.getElectricSystems());
     this.counties = this.getAutonomousCommunities();
-    this.technologies = this.mixTranslateService.translatorByGroup("TECHNOLOGY", TECHNOLOGIES);
+    this.technologies = this.mixTranslateService.translateByGroup("TECHNOLOGY", TECHNOLOGIES);
 
     this.selectedGeoType = this.geoTypes[0];
   }
@@ -106,11 +106,10 @@ export class MixFilterComponent implements OnChanges {
   private createDropDown(filter: any) {
     const dropdownRef = this.filterContainer.createComponent(Dropdown);
 
-    //dropdownRef.instance.id = ""
     dropdownRef.instance.name = filter.id;
     dropdownRef.instance.options = filter.collection;
     dropdownRef.instance.optionLabel = "label";
-    dropdownRef.instance.placeholder = this.translate.instant(filter.placeholder);
+    dropdownRef.instance.placeholder = this.translateService.instant(filter.placeholder);
     dropdownRef.instance.onChange.subscribe(item => {
       console.log('Selected value:', item.value);
 
@@ -143,7 +142,7 @@ export class MixFilterComponent implements OnChanges {
     calendaRef.instance.readonlyInput = true;
     calendaRef.instance.selectionMode = "range";
     calendaRef.instance.style = {'width': '100%'};
-    calendaRef.instance.placeholder = this.translate.instant('TABLE_FILTERS.SELECT_INTERVAL');
+    calendaRef.instance.placeholder = this.translateService.instant('TABLE_FILTERS.SELECT_INTERVAL');
     calendaRef.instance.onSelect.subscribe(value => {
         console.log('Selected value:', value);
 

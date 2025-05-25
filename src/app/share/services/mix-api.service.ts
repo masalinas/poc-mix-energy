@@ -7,7 +7,7 @@ import { mergeMap, toArray } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class MixService {
+export class MixApiService {
   constructor(private http: HttpClient) { }
 
   getMixFiltered(

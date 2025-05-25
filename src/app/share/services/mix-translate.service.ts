@@ -17,7 +17,7 @@ export class MixTranslateService {
     ));
   }
 
-  translatorByGroup(group: string, list: any) {
+  translateByGroup(group: string, list: any) {
     let translation  = list.map((item: any) => ({
       label: this.translateService.instant(group + "." + item.label),
       id: item.id,

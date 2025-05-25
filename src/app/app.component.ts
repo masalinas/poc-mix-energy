@@ -24,7 +24,7 @@ import { MessageService } from 'primeng/api';
 
 import { MixTranslateService } from './share/services/mix-translate.service';
 import { MixModelService } from './share/services/mix-model.service';
-import { MixService } from './share/services/mix-api.service';
+import { MixApiService } from './share/services/mix-api.service';
 
 import { MixFilterComponent } from './share/components/mix-filter/mix-filter.component';
 import { MixFilter } from './share/models/mix-filter.model';
@@ -100,7 +100,7 @@ export class AppComponent implements AfterViewInit {
     private messageService: MessageService,
     public translate: TranslateService,          
     public primengConfig: PrimeNGConfig,
-    public mixService: MixService,
+    public mixApiService: MixApiService,
     private mixModelService: MixModelService) { 
       // initialize language from default browser language
       this.translate.addLangs(['es', 'en']);
@@ -163,11 +163,11 @@ export class AppComponent implements AfterViewInit {
   }
 
   private setTranslateLists() {
-    this.categories = this.mixTranslateService.translatorByGroup("CATEGORY", this.mixModelService.getCategories());
+    this.categories = this.mixTranslateService.translateByGroup("CATEGORY", this.mixModelService.getCategories());
     if (this.categorySelected)
-      this.widgets = this.mixTranslateService.translatorByGroup(this.categorySelected.id.toUpperCase(), this.mixModelService.getWidgetsByCategoryId(this.categorySelected.id));
-    this.technologies = this.mixTranslateService.translatorByGroup("TECHNOLOGY", this.mixModelService.getTechnologies());
-    this.types = this.mixTranslateService.translatorByGroup("TYPE", this.mixModelService.getTypes());   
+      this.widgets = this.mixTranslateService.translateByGroup(this.categorySelected.id.toUpperCase(), this.mixModelService.getWidgetsByCategoryId(this.categorySelected.id));
+    this.technologies = this.mixTranslateService.translateByGroup("TECHNOLOGY", this.mixModelService.getTechnologies());
+    this.types = this.mixTranslateService.translateByGroup("TYPE", this.mixModelService.getTypes());   
   }
 
   private setPrimeNGTranslations() {
@@ -205,7 +205,7 @@ export class AppComponent implements AfterViewInit {
 
   onChangeCategory(category: any) {
     this.categorySelected = category;
-    this.widgets = this.mixTranslateService.translatorByGroup(category.id.toUpperCase(), this.mixModelService.getWidgetsByCategoryId(category.id));
+    this.widgets = this.mixTranslateService.translateByGroup(category.id.toUpperCase(), this.mixModelService.getWidgetsByCategoryId(category.id));
 
     this.lastCategoryId = this.categories.findIndex((item: any) => item.id == category.id);
   }
@@ -230,7 +230,7 @@ export class AppComponent implements AfterViewInit {
   onGetApiMix(event: any) {
     this.loading = true;
 
-    this.mixService.getMixFiltered(
+    this.mixApiService.getMixFiltered(
       this.category.id,
       this.widget.id,
       this.formatDate(this.mixFilter.rangeDates![0]),
