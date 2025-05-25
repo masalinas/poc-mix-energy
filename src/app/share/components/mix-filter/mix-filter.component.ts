@@ -164,7 +164,7 @@ export class MixFilterComponent implements OnChanges {
     if (changes['widget']) {
       if (changes['widget'].currentValue) {
         // get widget selected
-        const widget = this.mixModelService.getWidgetById(changes['widget'].currentValue.id)[0];
+        const widget = this.mixModelService.getWidgetById(changes['widget'].currentValue.id);
 
         // clear filter components
         this.filterContainer.clear()

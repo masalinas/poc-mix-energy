@@ -12,12 +12,12 @@ export class MixModelService {
     return CATEGORIES;
   }
 
+  getWidgetById(widgetId: string) {
+    return WIDGETS.find(widget => widget.id == widgetId);
+  }
+    
   getWidgetsByCategoryId(categoryId: string) {
     return WIDGETS.filter(widget => widget.categoryId == categoryId);
-  }
-
-  getWidgetById(widgetId: string) {
-    return WIDGETS.filter(widget => widget.id == widgetId);
   }
 
   getTechnologies() {
