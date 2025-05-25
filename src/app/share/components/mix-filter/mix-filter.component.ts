@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges, ViewChild, ViewContainerRef, ComponentRef, ChangeDetectorRef } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges, ViewChild, ViewContainerRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule} from '@angular/forms'
 
@@ -11,7 +11,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CalendarModule, CalendarTypeView, Calendar} from 'primeng/calendar';
 import { RadioButtonModule, RadioButton } from 'primeng/radiobutton';
 
-import { TranslatorListService } from '../../services/mix-translator.service';
+import { MixTranslateService } from '../../services/mix-translate.service';
 import { GEO_TYPES, TIME_TRUNCS, GEO_LIMITS, TECHNOLOGIES } from '../../models/mix-domain.model';
 
 import { MixFilter } from '../../../share/models/mix-filter.model';
@@ -68,10 +68,9 @@ export class MixFilterComponent implements OnChanges {
   mixFilter: MixFilter = {};
 
   constructor(
-    private translatorListService: TranslatorListService,
-    public translate: TranslateService,
-    private mixModelService: MixModelService,
-    private cdr: ChangeDetectorRef) {    
+    private translate: TranslateService,
+    private mixTranslateService: MixTranslateService,
+    private mixModelService: MixModelService) {    
   }
 
   private getElectricSystems() {
@@ -83,11 +82,11 @@ export class MixFilterComponent implements OnChanges {
   }
 
   private setTranslateLists() {
-    this.geoTypes = this.translatorListService.translatorByGroup("GEO_TYPE", GEO_TYPES);
-    this.timeTruncs = this.translatorListService.translatorByGroup("TIME_TRUNC", TIME_TRUNCS);
-    this.systemElectrics = this.translatorListService.translatorByGroup("GEO_LIMIT", this.getElectricSystems());
+    this.geoTypes = this.mixTranslateService.translatorByGroup("GEO_TYPE", GEO_TYPES);
+    this.timeTruncs = this.mixTranslateService.translatorByGroup("TIME_TRUNC", TIME_TRUNCS);
+    this.systemElectrics = this.mixTranslateService.translatorByGroup("GEO_LIMIT", this.getElectricSystems());
     this.counties = this.getAutonomousCommunities();
-    this.technologies = this.translatorListService.translatorByGroup("TECHNOLOGY", TECHNOLOGIES);
+    this.technologies = this.mixTranslateService.translatorByGroup("TECHNOLOGY", TECHNOLOGIES);
 
     this.selectedGeoType = this.geoTypes[0];
   }
@@ -107,6 +106,8 @@ export class MixFilterComponent implements OnChanges {
   private createDropDown(filter: any) {
     const dropdownRef = this.filterContainer.createComponent(Dropdown);
 
+    //dropdownRef.instance.id = ""
+    dropdownRef.instance.name = filter.id;
     dropdownRef.instance.options = filter.collection;
     dropdownRef.instance.optionLabel = "label";
     dropdownRef.instance.placeholder = this.translate.instant(filter.placeholder);
@@ -121,7 +122,7 @@ export class MixFilterComponent implements OnChanges {
     filter.collection.forEach((item: any) => {
       const radioButtonRef = this.filterContainer.createComponent(RadioButton);
 
-      radioButtonRef.instance.name = filter.id;
+      radioButtonRef.instance.name = item.id;
       radioButtonRef.instance.value = item.id;            
       radioButtonRef.instance.label = item.label;
       radioButtonRef.instance.onClick.subscribe(item => {
@@ -135,6 +136,7 @@ export class MixFilterComponent implements OnChanges {
   private createCalendar(filter: any) {
     const calendaRef = this.filterContainer.createComponent(Calendar);
     
+    calendaRef.instance.name = filter.id;
     calendaRef.instance.view = filter.value;
     calendaRef.instance.dateFormat = this.getCalendarView(filter.value);
     calendaRef.instance.showIcon = true;

@@ -5,26 +5,21 @@ import { PrimeNGConfig } from 'primeng/api';
 @Injectable({
   providedIn: 'root'
 })
-export class TranslatorListService {
+export class MixTranslateService {
   constructor(
-    private translate: TranslateService,
+    private translateService: TranslateService,
     private primengConfig: PrimeNGConfig,
   ) { }
 
-
-  translator(list: any) {
-    let translation  = list.map((item: any) => ({
-      label: this.translate.instant(item.label),
-      id: item.id,
-      description: item.description
-    }));
-
-    return translation;
+  translate(list: any) {
+    return list.map((item: any) => (
+       { ...item, label: this.translateService.instant(item.label) }
+    ));
   }
 
   translatorByGroup(group: string, list: any) {
     let translation  = list.map((item: any) => ({
-      label: this.translate.instant(group + "." + item.label),
+      label: this.translateService.instant(group + "." + item.label),
       id: item.id,
       description: item.description
     }));
@@ -34,13 +29,13 @@ export class TranslatorListService {
 
   setLanguageTranslations() {
     return [
-      { id:'LAN_SPANISH', label: this.translate.instant('LAN_SPANISH'), code: 'es', icon: 'flag-icon flag-icon-es' },
-      { id:'LAN_ENGLISH', label: this.translate.instant('LAN_ENGLISH'), code: 'en', icon: 'flag-icon flag-icon-gb' }
+      { id:'LAN_SPANISH', label: this.translateService.instant('LAN_SPANISH'), code: 'es', icon: 'flag-icon flag-icon-es' },
+      { id:'LAN_ENGLISH', label: this.translateService.instant('LAN_ENGLISH'), code: 'en', icon: 'flag-icon flag-icon-gb' }
     ];
   }
 
   setPrimeNGTranslations() {
-    this.translate.get([
+    this.translateService.get([
       'FILTER_TABLES.FILTER_MATCH_ALL',
       'FILTER_TABLES.FILTER_MATCH_ANY',
       'FILTER_TABLES.FILTER_EQUALS',
