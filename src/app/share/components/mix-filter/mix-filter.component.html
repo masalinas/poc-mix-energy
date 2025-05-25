@@ -1,4 +1,4 @@
-<div class="app-panel-filter">
+<form class="app-panel-filter" [formGroup]="formGroup">
     <ng-container #filterContainer></ng-container>
 
     <!--<div *ngFor="let geoType of geoTypes">
@@ -58,4 +58,4 @@
       [placeholder]="translate.instant('TABLE_FILTERS.SELECT_INTERVAL')"
       (onSelect)="onRangeDatesChange(rangeDates)"> 
     </p-calendar>-->                              
-</div>
+</form>

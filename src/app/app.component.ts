@@ -159,7 +159,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   private setLanguageTranslations() {
-    this.languages = this.mixTranslateService.setLanguageTranslations();  
+    this.languages = this.mixTranslateService.translateLanguages();  
   }
 
   private setTranslateLists() {
@@ -171,7 +171,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   private setPrimeNGTranslations() {
-    this.mixTranslateService.setPrimeNGTranslations();  
+    this.mixTranslateService.translatePrimeNG();  
   }
 
   private formatDate(date: any) {
@@ -205,7 +205,7 @@ export class AppComponent implements AfterViewInit {
 
   onChangeCategory(category: any) {
     this.categorySelected = category;
-    this.widgets = this.mixTranslateService.translateByGroup(category.id.toUpperCase(), this.mixModelService.getWidgetsByCategoryId(category.id));
+    this.widgets = this.mixTranslateService.translate(this.mixModelService.getWidgetsByCategoryId(category.id));
 
     this.lastCategoryId = this.categories.findIndex((item: any) => item.id == category.id);
   }
@@ -213,7 +213,9 @@ export class AppComponent implements AfterViewInit {
   onChangeWidget(widget: any) {
     this.lastWidgetId = this.widgets.findIndex((item: any) => item.id == widget.id);
 
-    this.widgetTooltip = this.translate.instant(this.categorySelected.id.toUpperCase() + "." + this.widget.description);
+    if (this.widget.description) {
+      this.widgetTooltip = this.translate.instant(this.widget.description);
+    }
   }
 
   onPercentageInput(value: any, filterCallback: (val: number) => void) {

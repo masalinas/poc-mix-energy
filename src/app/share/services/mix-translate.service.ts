@@ -27,14 +27,14 @@ export class MixTranslateService {
     return translation;
   }
 
-  setLanguageTranslations() {
+  translateLanguages() {
     return [
       { id:'LAN_SPANISH', label: this.translateService.instant('LAN_SPANISH'), code: 'es', icon: 'flag-icon flag-icon-es' },
       { id:'LAN_ENGLISH', label: this.translateService.instant('LAN_ENGLISH'), code: 'en', icon: 'flag-icon flag-icon-gb' }
     ];
   }
 
-  setPrimeNGTranslations() {
+  translatePrimeNG() {
     this.translateService.get([
       'FILTER_TABLES.FILTER_MATCH_ALL',
       'FILTER_TABLES.FILTER_MATCH_ANY',

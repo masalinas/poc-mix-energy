@@ -11,145 +11,145 @@ export const CATEGORIES: any[] = [
 export const WIDGETS: any[] = [
     // demanda
     {id: 'demanda-bc', label: 'DEMANDA_BC', categoryId: 'demanda', type: "dropdown", placeholder: "SELECCIONE_OPTION", collection: [
-        {id: 'evolucion-demanda', label: 'DEMANDA.EVOLUCION_DEMANDA', type: "radio-button", collection: [
-            {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
-                {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
+        {id: 'evolucion-demanda', label: 'EVOLUCION_DEMANDA', type: "dropdown", placeholder: "SELECCIONE_OPTION", collection: [
+            {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", placeholder: "SISTEMA_ELECTRICO", collection: [
+                {id: 'nacional', label: 'NACIONAL', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
-                {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
+                {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
-                {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
+                {id: 'baleares', label: 'BALEARES', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
-                {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
+                {id: 'canarias', label: 'CANARIAS', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
-                {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
+                {id: 'ceuta', label: 'CEUTA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
-                {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
+                {id: 'melilla', label: 'MELILLA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
             ]},
-            {id: 'comunidad-autonoma', label: 'COMUNIDAD_AUTONOMA', type: "dropdown", collection: [
-                {id: 'todas-comunidades', label: 'TODAS_COMUNIDADES', type: 'dropdown', collection: [
+            {id: 'comunidad-autonoma', label: 'COMUNIDAD_AUTONOMA', type: "dropdown", placeholder: "COMUNIDAD_AUTONOMA", collection: [
+                {id: 'todas-comunidades', label: 'TODAS_COMUNIDADES', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'andalucia', label: 'ANDALUCIA', type: 'dropdown', collection: [
+                {id: 'andalucia', label: 'ANDALUCIA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'aragon', label: 'ARAGON', type: 'dropdown', collection: [
+                {id: 'aragon', label: 'ARAGON', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'asturias', label: 'ASTURIAS', type: 'dropdown', collection: [
+                {id: 'asturias', label: 'ASTURIAS', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'cantabria', label: 'CANTABRIA', type: 'dropdown', collection: [
+                {id: 'cantabria', label: 'CANTABRIA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},                
-                {id: 'castilla-mancha', label: 'CASTILLA_MANCHA', type: 'dropdown', collection: [
+                {id: 'castilla-mancha', label: 'CASTILLA_MANCHA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'castilla-leon', label: 'CASTILLA_LEON', type: 'dropdown', collection: [
+                {id: 'castilla-leon', label: 'CASTILLA_LEON', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'cataluna', label: 'CATALUNA', type: 'dropdown', collection: [
+                {id: 'cataluna', label: 'CATALUNA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'ceuta', label: 'CEUTA', type: 'dropdown', collection: [
+                {id: 'ceuta', label: 'CEUTA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'madrid', label: 'MADRID', type: 'dropdown', collection: [
+                {id: 'madrid', label: 'MADRID', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'valencia', label: 'VALENCIA', type: 'dropdown', collection: [
+                {id: 'valencia', label: 'VALENCIA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'extremadura', label: 'EXTREMADURA', type: 'dropdown', collection: [
+                {id: 'extremadura', label: 'EXTREMADURA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'galicia', label: 'GALICIA', type: 'dropdown', collection: [
+                {id: 'galicia', label: 'GALICIA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'isla-baleares', label: 'ISLA_BALEARES', type: 'dropdown', collection: [
+                {id: 'isla-baleares', label: 'ISLA_BALEARES', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'isla-canarias', label: 'ISLA_CANARIAS', type: 'dropdown', collection: [
+                {id: 'isla-canarias', label: 'ISLA_CANARIAS', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'rioja', label: 'RIOJA', type: 'dropdown', collection: [
+                {id: 'rioja', label: 'RIOJA', type: 'dropdown', placeholder: "RANGO_FERANGO_TEMPORALCHAS", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'melilla', label: 'MELILLA', type: 'dropdown', collection: [
+                {id: 'melilla', label: 'MELILLA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'murcia', label: 'MURCIA', type: 'dropdown', collection: [
+                {id: 'murcia', label: 'MURCIA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'navarra', label: 'NAVARRA', type: 'dropdown', collection: [
+                {id: 'navarra', label: 'NAVARRA', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
-                {id: 'pais-vasco', label: 'PAIS_VASCO', type: 'dropdown', collection: [
+                {id: 'pais-vasco', label: 'PAIS_VASCO', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
                 ]},
             ]}
         ]},
-        {id: 'variacion-componentes', label: 'DEMANDA.VARIACION_COMPONENTES', type: "dropdown", placeholder: "SISTEMA_ELECTRICO", collection: [
-            {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
+        {id: 'variacion-componentes', label: 'VARIACION_COMPONENTES', type: "dropdown", placeholder: "SISTEMA_ELECTRICO", collection: [
+            {id: 'nacional', label: 'NACIONAL', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
                 {id: 'acumulado-ano-movil', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'}
             ]},
-            {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
+            {id: 'peninsular', label: 'PENINSULAR', type: "dropdown",  placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
                 {id: 'acumulado-ano-movil', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'}
             ]},
-            {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
+            {id: 'baleares', label: 'BALEARES', type: "dropdown",  placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
                 {id: 'acumulado-ano-movil', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'}
             ]},            
-            {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
+            {id: 'canarias', label: 'CANARIAS', type: "dropdown",  placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
                 {id: 'acumulado-ano-movil', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'}
             ]}            
         ]},
-        {id: 'demanda-maxima-horaria', label: 'DEMANDA.DEMANDA_MAXIMA_HORARIA', type: "dropdown", placeholder: "SISTEMA_ELECTRICO", collection: [
+        {id: 'demanda-maxima-horaria', label: 'DEMANDA_MAXIMA_HORARIA', type: "dropdown", placeholder: "SISTEMA_ELECTRICO", collection: [
             {id: 'penindular', label: 'PENINSULAR', type: "dropdown", collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
@@ -171,7 +171,7 @@ export const WIDGETS: any[] = [
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
             ]},                                   
         ]},
-        {id: 'demanda-maxima-diaria', label: 'DEMANDA.DEMANDA_MAXIMA_DIARIA', type: "dropdown", placeholder: "SISTEMA_ELECTRICO", collection: [
+        {id: 'demanda-maxima-diaria', label: 'DEMANDA_MAXIMA_DIARIA', type: "dropdown", placeholder: "SISTEMA_ELECTRICO", collection: [
             {id: 'penindular', label: 'PENINSULAR', type: "dropdown", collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
@@ -193,7 +193,7 @@ export const WIDGETS: any[] = [
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
             ]},               
         ]},
-        {id: 'potencia-maxima-instantanea', label: 'DEMANDA.POTENCIA_MAXIMA_INSTANTANEA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
+        {id: 'potencia-maxima-instantanea', label: 'POTENCIA_MAXIMA_INSTANTANEA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'},
         ]}                        
@@ -220,22 +220,22 @@ export const WIDGETS: any[] = [
             {id: 'general', label: 'GENERAL', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: "calendar", value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: "calendar", value: 'year'},
-                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOBILE', type: "calendar", value: 'year'},
+                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: "calendar", value: 'year'},
             ]},
             {id: 'industria', label: 'INDUSTRIA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: "calendar", value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: "calendar", value: 'year'},
-                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOBILE', type: "calendar", value: 'year'},
+                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: "calendar", value: 'year'},
             ]},
             {id: 'servicios', label: 'SERVICIOS', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: "calendar", value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: "calendar", value: 'year'},
-                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOBILE', type: "calendar", value: 'year'},                
+                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: "calendar", value: 'year'},                
             ]},
             {id: 'otras-actividades', label: 'OTRAS_ACTIVIDADES', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: "calendar", value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: "calendar", value: 'year'},
-                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOBILE', type: "calendar", value: 'year'},                
+                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: "calendar", value: 'year'},                
             ]},
         ]},
     ]},
@@ -13903,34 +13903,34 @@ export const WIDGETS: any[] = [
 
     // intercambios
     {id: 'intercambios-internacionales', label: 'INTERCAMBIOS_INTERNACIONALES', categoryId: 'intercambios', type: "dropdown", collection: [
-        {id: 'fisico', label: 'FISICO', type: "radio-button", collection: [
-            {id: 'todas-fronteras', label: 'TODAS_FRONTERAS', type: "dropdown", collection: [
+        {id: 'fisico', label: 'FISICO', type: "dropdown", placeholder: "FRONTERAS",  collection: [
+            {id: 'todas-fronteras', label: 'TODAS_FRONTERAS', type: "dropdown",  placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
-            {id: 'andorra', label: 'ANDORRA', type: "dropdown", collection: [
+            {id: 'andorra', label: 'ANDORRA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
-            {id: 'francia', label: 'FRANCIA', type: "dropdown", collection: [
+            {id: 'francia', label: 'FRANCIA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
-            {id: 'marruecos', label: 'MARRUECOS', type: "dropdown", collection: [
+            {id: 'marruecos', label: 'MARRUECOS', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
-            {id: 'portugal', label: 'PORTUGAL', type: "dropdown", collection: [
+            {id: 'portugal', label: 'PORTUGAL', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
                 {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
         ]},
-        {id: 'programado', label: 'PROGRAMDADO', type: "radio-button", collection: [
+        {id: 'programado', label: 'PROGRAMADO', type: "dropdown",  placeholder: "FRONTERAS", collection: [
             {id: 'todas-fronteras', label: 'TODAS_FRONTERAS', type: "dropdown", collection: [
                 {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
@@ -13965,7 +13965,7 @@ export const WIDGETS: any[] = [
     ]},
 
     // balance
-    {id: 'balance', label: 'BALANCE_ELETRICO', categoryId: 'balance', type: "radio-button", collection: [
+    {id: 'balance', label: 'BALANCE_ELETRICO', categoryId: 'balance', type: "dropdown", collection: [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
                 {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},

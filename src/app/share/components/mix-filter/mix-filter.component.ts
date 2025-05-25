@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges, ViewChild, ViewContainerRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule} from '@angular/forms'
+import { FormsModule, ReactiveFormsModule, FormGroup, FormControl} from '@angular/forms'
 
 import { TranslateModule}  from "@ngx-translate/core";
 import { TranslateService } from "@ngx-translate/core";
@@ -24,6 +24,7 @@ import { MixModelService } from '../../services/mix-model.service';
     CommonModule,
     TranslateModule,
     FormsModule,
+    ReactiveFormsModule,
     ButtonModule,
     DropdownModule,
     InputTextModule,
@@ -39,6 +40,8 @@ export class MixFilterComponent implements OnChanges {
 
   @ViewChild('filterContainer', { read: ViewContainerRef })
   filterContainer!: ViewContainerRef;
+
+  formGroup: FormGroup = new FormGroup({});
 
   geoTypes:  any[] = [];
   geoType: any;
@@ -94,9 +97,9 @@ export class MixFilterComponent implements OnChanges {
   private getCalendarView(dateFormat: string) {
     if (dateFormat == "date") {
       return "dd/mm/yy"; 
-    } else if (this.timeTrunc.id == "month") {
+    } else if (dateFormat == "month") {
       return "mm/yy"; 
-    } else if (this.timeTrunc.id == "year") {
+    } else if (dateFormat == "year") {
       return "yy"; 
     } else {
       return "dd/mm/yy"
@@ -107,9 +110,10 @@ export class MixFilterComponent implements OnChanges {
     const dropdownRef = this.filterContainer.createComponent(Dropdown);
 
     dropdownRef.instance.name = filter.id;
-    dropdownRef.instance.options = filter.collection;
+    dropdownRef.instance.options = this.mixTranslateService.translate(filter.collection);
     dropdownRef.instance.optionLabel = "label";
     dropdownRef.instance.placeholder = this.translateService.instant(filter.placeholder);
+    dropdownRef.instance.style = {'width': '100%'};
     dropdownRef.instance.onChange.subscribe(item => {
       console.log('Selected value:', item.value);
 
@@ -121,9 +125,10 @@ export class MixFilterComponent implements OnChanges {
     filter.collection.forEach((item: any) => {
       const radioButtonRef = this.filterContainer.createComponent(RadioButton);
 
-      radioButtonRef.instance.name = item.id;
-      radioButtonRef.instance.value = item.id;            
-      radioButtonRef.instance.label = item.label;
+      radioButtonRef.instance.name = filter.id;
+      radioButtonRef.instance.value = item;
+      radioButtonRef.instance.label = this.translateService.instant(item.label);
+
       radioButtonRef.instance.onClick.subscribe(item => {
         console.log('Selected value:', item.value);
 
