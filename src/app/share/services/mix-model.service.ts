@@ -16,6 +16,10 @@ export class MixModelService {
     return WIDGETS.filter(widget => widget.categoryId == categoryId);
   }
 
+  getWidgetById(widgetId: string) {
+    return WIDGETS.filter(widget => widget.id == widgetId);
+  }
+
   getTechnologies() {
     return TECHNOLOGIES;
   }

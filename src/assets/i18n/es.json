@@ -8,6 +8,9 @@
     "EXPORT": "Exportar",
     "EMAIL_TEXT": "Mándame un email",
     "GET_CODE": "Bájate el código",
+    "SELECCIONE_OPTION": "Seleccione una opción",
+    "SISTEMA_ELECTRICO": "Sistema eléctrico",
+    "RANGO_TEMPORAL": "Rango temporal",
     "TABLE_SELECTORS": {
         "CATEGORY_SELECTOR": "Selecciona categoría",
         "WIDGET_SELECTOR": "Selecciona widget",
@@ -98,48 +101,40 @@
         "TRANSPORTE": "Red de transporte"
     },
     "DEMANDA": {
-        "EVOLUCION": "Evolución",
-        "VARIACION_COMPONENTES": "Variación componentes",
-        "VARIACION_COMPONENTES_MOVIL": "Variación móvil componentes",
-        "IRE_GENERAL": "IRE general",
-        "IRE_GENERAL_ANUAL": "IRE general anual",
-        "IRE_GENERAL_MOVIL": "IRE general móvil",
-        "IRE_INDUSTRIAL_ANUAL": "IRE industrial anual",
-        "IRE_INDUSTRIAL_MOVIL": "IRE industrial móvil",
-        "IRE_SERVICIOS": "IRE servicios",
-        "IRE_SERVICIOS_ANUAL": "IRE servicios anual",
-        "IRE_SERVICIOS_MOVIL": "IRE servicios móvil",
-        "IRE_OTRAS": "IRE otras",
-        "IRE_OTRAS_ANUAL": "IRE otras anual",
-        "IRE_OTRAS_MOVIL": "IRE otras móvil"
+        "DEMANDA_BC": "Demanda (b.c.)",
+        "PERDIDAS_TRANSPORTE": "Pérdidas de transporte",
+        "DEMANDA_FINAL": "Demanda final",
+        "EVOLUCION_DEMANDA": "Evolución de la demanda",
+        "VARIACION_COMPONENTES": "Variación y componentes",
+        "DEMANDA_MAXIMA_HORARIA": "Demanda máxima horaria",
+        "DEMANDA_MAXIMA_DIARIA": "Demanda máxima diaria",
+        "POTENCIA_MAXIMA_INSTANTANEA": "Potencia máxima instantanea"
     },    
     "GENERACION": {
-        "DEMANDA_MAXIMA_DIARIA": "Demanda máxima diaria",
-        "VARIACION_MAXIMA_HORARIA": "Variación máxima horaria",
-        "PERDIDAS_TRANSPORTE": "Pérdidas transporte",
-        "POTENCIA_MAXIMA_INSTANTANEA": "Potencia máxima instantanea",
-        "VARIACION_DEMANDA": "Variación demanda",
-        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION": "Variación potencia máxima instantanea",
-        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION_HISTORICO": "Variación histórica potencia máxima instantanea",
-        "DEMANDA_TIEMPO_REAL": "Demanda Tiempo Real",
-        "VARIACION_COMPONENTES_ANUAL": "Variación componentes real",
         "ESTRUCTURA_GENERACION": "Estructura generación",
-        "ESTRUCTURA_GENERACION_DESC": "Balance eléctrico: asignación de unidades de producción según combustible principal",
-        "EVOLUCION_RENOVABLE_NO_RENOVABLE": "Evolución renovables no renovables",
-        "ESTRUCTURA_RENOVABLES": "Estructura Renovables",
-        "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Estructura generación emisiones asociadas",
-        "EVOLUCION_ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Evolución estructura generación emisiones asociadas",
-        "NO_RENOVABLES_DETALLE_EMISIONES_CO2": "No Renovables detalle emisiones CO2",
-        "MAXIMA_RENOVABLE": "Máxima renovable",
+        "EVOLUCION_GENERACION_RENOVABLE_NO_RENOVABLE": "Evolución de la generación renovable y no renovable",
+        "ESTRUCTURA_GENERACION_RENOVABLE": "Estructura de la generación renovable",
+        "ESTRUCTURA_GENERACION_CON_SIN_EMISIONES_CO2": "Estructura de la generación con/sin emisiones CO2 eq.",
+        "EVOLUCION_GENERACION_CON_SIN_EMISIONES_CO2": "Evolución de la generación con/sin emisiones CO2 eq.",
+        "EMISIONES_GENERACION": "Emisiones de la generación",
+        "MAXIMA_GENERACION_RENOVABLES": "Máxima generación renovable",
         "POTENCIA_INSTALADA": "Potencia instalada",
-        "MAXIMA_RENOVABLE_HISTORICO": "Máxima renovable histórico",
-        "MAXIMA_SIN_EMISIONES_HISTORICO": "Máxima sin emisiones histórico"
+        "EVOLUCION_POTENCIA_INSTALADA_RENOVABLE_NO_RENOVABLE": "Evolución de la potencia instalda renovable y no renovable",
+        "ESTRUCTURA_POTENCIA_INSTALADA_RENOVABLE": "Estructura potencia instalda renovable",
+        "ESTRUCTURA_POTENCIA_INSTALADA_CON_SIN_EMISIONES_CO2": "Estructura potencia instalada con/sin CO2 eq.",
+        "EVOLUCION_POTENCIA_INSTALADA_CON_SIN_EMISIONES_CO2": "Evolución de la potencia instalada con/sin CO2 eq.",
+        "RESERVA_HIDRAULICA": "Reservas hidraúlicas",
+        "PRODUCIBLE_HIDRAULICO": "Producible hidraúlico",
+        "COMPORTAMIENTO_EQUIPO_TERMICO": "Comportamiento quipo térmico"
     },
     "ALMACENAMIENTO": {
         "ENERGIA_ALMACENAMIENTO": "Energía almacenamiento",
         "POTENCIA_INSTALADA": "Potencia instalada"
     },
     "INTERCAMBIOS": {
+        "INTERCAMBIOS_INTERNACIONALES": "Intercambios internacionales",
+        "ENLACE_PENINSULAR_BALEARES": "Enlace Peninsular-Baleares",
+
         "FRANCIA_FRONTERA": "Francia frontera",
         "PORTUGAL_FRONTERA": "Portugal frontera",
         "MARRUECOS_FRONTERA": "Marruecos frontera",
@@ -159,9 +154,13 @@
         "TODAS_FRONTERAS_PROGRAMADADOS": "Todas frontera programados"
     },
     "BALANCE": {
-        "BALANCE_ELETRICO": "Balance eléctrico"
+        "BALANCE_ELETRICO": "Balance eléctrico",
+        "COMUNIDADES_AUTONOMAS": "Comunidades autónomas"
     },    
-    "MERCADOS": {     
+    "MERCADOS": {
+        "SISTEMA_PENINSULAR": "Sistema Peninsular",
+        "SISTEMA_NO_PENINSULAR": "Sistema no Peninsular",
+
         "COMPONENTES_PRECIO_ENERGIA_CIERRE_DESGLOSE": "Componentes precio energía cierre desglose",
         "COMPONENTES_PRECIO": "Componentes precio",
         "ENERGIA_GESTIONADA_SERVICIOS_AJUSTE": "Energía gestionada servicios ajuste",
@@ -180,12 +179,18 @@
         "ENERGIA_PRECIOS_PONDERADOS_GESTION_DESVIOS_AFTER": "Energía precios ponderados gestión desvíos after"
     },
     "TRANSPORTE": {
+        "RED_TRANSPORTE": "Red de transporte (Km)",
+        "ENERGIA_NO_SUMINISTRADA": "Energía no suministrada (ENS)",
+        "TIEMPO_INTERRUPCION_MEDIO": "Tiempo de interrupción medio (TIM)",
+        "INDISPONIBILIDAD_RED": "Indisponibilidad de la red",
+        "DISPONIBILIDAD_RED": "Disponibilidad de la red",
+        "NUMERO_CORTES": "Número cortes",
+
         "ENERGIA_NO_SUMINISTRADA_ENS": "Energía no suministrada ENS",
         "INDICE_INDISPONIBILIDAD": "Indisponibilidad",
         "TIEMPO_INTERRUPCION_MEDIO_TIM": "Tiempo interrupción medio TIM",
         "KILOMETROS_LINEAS": "Kilómetros líneas",
         "INDICE_DISPONIBILIDAD": "Índice disponibilidad",
-        "NUMERO_CORTES": "Número cortes",
         "ENS_TIM": "ENS TIM",
         "INDICE_DISPONIBILIDAD_TOTAL": "Índice disponibilidad total"
     }    

@@ -7,6 +7,9 @@
     "CLEAR_FILTERS": "Clear filters",
     "EXPORT": "Export",
     "EMAIL_TEXT": "Send me and email",
+    "SELECCIONE_OPTION": "Select an option",
+    "SISTEMA_ELECTRICO": "Electrical system",
+    "RANGO_TEMPORAL": "Rango temporal",    
     "GET_CODE": "Get the code",
     "TABLE_SELECTORS": {
         "CATEGORY_SELECTOR": "Select category",
@@ -93,53 +96,45 @@
         "GENERACION": "Generation",
         "ALMACENAMIENTO": "Storage",    
         "INTERCAMBIOS": "Exchanges",
-        "BALANCE": "Wlectrical balance",    
+        "BALANCE": "Electrical balance",    
         "MERCADOS": "Markets",
-        "TRANSPORTE": "Wransportation network"
+        "TRANSPORTE": "Transportation network"
     },      
     "DEMANDA": {
-        "EVOLUCION": "Evolution",
-        "VARIACION_COMPONENTES": "Variation components",
-        "VARIACION_COMPONENTES_MOVIL": "Variation mobile",
-        "IRE_GENERAL": "IRE general",
-        "IRE_GENERAL_ANUAL": "IRE General annual",
-        "IRE_GENERAL_MOVIL": "IRE General mobile",
-        "IRE_INDUSTRIAL_ANUAL": "IRE Industrial annual",
-        "IRE_INDUSTRIAL_MOVIL": "IRE Industrial mobile",
-        "IRE_SERVICIOS": "IRE services",
-        "IRE_SERVICIOS_ANUAL": "IRE Services annual",
-        "IRE_SERVICIOS_MOVIL": "IRE Services mobile",
-        "IRE_OTRAS": "IRE others",
-        "IRE_OTRAS_ANUAL": "IRE Others annual",
-        "IRE_OTRAS_MOVIL": "IRE Others mobile"
+        "DEMANDA_BC": "Demand (b.c.)",
+        "PERDIDAS_TRANSPORTE": "Transportation losses",
+        "DEMANDA_FINAL": "Final demand",
+        "EVOLUCION_DEMANDA": "Evolution of demand",
+        "VARIACION_COMPONENTES": "Variation and components",
+        "DEMANDA_MAXIMA_HORARIA": "Maximum hourly demand",
+        "DEMANDA_MAXIMA_DIARIA": "Maximum daily demand",
+        "POTENCIA_MAXIMA_INSTANTANEA": "Maximum instantaneous power"        
     },    
     "GENERACION": {
-        "DEMANDA_MAXIMA_DIARIA": "Maximun daily damand",
-        "VARIACION_MAXIMA_HORARIA": "Maximun hourly variation",
-        "PERDIDAS_TRANSPORTE": "Transport losses",
-        "POTENCIA_MAXIMA_INSTANTANEA": "Maximun instantaneous power",
-        "VARIACION_DEMANDA": "Deman variation",
-        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION": "Maximun instantaneous power variation",
-        "POTENCIA_MAXIMA_INSTANTANEA_VARIACION_HISTORICO": "Maximun instantaneous power historical variation",
-        "DEMANDA_TIEMPO_REAL": "Real time demand",
-        "VARIACION_COMPONENTES_ANUAL": "Annual component variation",
         "ESTRUCTURA_GENERACION": "Generation structure",
-        "ESTRUCTURA_GENERACION_DESC": "Electricity balance: allocation of production units according to main fuel",
-        "EVOLUCION_RENOVABLE_NO_RENOVABLE": "Renewable Non renewable evolution",
-        "ESTRUCTURA_RENOVABLES": "Rnewable structure",
-        "ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Generation structure associated emissiones",
-        "EVOLUCION_ESTRUCTURA_GENERACION_EMISIONES_ASOCIADAS": "Evolution structure generation associated emissions",
-        "NO_RENOVABLES_DETALLE_EMISIONES_CO2": "Renewable CO2 emissions detail",
-        "MAXIMA_RENOVABLE": "Maximun renewable",
+        "EVOLUCION_GENERACION_RENOVABLE_NO_RENOVABLE": "Evolution of renewable and non-renewable generation",
+        "ESTRUCTURA_GENERACION_RENOVABLE": "Structure of renewable generation",
+        "ESTRUCTURA_GENERACION_CON_SIN_EMISIONES_CO2": "Generation structure with/without CO2 emissions eq.",
+        "EVOLUCION_GENERACION_CON_SIN_EMISIONES_CO2": "Evolution of generation with/without CO2 emissions eq.",
+        "EMISIONES_GENERACION": "Generation emissions",
+        "MAXIMA_GENERACION_RENOVABLES": "Maximum renewable generation",
         "POTENCIA_INSTALADA": "Installed power",
-        "MAXIMA_RENOVABLE_HISTORICO": "Maxikun renewable historical",
-        "MAXIMA_SIN_EMISIONES_HISTORICO": "Maximun non emissions historical"
+        "EVOLUCION_POTENCIA_INSTALADA_RENOVABLE_NO_RENOVABLE": "Evolution of installed renewable and non-renewable capacity",
+        "ESTRUCTURA_POTENCIA_INSTALADA_RENOVABLE": "Renewable installed capacity structure",
+        "ESTRUCTURA_POTENCIA_INSTALADA_CON_SIN_EMISIONES_CO2": "Installed power structure with/without CO2 eq.",
+        "EVOLUCION_POTENCIA_INSTALADA_CON_SIN_EMISIONES_CO2": "EEvolution of installed power with/without CO2 eq.",
+        "RESERVA_HIDRAULICA": "Hydraulic reserves",
+        "PRODUCIBLE_HIDRAULICO": "Hydraulic producible",
+        "COMPORTAMIENTO_EQUIPO_TERMICO": "Thermal equipment behavior"
     },
     "ALMACENAMIENTO": {
         "ENERGIA_ALMACENAMIENTO": "Energy storage",
         "POTENCIA_INSTALADA": "Installed power"
     },    
     "INTERCAMBIOS": {
+        "INTERCAMBIOS_INTERNACIONALES": "International exchanges",
+        "ENLACE_PENINSULAR_BALEARES": "Peninsular-Balearic Link",
+
         "FRANCIA_FRONTERA": "France border",
         "PORTUGAL_FRONTERA": "Portugal border",
         "MARRUECOS_FRONTERA": "Morocco border",
@@ -159,9 +154,17 @@
         "TODAS_FRONTERAS_PROGRAMADADOS": "All scheduled border"
     },
     "BALANCE": {
-        "BALANCE_ELETRICO": "Electric balance"
+        "BALANCE_ELETRICO": "Electric balance",                
+        "COMUNIDADES_AUTONOMAS": "Autonomous communities"
     },    
     "MERCADOS": { 
+        "RED_TRANSPORTE": "Transportation network (Km)",
+        "ENERGIA_NO_SUMINISTRADA": "Power not supplied (ENS)",
+        "TIEMPO_INTERRUPCION_MEDIO": "Average Interruption Time (TIM)",
+        "INDISPONIBILIDAD_RED": "Network unavailability",
+        "DISPONIBILIDAD_RED": "Network availability",
+        "NUMERO_CORTES": "Number of cuts",
+
         "COMPONENTES_PRECIO_ENERGIA_CIERRE_DESGLOSE": "Energy price components closing breakdown",
         "COMPONENTES_PRECIO": "Price components",
         "ENERGIA_GESTIONADA_SERVICIOS_AJUSTE": "Managed energy services adjustment",

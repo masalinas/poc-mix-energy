@@ -1,5 +1,7 @@
-<div class="app-panel-filter"> 
-    <div *ngFor="let geoType of geoTypes">
+<div class="app-panel-filter">
+    <ng-container #filterContainer></ng-container>
+
+    <!--<div *ngFor="let geoType of geoTypes">
       <p-radioButton
         [inputId]="geoType.id"
         name="geoType"
@@ -55,14 +57,5 @@
       [style]="{'width': '100%'}"
       [placeholder]="translate.instant('TABLE_FILTERS.SELECT_INTERVAL')"
       (onSelect)="onRangeDatesChange(rangeDates)"> 
-    </p-calendar>
-    <!--<p-dropdown 
-      [options]="geoLimits"      
-      [(ngModel)]="geoLimit"             
-      optionLabel="label" 
-      [placeholder]="translate.instant('TABLE_SELECTORS.GEO_LIMIT_SELECTOR')"      
-      [style]="{'width': '240px'}"
-      showClear="true"                   
-      (onChange)="onChangeGeoLimit($event.value)">
-    </p-dropdown>-->                                  
+    </p-calendar>-->                              
 </div>

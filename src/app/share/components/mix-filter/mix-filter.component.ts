@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges, ViewChild, ViewContainerRef, ComponentRef, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule} from '@angular/forms'
 
@@ -6,15 +6,16 @@ import { TranslateModule}  from "@ngx-translate/core";
 import { TranslateService } from "@ngx-translate/core";
 
 import { ButtonModule } from 'primeng/button';
-import { DropdownModule } from 'primeng/dropdown';
+import { DropdownModule, Dropdown } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
-import { CalendarModule, CalendarTypeView } from 'primeng/calendar';
-import { RadioButtonModule } from 'primeng/radiobutton';
+import { CalendarModule, CalendarTypeView, Calendar} from 'primeng/calendar';
+import { RadioButtonModule, RadioButton } from 'primeng/radiobutton';
 
 import { TranslatorListService } from '../../services/mix-translator.service';
 import { GEO_TYPES, TIME_TRUNCS, GEO_LIMITS, TECHNOLOGIES } from '../../models/mix-domain.model';
 
 import { MixFilter } from '../../../share/models/mix-filter.model';
+import { MixModelService } from '../../services/mix-model.service';
 
 @Component({
   selector: 'app-mix-filter',
@@ -32,13 +33,12 @@ import { MixFilter } from '../../../share/models/mix-filter.model';
   templateUrl: './mix-filter.component.html',
   styleUrl: './mix-filter.component.scss'
 })
-export class MixFilterComponent {
-  @Input() category: string = '';
-  @Input() widget: string = '';
-
+export class MixFilterComponent implements OnChanges {
+  @Input() widget: any;
   @Output() filterChange = new EventEmitter<MixFilter>();  
 
-  tecnoSelect: any;
+  @ViewChild('filterContainer', { read: ViewContainerRef })
+  filterContainer!: ViewContainerRef;
 
   geoTypes:  any[] = [];
   geoType: any;
@@ -69,7 +69,9 @@ export class MixFilterComponent {
 
   constructor(
     private translatorListService: TranslatorListService,
-    public translate: TranslateService) {    
+    public translate: TranslateService,
+    private mixModelService: MixModelService,
+    private cdr: ChangeDetectorRef) {    
   }
 
   private getElectricSystems() {
@@ -90,6 +92,88 @@ export class MixFilterComponent {
     this.selectedGeoType = this.geoTypes[0];
   }
 
+  private getCalendarView(dateFormat: string) {
+    if (dateFormat == "date") {
+      return "dd/mm/yy"; 
+    } else if (this.timeTrunc.id == "month") {
+      return "mm/yy"; 
+    } else if (this.timeTrunc.id == "year") {
+      return "yy"; 
+    } else {
+      return "dd/mm/yy"
+    }
+  }
+
+  private createDropDown(filter: any) {
+    const dropdownRef = this.filterContainer.createComponent(Dropdown);
+
+    dropdownRef.instance.options = filter.collection;
+    dropdownRef.instance.optionLabel = "label";
+    dropdownRef.instance.placeholder = this.translate.instant(filter.placeholder);
+    dropdownRef.instance.onChange.subscribe(item => {
+      console.log('Selected value:', item.value);
+
+      this.createFilter(item.value);
+    });
+  }
+
+  private createRadioButtons(filter: any) {
+    filter.collection.forEach((item: any) => {
+      const radioButtonRef = this.filterContainer.createComponent(RadioButton);
+
+      radioButtonRef.instance.name = filter.id;
+      radioButtonRef.instance.value = item.id;            
+      radioButtonRef.instance.label = item.label;
+      radioButtonRef.instance.onClick.subscribe(item => {
+        console.log('Selected value:', item.value);
+
+        this.createFilter(item.value);
+      });
+    });
+  }
+
+  private createCalendar(filter: any) {
+    const calendaRef = this.filterContainer.createComponent(Calendar);
+    
+    calendaRef.instance.view = filter.value;
+    calendaRef.instance.dateFormat = this.getCalendarView(filter.value);
+    calendaRef.instance.showIcon = true;
+    calendaRef.instance.readonlyInput = true;
+    calendaRef.instance.selectionMode = "range";
+    calendaRef.instance.style = {'width': '100%'};
+    calendaRef.instance.placeholder = this.translate.instant('TABLE_FILTERS.SELECT_INTERVAL');
+    calendaRef.instance.onSelect.subscribe(value => {
+        console.log('Selected value:', value);
+
+        this.createFilter(value);
+    });
+  }
+
+  private createFilter(filter: any) {
+    if (filter.type == "dropdown") {
+      this.createDropDown(filter);
+    } else if (filter.type == "radio-button") {
+      this.createRadioButtons(filter);      
+    } else if (filter.type == "calendar") {
+      this,this.createCalendar(filter);  
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['widget']) {
+      if (changes['widget'].currentValue) {
+        // get widget selected
+        const widget = this.mixModelService.getWidgetById(changes['widget'].currentValue.id)[0];
+
+        // clear filter components
+        this.filterContainer.clear()
+
+        // create filter component
+        this.createFilter(widget);
+      }
+    }
+  }
+  
   onLangChange() {
     this.setTranslateLists();
 
@@ -132,7 +216,6 @@ export class MixFilterComponent {
   }
 
   onTimeTruncChange(timeTrunc: any) {
-    // configure calendar
     if (this.timeTrunc.id == "day") {
       this.calendarView="date";
       this.calendarDateFormat="dd/mm/yy"; 
@@ -174,7 +257,6 @@ export class MixFilterComponent {
     this.technology = null;
     this.rangeDates = [];
     this.timeTrunc = null;
-    this.tecnoSelect = null;
 
     this.mixFilter = {};
   }
