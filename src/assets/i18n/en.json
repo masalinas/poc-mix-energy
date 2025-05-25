@@ -221,5 +221,21 @@
     "GENERAL": "General",
     "INDUSTRIA": "Industry",
     "SERVICIOS": "Services",
-    "OTRAS_ACTIVIDADES": "Other activities"
+    "OTRAS_ACTIVIDADES": "Other activities",
+    "TODAS_TECNOLOGIAS": "All technologies",
+    "CARBON": "Coal",
+    "FUEL_GAS": "Fuel+Gas",
+    "MOTORES_DIESEL": "Diesel Engines",
+    "CICLO_COMBINADO": "Combined cycle",
+    "COGENERACION": "Cogeneration",
+    "EOLICA": "Wind",
+    "HIDROEOLICA": "Hydrowind",
+    "NUCLEAR": "Nuclear",
+    "OTRAS_RENOVABLES": "Other renewables",
+    "RESIDUOS_NO_RENOVABLES": "Non-renewable waste",
+    "RESIDUOS_RENOVABLES": "Renewable waste",
+    "SOLAR_FOTOVOLTAICA": "Solar photovoltaic",
+    "SOLAR_TERMICA": "Thermal wave",
+    "TURBINA_GAS": "Gas turbine",
+    "TURBINA_VAPOR": "Steam turbine"    
 }

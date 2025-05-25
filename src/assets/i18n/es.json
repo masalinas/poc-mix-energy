@@ -224,5 +224,21 @@
     "GENERAL": "General",
     "INDUSTRIA": "Industria",
     "SERVICIOS": "Servicios",
-    "OTRAS_ACTIVIDADES": "Otras actividades"
+    "OTRAS_ACTIVIDADES": "Otras actividades",
+    "TODAS_TECNOLOGIAS": "Todas las tecnologías",
+    "CARBON": "Carbón",
+    "FUEL_GAS": "Fuel+Gas",
+    "MOTORES_DIESEL": "Motores Diesel",
+    "CICLO_COMBINADO": "Ciclo combinado",
+    "COGENERACION": "Cogeneración",
+    "EOLICA": "Eólica",
+    "HIDROEOLICA": "Hidroeólica",
+    "NUCLEAR": "Nuclear",
+    "OTRAS_RENOVABLES": "Otras renovables",
+    "RESIDUOS_NO_RENOVABLES": "Residuos no renovables",
+    "RESIDUOS_RENOVABLES": "Residuos renovables",
+    "SOLAR_FOTOVOLTAICA": "Solar fotovoltaica",
+    "SOLAR_TERMICA": "Solar térmica",
+    "TURBINA_GAS": "Turbina de gas",
+    "TURBINA_VAPOR": "Turbina de vapor"
 }

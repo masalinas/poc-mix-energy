@@ -112,7 +112,7 @@ export class MixFilterComponent implements OnChanges {
     dropdownRef.instance.name = filter.id;
     dropdownRef.instance.options = this.mixTranslateService.translate(filter.collection);
     dropdownRef.instance.optionLabel = "label";
-    dropdownRef.instance.placeholder = this.translateService.instant(filter.placeholder);
+    dropdownRef.instance.placeholder = filter.placeholder ? this.translateService.instant(filter.placeholder) : this.translateService.instant("SELECCIONE_OPTION");
     dropdownRef.instance.style = {'width': '100%'};
     dropdownRef.instance.onChange.subscribe(item => {
       console.log('Selected value:', item.value);
@@ -147,7 +147,7 @@ export class MixFilterComponent implements OnChanges {
     calendaRef.instance.readonlyInput = true;
     calendaRef.instance.selectionMode = "range";
     calendaRef.instance.style = {'width': '100%'};
-    calendaRef.instance.placeholder = this.translateService.instant('TABLE_FILTERS.SELECT_INTERVAL');
+    calendaRef.instance.placeholder = filter.placeholder ? this.translateService.instant(filter.placeholder) : this.translateService.instant('RANGO_TEMPORAL');
     calendaRef.instance.onSelect.subscribe(value => {
         console.log('Selected value:', value);
 
