@@ -222,5 +222,9 @@
     "SOLAR_FOTOVOLTAICA": "Solar fotovoltaica",
     "SOLAR_TERMICA": "Solar térmica",
     "TURBINA_GAS": "Turbina de gas",
-    "TURBINA_VAPOR": "Turbina de vapor"
+    "TURBINA_VAPOR": "Turbina de vapor",
+    "PRECIO_MEDIO_ENERGIA": "Precio medio y energía final",
+    "SERVICIOS_AJUSTE": "Servicios de ajuste",
+    "COMPORTAMIENTO_PRECIO_FINAL": "Componentes de precio final y energia del cierre",
+    "ENERGIA_GESTIONADA": "Energía gestionada en los servicios de ajuste"
 }

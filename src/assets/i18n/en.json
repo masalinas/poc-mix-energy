@@ -219,5 +219,9 @@
     "SOLAR_FOTOVOLTAICA": "Solar photovoltaic",
     "SOLAR_TERMICA": "Thermal wave",
     "TURBINA_GAS": "Gas turbine",
-    "TURBINA_VAPOR": "Steam turbine"    
+    "TURBINA_VAPOR": "Steam turbine",
+    "PRECIO_MEDIO_ENERGIA": "Average price and final energy",
+    "SERVICIOS_AJUSTE": "Fitting Services",
+    "COMPORTAMIENTO_PRECIO_FINAL": "Final price components and closing energy",
+    "ENERGIA_GESTIONADA": "Energy managed in adjustment services"        
 }
