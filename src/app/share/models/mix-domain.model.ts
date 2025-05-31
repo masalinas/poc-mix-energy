@@ -14888,45 +14888,6 @@ export const WIDGETS: any[] = [
     {id: 'numero-cortes', label: 'NUMERO_CORTES', categoryId: 'transporte'}
 ]    
 
-export const GEO_TRUNCS: any[] = [
-    {id: 'electric_system', label: 'ELECTRIC_SYSTEM'},
-]
-
-export const GEO_TYPES: any[] = [
-    {id: 'sistema_electrico', label: 'SISTEMA_ELECTRICO'},
-    {id: 'comunidades_autonomas', label: 'COMUNIDADES_AUTONOMNAS'}
-]
-
-export const GEO_LIMITS: any[] = [
-    {id: 'peninsular', label: 'PENINSULAR', geoId: 8741},
-    {id: 'canarias', label: 'CANARIAS', geoId: 8742},
-    {id: 'baleares', label: 'BALEARES', geoId: 8743},
-    {id: 'ceuta', label: 'CEUTA', geoId: 8744},
-    {id: 'melilla', label: 'MELILLA', geoId: 8745},
-    {id: 'ccaa', label: 'CCAA', regions: [
-        { id: "todas", label: "Todas las comunidades", geoId: 4 },
-        { id: "andalucia", label: "Andalucía", geoId: 4 },
-        { id: "aragon", label: "Aragón", geoId: 5 },
-        { id: "cantabria", label: "Cantabría", geoId: 6 },
-        { id: "castilla_mancha", label: "Castilla la Mancha", geoId: 7 },
-        { id: "castilla_leon", label: "Castilla León", geoId: 8 },
-        { id: "cataluna", label: "Cataluña", geoId: 9},
-        { id: "pais_vasco", label: "País Vasco", geoId: 10 },
-        { id: "asturias", label: "Principado de Asturias", geoId: 11 },
-        { id: "comunidad_ceuta", label: "Comunidad de Ceuta", geoId: 8744 },
-        { id: "comunidad_melilla", label: "Comunidad de Melilla", geoId: 8745 },
-        { id: "comunidad_madrid", label: "Comunidad de Madrid", geoId: 13 },
-        { id: "comunidad_navarra", label: "Comunidad de Navarra", eoId: 14 },
-        { id: "comunidad_valencia", label: "Comunidad de Valencia", geoId: 15 },
-        { id: "extremadura", label: "Extremadura", geoId: 16 },
-        { id: "galicia", label: "Galicia", geoId: 17 },
-        { id: "islas_baleares", label: "Islas Baleares", geoId: 8743 },
-        { id: "islas_canarias", label: "Islas Canarias", geoId: 8742 },
-        { id: "la_rioja", label: "La Rioja", geoId: 20},
-        { id: "regios_murcia", label: "Región de Murcia", geoId: 21 },
-    ]},
-]
-
 export const TIME_TRUNCS: any[] = [
     {id: 'date', label: 'DAYS'},
     {id: 'month', label: 'MONTHS'},

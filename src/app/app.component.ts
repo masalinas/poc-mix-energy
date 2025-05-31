@@ -186,13 +186,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   isStatusValidGetMix() : boolean {
-    if (this.category &&
-        this.widget &&
-        this.mixFilter &&
-        this.mixFilter.timeTruncId !== null &&
-        this.mixFilter.rangeDates &&
-        this.mixFilter.rangeDates![0] !== null &&
-        this.mixFilter.rangeDates![1] !== null)        
+    if (this.category && this.widget && this.mixFilter)        
       return false;
     
     return true;

@@ -30,12 +30,6 @@
         "PERTENTAGE": "Percentage",
         "DATETIME": "Date"
     },
-    "TIME_TRUNC": {
-        "HOURS": "Hours",
-        "DAYS": "Days",
-        "MONTHS": "Months",
-        "YEARS": "Years"
-    },
     "TECHNOLOGY": {
         "HYDRAULIC": "Hydraulic",
         "NUCLEAR": "Nuclear",
@@ -58,19 +52,7 @@
         "RENOVABLE": "Renewable",
         "NO_RENEWABLE": "No Renewable",
         "TOTAL_GENERATION": "Total generation"
-    },
-    "GEO_TYPE": {
-        "SISTEMA_ELECTRICO": "Electrical system",
-        "COMUNIDADES_AUTONOMNAS": "Autonomous communities"
-    },    
-    "GEO_LIMIT": {
-        "PENINSULAR": "Peninsula",
-        "CANARIAS": "Canarias",
-        "BALEARES": "Baleares",
-        "CEUTA": "Ceuta",
-        "MELILLA": "Melilla",
-        "CCAA": "CCAA"
-    },    
+    },  
     "FILTER_TABLES": {
         "FILTER_MATCH_ALL": "Match all",
         "FILTER_MATCH_ANY": "Match any",
