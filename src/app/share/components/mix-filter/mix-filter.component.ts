@@ -1,20 +1,17 @@
 import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges, ViewChild, ViewContainerRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms'
 
 import { TranslateModule}  from "@ngx-translate/core";
 import { TranslateService } from "@ngx-translate/core";
 
-import { ButtonModule } from 'primeng/button';
 import { DropdownModule, Dropdown } from 'primeng/dropdown';
-import { InputTextModule } from 'primeng/inputtext';
-import { CalendarModule, CalendarTypeView, Calendar} from 'primeng/calendar';
 import { RadioButtonModule, RadioButton } from 'primeng/radiobutton';
+import { CalendarModule, Calendar} from 'primeng/calendar';
 
 import { MixTranslateService } from '../../services/mix-translate.service';
-
-import { MixFilter } from '../../../share/models/mix-filter.model';
 import { MixModelService } from '../../services/mix-model.service';
+import { MixFilter } from '../../../share/models/mix-filter.model';
 
 @Component({
   selector: 'app-mix-filter',
@@ -23,10 +20,7 @@ import { MixModelService } from '../../services/mix-model.service';
     CommonModule,
     TranslateModule,
     FormsModule,
-    ReactiveFormsModule,
-    ButtonModule,
     DropdownModule,
-    InputTextModule,
     CalendarModule,
     RadioButtonModule,
   ],
@@ -129,7 +123,7 @@ export class MixFilterComponent implements OnChanges {
 
   onLangChange() {      
   }
-    
+
   ngOnChanges(changes: SimpleChanges) {
     if (changes['widget'] && changes['widget'].currentValue) {
       // get widget selected
@@ -144,7 +138,6 @@ export class MixFilterComponent implements OnChanges {
   }
   
   onClear() {
-    // clear filter components
     this.filterContainer.clear()
   }
 }
