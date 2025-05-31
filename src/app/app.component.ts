@@ -218,10 +218,9 @@ export class AppComponent implements AfterViewInit {
   }
 
   onFilterChange(WidgetFilters: WidgetFilter[]) {
+    console.log(WidgetFilters);    
     this.widgetFilters = WidgetFilters;
 
-    console.log(WidgetFilters);
-    
     this.isStatusValidGetMix();
   }
 
