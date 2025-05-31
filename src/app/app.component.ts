@@ -27,7 +27,7 @@ import { MixModelService } from './share/services/mix-model.service';
 import { MixApiService } from './share/services/mix-api.service';
 
 import { MixFilterComponent } from './share/components/mix-filter/mix-filter.component';
-import { MixFilter } from './share/models/mix-filter.model';
+import { WidgetFilter } from './share/models/mix-filter.model';
 
 // Register the Spanish locale
 registerLocaleData(localeEs);
@@ -89,7 +89,7 @@ export class AppComponent implements AfterViewInit {
   widgetTooltip!: string;
 
   // table mix datasource
-  mixFilter!: MixFilter;
+  widgetFilters: WidgetFilter[] = [];
   mix: any[] = []
 
   technologies: any[] = [];
@@ -186,7 +186,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   isStatusValidGetMix() : boolean {
-    if (this.category && this.widget && this.mixFilter)        
+    if (this.category && this.widget && this.widgetFilters.length > 0)        
       return false;
     
     return true;
@@ -217,14 +217,16 @@ export class AppComponent implements AfterViewInit {
     filterCallback(numericValue);
   }
 
-  onFilterChange(mixFilter: MixFilter) {
-    this.mixFilter = mixFilter;
+  onFilterChange(WidgetFilters: WidgetFilter[]) {
+    this.widgetFilters = WidgetFilters;
 
+    console.log(WidgetFilters);
+    
     this.isStatusValidGetMix();
   }
 
   onGetApiMix(event: any) {
-    this.loading = true;
+    /*this.loading = true;
 
     this.mixApiService.getMixFiltered(
       this.category.id,
@@ -249,7 +251,8 @@ export class AppComponent implements AfterViewInit {
         if (error.status == 500) {
           this.messageService.add({ severity: 'error', summary: 'Error', detail: error.message });
         }
-      });
+      }
+    );*/
   }
 
   onClear(table: Table) {

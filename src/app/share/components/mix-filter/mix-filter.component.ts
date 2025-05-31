@@ -11,7 +11,7 @@ import { CalendarModule, Calendar} from 'primeng/calendar';
 
 import { MixTranslateService } from '../../services/mix-translate.service';
 import { MixModelService } from '../../services/mix-model.service';
-import { MixFilter } from '../../../share/models/mix-filter.model';
+import { WidgetFilter } from '../../../share/models/mix-filter.model';
 
 @Component({
   selector: 'app-mix-filter',
@@ -29,15 +29,35 @@ import { MixFilter } from '../../../share/models/mix-filter.model';
 })
 export class MixFilterComponent implements OnChanges {
   @Input() widget: any;
-  @Output() filterChange = new EventEmitter<MixFilter>();  
+  @Output() filterChange = new EventEmitter<WidgetFilter[]>();  
 
   @ViewChild('filterContainer', { read: ViewContainerRef })
   filterContainer!: ViewContainerRef;
+
+  componentRefs: any[] = [];
+  widgetFilters: WidgetFilter[] = [];
+  lastWidgetFilterLevel: number = 0;
 
   constructor(
     private translateService: TranslateService,
     private mixTranslateService: MixTranslateService,
     private mixModelService: MixModelService) {    
+  }
+
+  private removeChildFilterWidget(filterWidgetComponentRef: any) {
+    // remove all child componentRef
+    this.componentRefs.forEach(componentRef => {
+      if(componentRef.instance.tabindex > filterWidgetComponentRef.instance.tabindex) {
+        const index = this.filterContainer.indexOf(componentRef.hostView);
+
+        if (index !== -1) {
+          this.filterContainer.remove(index);
+          this.lastWidgetFilterLevel--;
+        }
+      }
+    });
+
+    this.componentRefs = this.componentRefs.filter(componentRef => componentRef.instance.tabindex < filterWidgetComponentRef.instance.tabindex);
   }
 
   private getCalendarFormat(dateFormat: string) {
@@ -56,17 +76,28 @@ export class MixFilterComponent implements OnChanges {
     const dropdownRef = this.filterContainer.createComponent(Dropdown);
 
     dropdownRef.instance.name = widget.id;
+    dropdownRef.instance.tabindex = this.lastWidgetFilterLevel;
     dropdownRef.instance.options = this.mixTranslateService.translate(widget.collection);
     dropdownRef.instance.optionLabel = "label";
     dropdownRef.instance.placeholder = widget.placeholder ? this.translateService.instant(widget.placeholder) : this.translateService.instant("SELECCIONE_OPTION");
     dropdownRef.instance.style = {'width': '100%'};
     dropdownRef.instance.onChange.subscribe(() => {
-      const value = dropdownRef.instance.value;
+      const widget = dropdownRef.instance.value;
 
-      console.log('Selected value:', value);
+      // remove child components
+      this.removeChildFilterWidget(dropdownRef);
 
-      this.createFilterWidget(value);
+      this.widgetFilters.push({
+        level: this.lastWidgetFilterLevel,
+        value: widget.id ?? widget
+      });
+
+      this.createFilterWidget(widget);  
     });
+
+    // add filter widget
+    this.componentRefs.push(dropdownRef);
+    this.lastWidgetFilterLevel++;    
   }
 
   private createRadioButtonsFilterWidget(widget: any) {
@@ -74,16 +105,27 @@ export class MixFilterComponent implements OnChanges {
       const radioButtonRef = this.filterContainer.createComponent(RadioButton);
 
       radioButtonRef.instance.name = widget.id;
+      radioButtonRef.instance.tabindex = this.lastWidgetFilterLevel;
       radioButtonRef.instance.value = item;
       radioButtonRef.instance.label = this.translateService.instant(item.label);
 
       radioButtonRef.instance.onClick.subscribe(() => {
-        const value = radioButtonRef.instance.value;
+        const widget = radioButtonRef.instance.value;
 
-        console.log('Selected value:', value);
+        // remove child components
+        this.removeChildFilterWidget(radioButtonRef);
 
-        this.createFilterWidget(value);
+        this.widgetFilters.push({
+          level: this.lastWidgetFilterLevel,
+          value: widget.id ?? widget
+        });
+
+        this.createFilterWidget(widget);
       });
+
+      // add filter widget
+      this.componentRefs.push(radioButtonRef);
+      this.lastWidgetFilterLevel++;   
     });
   }
 
@@ -91,6 +133,7 @@ export class MixFilterComponent implements OnChanges {
     const calendarRef = this.filterContainer.createComponent(Calendar);
     
     calendarRef.instance.name = widget.id;
+    calendarRef.instance.tabindex = this.lastWidgetFilterLevel;
     calendarRef.instance.view = widget.value;
     calendarRef.instance.dateFormat = this.getCalendarFormat(widget.value);
     calendarRef.instance.showIcon = true;
@@ -99,16 +142,24 @@ export class MixFilterComponent implements OnChanges {
     calendarRef.instance.style = {'width': '100%'};
     calendarRef.instance.placeholder = widget.placeholder ? this.translateService.instant(widget.placeholder) : this.translateService.instant('RANGO_TEMPORAL');
     calendarRef.instance.onSelect.subscribe(() => {
-        const range = calendarRef.instance.value;
+        const widget = calendarRef.instance.value;
 
-        if (range[1] !== null && range[2] !== null) {
-          const [startDate, endDate] = range;
-          console.log('Start Date:', startDate);
-          console.log('End Date:', endDate);
+        // remove child components
+        this.removeChildFilterWidget(calendarRef);
 
-          this.filterChange.emit(range);
+        if (widget[1] !== null && widget[2] !== null) {
+          this.widgetFilters.push({
+            level: this.lastWidgetFilterLevel,
+            value: widget.id ?? widget
+          });
+
+          this.filterChange.emit(this.widgetFilters);          
         }
     });
+
+    // add filter widget
+    this.componentRefs.push(calendarRef);
+    this.lastWidgetFilterLevel++;       
   }
 
   private createFilterWidget(widget: any) {

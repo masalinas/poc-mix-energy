@@ -1,9 +1,4 @@
-export interface MixFilter {
-  tecnologyId?: string;
-  systemElectricId?: string;
-  countyId?: string;
-  geoLimitId?: string;
-  technologyId?: string;
-  timeTruncId?: string;
-  rangeDates?: Date[];
+export interface WidgetFilter {
+  level: number;
+  value: any;
 }
