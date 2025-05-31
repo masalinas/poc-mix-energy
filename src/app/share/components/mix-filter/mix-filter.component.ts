@@ -21,8 +21,8 @@ import { MixFilter } from '../../../share/models/mix-filter.model';
     TranslateModule,
     FormsModule,
     DropdownModule,
+    RadioButtonModule,    
     CalendarModule,
-    RadioButtonModule,
   ],
   templateUrl: './mix-filter.component.html',
   styleUrl: './mix-filter.component.scss'
@@ -52,28 +52,28 @@ export class MixFilterComponent implements OnChanges {
     }
   }
 
-  private createDropDown(filter: any) {
+  private createDropDownFilterWidget(widget: any) {
     const dropdownRef = this.filterContainer.createComponent(Dropdown);
 
-    dropdownRef.instance.name = filter.id;
-    dropdownRef.instance.options = this.mixTranslateService.translate(filter.collection);
+    dropdownRef.instance.name = widget.id;
+    dropdownRef.instance.options = this.mixTranslateService.translate(widget.collection);
     dropdownRef.instance.optionLabel = "label";
-    dropdownRef.instance.placeholder = filter.placeholder ? this.translateService.instant(filter.placeholder) : this.translateService.instant("SELECCIONE_OPTION");
+    dropdownRef.instance.placeholder = widget.placeholder ? this.translateService.instant(widget.placeholder) : this.translateService.instant("SELECCIONE_OPTION");
     dropdownRef.instance.style = {'width': '100%'};
     dropdownRef.instance.onChange.subscribe(() => {
       const value = dropdownRef.instance.value;
 
       console.log('Selected value:', value);
 
-      this.createWidgetFilter(value);
+      this.createFilterWidget(value);
     });
   }
 
-  private createRadioButtons(filter: any) {
-    filter.collection.forEach((item: any) => {
+  private createRadioButtonsFilterWidget(widget: any) {
+    widget.collection.forEach((item: any) => {
       const radioButtonRef = this.filterContainer.createComponent(RadioButton);
 
-      radioButtonRef.instance.name = filter.id;
+      radioButtonRef.instance.name = widget.id;
       radioButtonRef.instance.value = item;
       radioButtonRef.instance.label = this.translateService.instant(item.label);
 
@@ -82,22 +82,22 @@ export class MixFilterComponent implements OnChanges {
 
         console.log('Selected value:', value);
 
-        this.createWidgetFilter(value);
+        this.createFilterWidget(value);
       });
     });
   }
 
-  private createCalendar(filter: any) {
+  private createCalendarFilterWidget(widget: any) {
     const calendarRef = this.filterContainer.createComponent(Calendar);
     
-    calendarRef.instance.name = filter.id;
-    calendarRef.instance.view = filter.value;
-    calendarRef.instance.dateFormat = this.getCalendarFormat(filter.value);
+    calendarRef.instance.name = widget.id;
+    calendarRef.instance.view = widget.value;
+    calendarRef.instance.dateFormat = this.getCalendarFormat(widget.value);
     calendarRef.instance.showIcon = true;
     calendarRef.instance.readonlyInput = true;
     calendarRef.instance.selectionMode = "range";
     calendarRef.instance.style = {'width': '100%'};
-    calendarRef.instance.placeholder = filter.placeholder ? this.translateService.instant(filter.placeholder) : this.translateService.instant('RANGO_TEMPORAL');
+    calendarRef.instance.placeholder = widget.placeholder ? this.translateService.instant(widget.placeholder) : this.translateService.instant('RANGO_TEMPORAL');
     calendarRef.instance.onSelect.subscribe(() => {
         const range = calendarRef.instance.value;
 
@@ -111,13 +111,13 @@ export class MixFilterComponent implements OnChanges {
     });
   }
 
-  private createWidgetFilter(filter: any) {
-    if (filter.type == "dropdown") {
-      this.createDropDown(filter);
-    } else if (filter.type == "radio-button") {
-      this.createRadioButtons(filter);      
-    } else if (filter.type == "calendar") {
-      this,this.createCalendar(filter);  
+  private createFilterWidget(widget: any) {
+    if (widget.type == "dropdown") {
+      this.createDropDownFilterWidget(widget);
+    } else if (widget.type == "radio-button") {
+      this.createRadioButtonsFilterWidget(widget);      
+    } else if (widget.type == "calendar") {
+      this,this.createCalendarFilterWidget(widget);  
     }
   }
 
@@ -133,7 +133,7 @@ export class MixFilterComponent implements OnChanges {
       this.filterContainer.clear()
 
       // create filter widget component
-      this.createWidgetFilter(widget);      
+      this.createFilterWidget(widget);      
     }
   }
   
