@@ -44,10 +44,10 @@ export class MixFilterComponent implements OnChanges {
     private mixModelService: MixModelService) {    
   }
 
-  private removeChildFilterWidget(filterWidgetComponentRef: any) {
+  private removeChildFilterWidgetsRef(filterWidgetRef: any) {
     // remove all child componentRef
     this.componentRefs.forEach(componentRef => {
-      if(componentRef.instance.tabindex > filterWidgetComponentRef.instance.tabindex) {
+      if(componentRef.instance.tabindex > filterWidgetRef.instance.tabindex) {
         const index = this.filterContainer.indexOf(componentRef.hostView);
 
         if (index !== -1) {
@@ -57,8 +57,20 @@ export class MixFilterComponent implements OnChanges {
       }
     });
 
-    this.componentRefs = this.componentRefs.filter(componentRef => componentRef.instance.tabindex < filterWidgetComponentRef.instance.tabindex);
+    this.componentRefs = this.componentRefs.filter(componentRef => componentRef.instance.tabindex <= filterWidgetRef.instance.tabindex);
+
+    // remove all child widget filters
+    this.widgetFilters = this.widgetFilters.filter(widgetFilter => widgetFilter.level <= filterWidgetRef.instance.tabindex);
   }
+
+  /*private addFilterWidget(widget: any) {
+    this.widgetFilters.push({
+      level: this.lastWidgetFilterLevel,
+      value: widget.id ?? widget
+    });
+
+    this.createFilterWidget(widget); 
+  }*/
 
   private getCalendarFormat(dateFormat: string) {
     if (dateFormat == "date") {
@@ -85,7 +97,7 @@ export class MixFilterComponent implements OnChanges {
       const widget = dropdownRef.instance.value;
 
       // remove child components
-      this.removeChildFilterWidget(dropdownRef);
+      this.removeChildFilterWidgetsRef(dropdownRef);
 
       this.widgetFilters.push({
         level: this.lastWidgetFilterLevel,
@@ -113,7 +125,7 @@ export class MixFilterComponent implements OnChanges {
         const widget = radioButtonRef.instance.value;
 
         // remove child components
-        this.removeChildFilterWidget(radioButtonRef);
+        this.removeChildFilterWidgetsRef(radioButtonRef);
 
         this.widgetFilters.push({
           level: this.lastWidgetFilterLevel,
@@ -145,7 +157,7 @@ export class MixFilterComponent implements OnChanges {
         const widget = calendarRef.instance.value;
 
         // remove child components
-        this.removeChildFilterWidget(calendarRef);
+        this.removeChildFilterWidgetsRef(calendarRef);
 
         if (widget[1] !== null && widget[2] !== null) {
           this.widgetFilters.push({
