@@ -201,6 +201,9 @@ export class MixFilterComponent implements OnChanges {
   }
   
   onClear() {
-    this.filterContainer.clear()
+    this.componentRefs = [];
+    this.widgetFilters = [];
+    this.lastWidgetFilterLevel = 0;    
+    this.filterContainer.clear()    
   }
 }

@@ -217,14 +217,18 @@ export class AppComponent implements AfterViewInit {
     filterCallback(numericValue);
   }
 
-  onFilterChange(WidgetFilters: WidgetFilter[]) {
-    console.log(WidgetFilters);    
+  onFilterChange(WidgetFilters: WidgetFilter[]) {  
     this.widgetFilters = WidgetFilters;
 
     this.isStatusValidGetMix();
   }
 
   onGetApiMix(event: any) {
+    console.log("Category id: " + this.category.id);  
+    console.log("Widget id: " + this.widget.id); 
+    console.log("Widget Filters:");
+    console.log(this.widgetFilters);
+
     /*this.loading = true;
 
     this.mixApiService.getMixFiltered(
@@ -258,8 +262,10 @@ export class AppComponent implements AfterViewInit {
     // clear all table filters
     table.clear();
 
-    // initialize filgters and data
+    // initialize filters and data
     this.mix = [];
+    this.category = null;
+    this.widget = null;
     this.mixFilterComponent.onClear();
 
     // initialize table with default filter
