@@ -212,6 +212,7 @@
     "COGENERACION": "Cogeneration",
     "EOLICA": "Wind",
     "HIDROEOLICA": "Hydrowind",
+    "HIDRAULICA": "Hydraulics",
     "NUCLEAR": "Nuclear",
     "OTRAS_RENOVABLES": "Other renewables",
     "RESIDUOS_NO_RENOVABLES": "Non-renewable waste",

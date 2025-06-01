@@ -63,15 +63,6 @@ export class MixFilterComponent implements OnChanges {
     this.widgetFilters = this.widgetFilters.filter(widgetFilter => widgetFilter.level <= filterWidgetRef.instance.tabindex);
   }
 
-  /*private addFilterWidget(widget: any) {
-    this.widgetFilters.push({
-      level: this.lastWidgetFilterLevel,
-      value: widget.id ?? widget
-    });
-
-    this.createFilterWidget(widget); 
-  }*/
-
   private getCalendarFormat(dateFormat: string) {
     if (dateFormat == "date") {
       return "dd/mm/yy"; 
@@ -100,8 +91,10 @@ export class MixFilterComponent implements OnChanges {
       this.removeChildFilterWidgetsRef(dropdownRef);
 
       this.widgetFilters.push({
+        id: widget.id,
         level: this.lastWidgetFilterLevel,
-        value: widget.id ?? widget
+        filterId: widget.filterId,
+        value: widget.id
       });
 
       this.createFilterWidget(widget);  
@@ -128,8 +121,10 @@ export class MixFilterComponent implements OnChanges {
         this.removeChildFilterWidgetsRef(radioButtonRef);
 
         this.widgetFilters.push({
+          id: widget.id,
           level: this.lastWidgetFilterLevel,
-          value: widget.id ?? widget
+          filterId: widget.filterId,
+          value: widget.id
         });
 
         this.createFilterWidget(widget);
@@ -159,10 +154,19 @@ export class MixFilterComponent implements OnChanges {
         // remove child components
         this.removeChildFilterWidgetsRef(calendarRef);
 
-        if (widget[1] !== null && widget[2] !== null) {
+        if (widget[0] !== null && widget[1] !== null) {
           this.widgetFilters.push({
+            id: widget.id,
             level: this.lastWidgetFilterLevel,
-            value: widget.id ?? widget
+            filterId: 'start_date',
+            value: widget[0]
+          });
+        
+          this.widgetFilters.push({
+            id: widget.id,
+            level: this.lastWidgetFilterLevel,
+            filterId: 'end_date',
+            value: widget[1]
           });
 
           this.filterChange.emit(this.widgetFilters);          

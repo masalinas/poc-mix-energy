@@ -229,23 +229,18 @@ export class AppComponent implements AfterViewInit {
     console.log("Widget Filters:");
     console.log(this.widgetFilters);
 
-    /*this.loading = true;
+    this.loading = true;
 
     this.mixApiService.getMixFiltered(
       this.category.id,
       this.widget.id,
-      this.formatDate(this.mixFilter.rangeDates![0]),
-      this.formatDate(this.mixFilter.rangeDates![1]),
-      this.mixFilter.timeTruncId,
-      undefined,
-      this.mixFilter.geoLimitId,
-      undefined)
-      .subscribe(mix => {
+      this.widgetFilters)
+      .subscribe((mix: any) => {
         this.loading = false;
 
         this.mix = mix;
       },
-      error => {
+      (error: any) => {
         this.mix = [];
 
         this.loading = false;
@@ -255,7 +250,7 @@ export class AppComponent implements AfterViewInit {
           this.messageService.add({ severity: 'error', summary: 'Error', detail: error.message });
         }
       }
-    );*/
+    );
   }
 
   onClear(table: Table) {
