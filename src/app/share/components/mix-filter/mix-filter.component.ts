@@ -63,8 +63,20 @@ export class MixFilterComponent implements OnChanges {
     this.widgetFilters = this.widgetFilters.filter(widgetFilter => widgetFilter.level <= filterWidgetRef.instance.tabindex);
   }
 
+ private getCalendarView(view: string) {
+    if (view == "day") {
+      return "date"; 
+    } else if (view == "month") {
+      return "month"; 
+    } else if (view == "year") {
+      return "year"; 
+    } else {
+      return "date"
+    }
+  }
+
   private getCalendarFormat(dateFormat: string) {
-    if (dateFormat == "date") {
+    if (dateFormat == "day") {
       return "dd/mm/yy"; 
     } else if (dateFormat == "month") {
       return "mm/yy"; 
@@ -141,7 +153,7 @@ export class MixFilterComponent implements OnChanges {
     
     calendarRef.instance.name = widget.id;
     calendarRef.instance.tabindex = this.lastWidgetFilterLevel;
-    calendarRef.instance.view = widget.value;
+    calendarRef.instance.view = this.getCalendarView(widget.value);
     calendarRef.instance.dateFormat = this.getCalendarFormat(widget.value);
     calendarRef.instance.showIcon = true;
     calendarRef.instance.readonlyInput = true;

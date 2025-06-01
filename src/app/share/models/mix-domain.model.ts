@@ -14,32 +14,32 @@ export const WIDGETS: any[] = [
         {id: 'evolucion-demanda', label: 'EVOLUCION_DEMANDA', type: "dropdown", placeholder: "SELECCIONE_OPTION", collection: [
             {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", placeholder: "SISTEMA_ELECTRICO", collection: [
                 {id: 'nacional', label: 'NACIONAL', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'baleares', label: 'BALEARES', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'canarias', label: 'CANARIAS', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'ceuta', label: 'CEUTA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'melilla', label: 'MELILLA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
@@ -200,17 +200,17 @@ export const WIDGETS: any[] = [
     ]},
     {id: 'perdidas-transporte', label: 'PERDIDAS_TRANSPORTE', categoryId: 'demanda', type: "dropdown", placeholder: "SISTEMA_ELECTRICO", collection: [
         {id: 'peninsular', label: 'PENINSULAR', type: 'dropdown', placeholder: "RANGO_TEMPORAL", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
         ]},
         {id: 'baleares', label: 'BALEARES', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}  
         ]},
         {id: 'canarias', label: 'CANARIAS', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
         ]},
@@ -245,522 +245,522 @@ export const WIDGETS: any[] = [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", placeholder: "SISTEMA_ELECTRICO", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", filterId:"tecno_select", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  filterId:"tecno_select", value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", filterId:"tecno_select", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", filterId:"tecno_select", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", filterId:"tecno_select", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", filterId:"tecno_select", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", filterId:"tecno_select", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", filterId:"tecno_select", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", filterId:"tecno_select", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", filterId:"tecno_select", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", filterId:"tecno_select", value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", filterId:"tecno_select", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', vfilterId:"time_trunc", alue: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", filterId:"tecno_select", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", filterId:"tecno_select", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                                                                                                                                                                                                                                                      
             ]},
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", filterId:"tecno_select", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  filterId:"tecno_select", value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", filterId:"tecno_select", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", filterId:"tecno_select", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", filterId:"tecno_select", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", filterId:"tecno_select", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", filterId:"tecno_select", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", filterId:"tecno_select", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", filterId:"tecno_select", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", filterId:"tecno_select", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", filterId:"tecno_select", value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", filterId:"tecno_select", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', vfilterId:"time_trunc", alue: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", filterId:"tecno_select", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", filterId:"tecno_select", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                  
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", filterId:"tecno_select", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  filterId:"tecno_select", value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", filterId:"tecno_select", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", filterId:"tecno_select", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", filterId:"tecno_select", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", filterId:"tecno_select", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", filterId:"tecno_select", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", filterId:"tecno_select", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", filterId:"tecno_select", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", filterId:"tecno_select", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", filterId:"tecno_select", value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", filterId:"tecno_select", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', vfilterId:"time_trunc", alue: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", filterId:"tecno_select", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", filterId:"tecno_select", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                                      
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", filterId:"tecno_select", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  filterId:"tecno_select", value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", filterId:"tecno_select", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", filterId:"tecno_select", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", filterId:"tecno_select", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", filterId:"tecno_select", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", filterId:"tecno_select", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", filterId:"tecno_select", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", filterId:"tecno_select", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", filterId:"tecno_select", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", filterId:"tecno_select", value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", filterId:"tecno_select", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', vfilterId:"time_trunc", alue: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", filterId:"tecno_select", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", filterId:"tecno_select", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                                        
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", filterId:"tecno_select", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  filterId:"tecno_select", value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", filterId:"tecno_select", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", filterId:"tecno_select", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", filterId:"tecno_select", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", filterId:"tecno_select", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", filterId:"tecno_select", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", filterId:"tecno_select", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", filterId:"tecno_select", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", filterId:"tecno_select", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", filterId:"tecno_select", value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", filterId:"tecno_select", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', vfilterId:"time_trunc", alue: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", filterId:"tecno_select", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", filterId:"tecno_select", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                                      
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", placeholder: "SELECCIONE_OPTION", collection: [
                  {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", filterId:"tecno_select", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  filterId:"tecno_select", value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", filterId:"tecno_select", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", filterId:"tecno_select", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", filterId:"tecno_select", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", filterId:"tecno_select", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", filterId:"tecno_select", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", filterId:"tecno_select", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", filterId:"tecno_select", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", filterId:"tecno_select", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", filterId:"tecno_select", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", filterId:"tecno_select", value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", filterId:"tecno_select", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', vfilterId:"time_trunc", alue: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", filterId:"tecno_select", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", filterId:"tecno_select", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', filterId:"time_trunc", value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId:"time_trunc", value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', filterId:"time_trunc", value: 'year'}
                 ]},                                       
@@ -769,1740 +769,1740 @@ export const WIDGETS: any[] = [
         {id: 'comunidad-autonoma', label: 'COMUNIDAD_AUTONOMA', type: "dropdown", placeholder: "COMUNIDAD_AUTONOMA", collection: [
             {id: 'todas-comunidades', label: 'TODAS_COMUNIDADES', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                      
             ]},
             {id: 'andalucia', label: 'ANDALUCIA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                   
             ]},
             {id: 'aragon', label: 'ARAGON', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                 
             ]},
             {id: 'asturias', label: 'ASTURIAS', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},   
             ]},
             {id: 'cantabria', label: 'CANTABRIA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                   
             ]},                
             {id: 'castilla-mancha', label: 'CASTILLA_MANCHA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
             ]},
             {id: 'castilla-leon', label: 'CASTILLA_LEON', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                   
             ]},
             {id: 'cataluna', label: 'CATALUNA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                   
             ]},
             {id: 'ceuta', label: 'CEUTA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                   
             ]},
             {id: 'madrid', label: 'MADRID', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                     
             ]},
             {id: 'valencia', label: 'VALENCIA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                     
             ]},
             {id: 'extremadura', label: 'EXTREMADURA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                     
             ]},
             {id: 'galicia', label: 'GALICIA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                      
             ]},
             {id: 'isla-baleares', label: 'ISLA_BALEARES', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
             ]},
             {id: 'isla-canarias', label: 'ISLA_CANARIAS', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                     
             ]},
             {id: 'rioja', label: 'RIOJA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                      
             ]},
             {id: 'melilla', label: 'MELILLA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                      
             ]},
             {id: 'murcia', label: 'MURCIA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                     
             ]},
             {id: 'navarra', label: 'NAVARRA', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                     
             ]},
             {id: 'pais-vasco', label: 'PAIS_VASCO', type: 'dropdown', placeholder: "SELECCIONE_OPTION", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", value: 'all', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown",  value: '10289', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", value: '10290', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", value: '10344', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", value: '1454', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", value: '10293', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", value: '10291', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", value: '1455', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidraulica', label: 'HIDRAULICA', type: "dropdown", value: '10288', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", value: '1446', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", value: '10292', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", value: '10294', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", value: '10295', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown",value: '1458', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", value: '1459', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", value: '1450', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", value: '1451', placeholder: "RANGO_TEMPORAL", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                     
@@ -2512,32 +2512,32 @@ export const WIDGETS: any[] = [
     {id: 'evolucion-generacion-renovable-no-renovable', label: 'EVOLUCION_GENERACION_RENOVABLE_NO_RENOVABLE', categoryId: 'generacion', type: "dropdown", collection: [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", placeholder: "SELECCIONE_OPTION", collection: [
         {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
         ] },
         {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
         ]},
         {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
         ]},
         {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
         ]},
         {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
         ]},
         {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
         ]},
@@ -2629,492 +2629,492 @@ export const WIDGETS: any[] = [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},   
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                                                                                                                                                                                                                                    
             ]},
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                   
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                    
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                      
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                      
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                      
@@ -4447,492 +4447,492 @@ export const WIDGETS: any[] = [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                                                                                                                                                                                                                                     
             ]},
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                    
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                      
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                       
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                     
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                       
@@ -6268,32 +6268,32 @@ export const WIDGETS: any[] = [
     {id: 'evolucion-generacion-con-sin-emisiones-co2', label: 'EVOLUCION_GENERACION_CON_SIN_EMISIONES_CO2', categoryId: 'generacion', type: "dropdown", collection: [
          {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
             ] },
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
@@ -6385,492 +6385,492 @@ export const WIDGETS: any[] = [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                                                                                                                                                                                                                                      
             ]},
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},   
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                  
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                    
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                      
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                 
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                     
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                      
@@ -8202,32 +8202,32 @@ export const WIDGETS: any[] = [
     {id: 'maxima-generacion-renovables', label: 'MAXIMA_GENERACION_RENOVABLES', categoryId: 'generacion', type: "dropdown", collection: [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
             ]},
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
@@ -8319,492 +8319,492 @@ export const WIDGETS: any[] = [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                                                                                                                                                                                                                                      
             ]},
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                   
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                     
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},   
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                    
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                    
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                      
@@ -10136,32 +10136,32 @@ export const WIDGETS: any[] = [
     {id: 'evolucion-potencia-instalada-renovable-no-renovable', label: 'EVOLUCION_POTENCIA_INSTALADA_RENOVABLE_NO_RENOVABLE', categoryId: 'generacion', type: "dropdown", collection: [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
             ]},
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
@@ -10253,492 +10253,492 @@ export const WIDGETS: any[] = [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                                                                                                                                                                                                                                      
             ]},
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                     
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                     
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                      
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                     
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                  
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                      
@@ -12071,492 +12071,492 @@ export const WIDGETS: any[] = [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},   
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                                                                                                                                                                                                                                    
             ]},
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                      
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                     
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},       
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                 
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},     
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                  
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
                {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'carbon', label: 'CARBON', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                
                 {id: 'fuel-gas', label: 'FUEL_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'motores-diesel', label: 'MOTORES_DIESEL', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'ciclo-combinado', label: 'CICLO_COMBINADO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'cogeneracion', label: 'COGENERACION', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'eolica', label: 'EOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'hidroeolica', label: 'HIDROEOLICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'nuclear', label: 'NUCLEAR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'otras-renovables', label: 'OTRAS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},  
                 {id: 'residuos-no-renovables', label: 'RESIDUOS_NO_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'residuos-renovables', label: 'RESIDUOS_RENOVABLES', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-fotovoltaica', label: 'SOLAR_FOTOVOLTAICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]}, 
                 {id: 'solar-termica', label: 'SOLAR_TERMICA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-gas', label: 'TURBINA_GAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},     
                 {id: 'turbina-vapor', label: 'TURBINA_VAPOR', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},                                   
@@ -13888,32 +13888,32 @@ export const WIDGETS: any[] = [
     {id: 'evolucion-potencia-instalada-con-sin-emisiones_co2', label: 'EVOLUCION_POTENCIA_INSTALADA_CON_SIN_EMISIONES_CO2', categoryId: 'generacion', type: "dropdown", collection: [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
         {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
         ] },
         {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
         ]},
         {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
         ]},
         {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
         ]},
         {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
         ]},
         {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
-            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+            {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
         ]},
@@ -14037,162 +14037,162 @@ export const WIDGETS: any[] = [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
              {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
              ]},
              {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                
              ]},
              {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                
              ]},
              {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                
              ]},
              {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                
              ]},
              {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                
@@ -14201,540 +14201,540 @@ export const WIDGETS: any[] = [
         {id: 'comunidad-autonoma', label: 'COMUNIDAD_AUTONOMA', type: "dropdown", collection: [
             {id: 'todas-comunidades', label: 'TODAS_COMUNIDADES', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'andalucia', label: 'ANDALUCIA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'aragon', label: 'ARAGON', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'asturias', label: 'ASTURIAS', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'cantabria', label: 'CANTABRIA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},                
             {id: 'castilla-mancha', label: 'CASTILLA_MANCHA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'castilla-leon', label: 'CASTILLA_LEON', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'cataluna', label: 'CATALUNA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'ceuta', label: 'CEUTA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'madrid', label: 'MADRID', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'valencia', label: 'VALENCIA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'extremadura', label: 'EXTREMADURA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'galicia', label: 'GALICIA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'isla-baleares', label: 'ISLA_BALEARES', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'isla-canarias', label: 'ISLA_CANARIAS', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'rioja', label: 'RIOJA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'melilla', label: 'MELILLA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'murcia', label: 'MURCIA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'navarra', label: 'NAVARRA', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
             ]},
             {id: 'pais-vasco', label: 'PAIS_VASCO', type: 'dropdown', collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                  
@@ -14773,27 +14773,27 @@ export const WIDGETS: any[] = [
              ]},
              {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
                 {id: 'todas-tecnologias', label: 'TODAS_TECNOLOGIAS', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
                 ]},
                 {id: 'turbina-bombeo', label: 'TURBINA_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'entrega-bateria', label: 'ENTREGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'consumo-bombeo', label: 'CONSUMO_BOMBEO', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},
                 {id: 'carga-bateria', label: 'CARGA_BATERIA', type: "dropdown", collection: [
-                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                    {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                     {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
                 ]},                
@@ -15129,61 +15129,61 @@ export const WIDGETS: any[] = [
     {id: 'intercambios-internacionales', label: 'INTERCAMBIOS_INTERNACIONALES', categoryId: 'intercambios', type: "dropdown", collection: [
         {id: 'fisico', label: 'FISICO', type: "dropdown", placeholder: "FRONTERAS",  collection: [
             {id: 'todas-fronteras', label: 'TODAS_FRONTERAS', type: "dropdown",  placeholder: "RANGO_TEMPORAL", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'andorra', label: 'ANDORRA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
             {id: 'francia', label: 'FRANCIA', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
             {id: 'marruecos', label: 'MARRUECOS', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
             {id: 'portugal', label: 'PORTUGAL', type: "dropdown", placeholder: "RANGO_TEMPORAL", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
         ]},
         {id: 'programado', label: 'PROGRAMADO', type: "dropdown",  placeholder: "FRONTERAS", collection: [
             {id: 'todas-fronteras', label: 'TODAS_FRONTERAS', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                
             ]},
             {id: 'andorra', label: 'ANDORRA', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
             {id: 'francia', label: 'FRANCIA', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
             {id: 'marruecos', label: 'MARRUECOS', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},
             {id: 'portugal', label: 'PORTUGAL', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                  
             ]},         
         ]}
     ]},
     {id: 'enlace-peninsular-baleares', label: 'ENLACE_PENINSULAR_BALEARES', categoryId: 'intercambios', type: "dropdown", collection: [
-        {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+        {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
         {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
         {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}            
     ]},
@@ -15192,32 +15192,32 @@ export const WIDGETS: any[] = [
     {id: 'balance', label: 'BALANCE_ELETRICO', categoryId: 'balance', type: "dropdown", collection: [
         {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: "dropdown", collection: [
             {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
             ]},
             {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
             ]},
             {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
             ]},
             {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
             ]},
             {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
             ]},
             {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
-                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'date'},
+                {id: 'diario', label: 'DIARIO', type: 'calendar', value: 'day'},
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
             ]},            
@@ -15436,7 +15436,7 @@ export const WIDGETS: any[] = [
 ]    
 
 export const TIME_TRUNCS: any[] = [
-    {id: 'date', label: 'DAYS'},
+    {id: 'day', label: 'DAYS'},
     {id: 'month', label: 'MONTHS'},
     {id: 'year', label: 'YEARS'},
 ]
