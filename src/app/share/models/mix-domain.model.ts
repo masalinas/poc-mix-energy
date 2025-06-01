@@ -11,8 +11,8 @@ export const CATEGORIES: any[] = [
 export const WIDGETS: any[] = [
     // demanda
     {id: 'demanda-bc', label: 'DEMANDA_BC', categoryId: 'demanda', type: 'dropdown', placeholder: 'SELECCIONE_OPTION', collection: [
-        {id: 'evolucion-demanda', label: 'EVOLUCION_DEMANDA', type: 'dropdown', placeholder: 'SELECCIONE_OPTION', collection: [
-            {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: 'dropdown', filterId: 'geo_trunc', value: 'electric_system', placeholder: 'SISTEMA_ELECTRICO', collection: [
+        {id: 'evolucion-demanda', label: 'EVOLUCION_DEMANDA', type: 'dropdown', pathId: 'evolucion', placeholder: 'SELECCIONE_OPTION', collection: [
+            {id: 'sistema-electrico', label: 'SISTEMA_ELECTRICO', type: 'dropdown', placeholder: 'SISTEMA_ELECTRICO', collection: [
                 {id: 'nacional', label: 'NACIONAL', type: 'dropdown', placeholder: 'RANGO_TEMPORAL', collection: [
                     {id: 'diario', label: 'DIARIO', type: 'calendar', filterId: 'time_trunc', value: 'day'},
                     {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
@@ -127,7 +127,7 @@ export const WIDGETS: any[] = [
                 ]},
             ]}
         ]},
-        {id: 'variacion-componentes', label: 'VARIACION_COMPONENTES', type: 'dropdown', placeholder: 'SISTEMA_ELECTRICO', collection: [
+        {id: 'variacion-componentes', label: 'VARIACION_COMPONENTES', type: 'dropdown', pathId: 'variacion-componentes', placeholder: 'SISTEMA_ELECTRICO', collection: [
             {id: 'nacional', label: 'NACIONAL', type: 'dropdown', placeholder: 'RANGO_TEMPORAL', collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', filterId: 'time_trunc', value: 'year'},
@@ -149,7 +149,7 @@ export const WIDGETS: any[] = [
                 {id: 'acumulado-ano-movil', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
             ]}            
         ]},
-        {id: 'demanda-maxima-horaria', label: 'DEMANDA_MAXIMA_HORARIA', type: 'dropdown', placeholder: 'SISTEMA_ELECTRICO', collection: [
+        {id: 'demanda-maxima-horaria', label: 'DEMANDA_MAXIMA_HORARIA', type: 'dropdown', pathId: 'demanda-maxima-horaria', placeholder: 'SISTEMA_ELECTRICO', collection: [
             {id: 'penindular', label: 'PENINSULAR', type: 'dropdown', collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
@@ -171,7 +171,7 @@ export const WIDGETS: any[] = [
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
             ]},                                   
         ]},
-        {id: 'demanda-maxima-diaria', label: 'DEMANDA_MAXIMA_DIARIA', type: 'dropdown', placeholder: 'SISTEMA_ELECTRICO', collection: [
+        {id: 'demanda-maxima-diaria', label: 'DEMANDA_MAXIMA_DIARIA', type: 'dropdown', pathId: 'demanda-maxima-diaria', placeholder: 'SISTEMA_ELECTRICO', collection: [
             {id: 'penindular', label: 'PENINSULAR', type: 'dropdown', collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
@@ -193,13 +193,13 @@ export const WIDGETS: any[] = [
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
             ]},               
         ]},
-        {id: 'potencia-maxima-instantanea', label: 'POTENCIA_MAXIMA_INSTANTANEA', type: 'dropdown', placeholder: 'RANGO_TEMPORAL', collection: [
+        {id: 'potencia-maxima-instantanea', label: 'POTENCIA_MAXIMA_INSTANTANEA', type: 'dropdown', pathId: 'potencia-maxima-instantanea', placeholder: 'RANGO_TEMPORAL', collection: [
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
         ]}                        
     ]},
-    {id: 'perdidas-transporte', label: 'PERDIDAS_TRANSPORTE', categoryId: 'demanda', type: 'dropdown', placeholder: 'SISTEMA_ELECTRICO', collection: [
-        {id: 'peninsular', label: 'PENINSULAR', type: 'dropdown', placeholder: 'RANGO_TEMPORAL', collection: [
+    {id: 'perdidas-transporte', label: 'PERDIDAS_TRANSPORTE', categoryId: 'demanda', type: 'dropdown', pathId: 'perdidas-transporte', placeholder: 'SISTEMA_ELECTRICO', collection: [
+        {id: 'peninsular', label: 'PENINSULAR', type: 'dropdown', filterId: 'geo_limit', value: 'peninsular', placeholder: 'RANGO_TEMPORAL', collection: [
             {id: 'diario', label: 'DIARIO', type: 'calendar', filterId: 'time_trunc', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
@@ -217,22 +217,22 @@ export const WIDGETS: any[] = [
     ]},
     {id: 'demanda-final', label: 'DEMANDA_FINAL', categoryId: 'demanda', type: 'dropdown', placeholder: 'SELECCIONE_OPTION', collection: [
         {id: 'indice-red-electrica', label: 'INDICE_RED_ELECTRICA', type: 'dropdown', placeholder: 'SELECCIONE_OPTION', collection: [
-            {id: 'general', label: 'GENERAL', type: 'dropdown', placeholder: 'RANGO_TEMPORAL', collection: [
+            {id: 'general', label: 'GENERAL', type: 'dropdown', pathId: 'ire-general', placeholder: 'RANGO_TEMPORAL', collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
                 {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'},
             ]},
-            {id: 'industria', label: 'INDUSTRIA', type: 'dropdown', placeholder: 'RANGO_TEMPORAL', collection: [
+            {id: 'industria', label: 'INDUSTRIA', type: 'dropdown', pathId: 'ire-industria', placeholder: 'RANGO_TEMPORAL', collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
                 {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'},
             ]},
-            {id: 'servicios', label: 'SERVICIOS', type: 'dropdown', placeholder: 'RANGO_TEMPORAL', collection: [
+            {id: 'servicios', label: 'SERVICIOS', type: 'dropdown', pathId: 'ire-servicios', placeholder: 'RANGO_TEMPORAL', collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
                 {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'},                
             ]},
-            {id: 'otras-actividades', label: 'OTRAS_ACTIVIDADES', type: 'dropdown', placeholder: 'RANGO_TEMPORAL', collection: [
+            {id: 'otras-actividades', label: 'OTRAS_ACTIVIDADES', pathId: 'ire-otras', type: 'dropdown', placeholder: 'RANGO_TEMPORAL', collection: [
                 {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
                 {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
                 {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'},                

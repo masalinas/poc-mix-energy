@@ -1,6 +1,7 @@
 export interface WidgetFilter {
   id: string,
   level: number;
-  filterId: string;
-  value: any;
+  pathId?: string;
+  filterId?: string;
+  value?: any;
 }

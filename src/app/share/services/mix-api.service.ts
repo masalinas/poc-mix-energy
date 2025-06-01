@@ -16,13 +16,18 @@ export class MixApiService {
         categoryId: string,
         widgetId: string,
         widgetFilters: WidgetFilter[]): Observable<any> {
-    // contruct the mix url requesy
-    const url = `https://apidatos.ree.es/es/datos/${categoryId}/${widgetId}`;
+    // contruct the mix url
+    //let url = `https://apidatos.ree.es/es/datos/${categoryId}/${widgetId}`;
+    let url = `https://apidatos.ree.es/es/datos/${categoryId}`;
     
     // construct the mix url params
     let params = new HttpParams()
     
     widgetFilters.forEach(widgetFilter => {
+      if (widgetFilter.pathId) {
+        url = url + "/" + widgetFilter.pathId;
+      }
+
       if (widgetFilter.filterId) {
         params = params.set(widgetFilter.filterId, widgetFilter.value);
       }      

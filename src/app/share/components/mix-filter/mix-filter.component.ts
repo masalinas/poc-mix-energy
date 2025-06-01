@@ -105,6 +105,7 @@ export class MixFilterComponent implements OnChanges {
       this.widgetFilters.push({
         id: widget.id,
         level: this.lastWidgetFilterLevel,
+        pathId: widget.pathId,
         filterId: widget.filterId,
         value: widget.value
       });
@@ -135,6 +136,7 @@ export class MixFilterComponent implements OnChanges {
         this.widgetFilters.push({
           id: widget.id,
           level: this.lastWidgetFilterLevel,
+          pathId: widget.pathId,
           filterId: widget.filterId,
           value: widget.value
         });
@@ -171,14 +173,14 @@ export class MixFilterComponent implements OnChanges {
             id: 'start_date',
             level: this.lastWidgetFilterLevel,
             filterId: 'start_date',
-            value: widget[0]
+            value: widget[0].toISOString()
           });
         
           this.widgetFilters.push({
             id: 'end_date',
             level: this.lastWidgetFilterLevel,
             filterId: 'end_date',
-            value: widget[1]
+            value: widget[1].toISOString()
           });
 
           this.filterChange.emit(this.widgetFilters);          
