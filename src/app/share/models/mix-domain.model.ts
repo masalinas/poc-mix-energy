@@ -14874,18 +14874,115 @@ export const WIDGETS: any[] = [
             ]},
 
             {id: 'mercados-reserva', label: 'MERCADOS_RESERVA', type: "dropdown", collection: []},
-            {id: 'energia-bakance', label: 'ENERGIA_BALANCE', type: "dropdown", collection: []},
+            {id: 'energia-balance', label: 'ENERGIA_BALANCE', type: "dropdown", collection: []},
         ]}
     ]},
-    {id: 'sistema-no-peninsular', label: 'SISTEMA_NO_PENINSULAR', categoryId: 'mercados', type: "dropdown", collection: []},    
+    {id: 'sistema-no-peninsular', label: 'SISTEMA_NO_PENINSULAR', categoryId: 'mercados', type: "dropdown", collection: [
+        {id: 'precio-medio-demanda', label: 'PRECIO_MEDIO_DEMANDA', type: "dropdown", collection: [
+            {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
+                {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
+                {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+            ]},
+            {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
+                {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
+                {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+            ]},
+            {id: 'ceuta', label: 'CEUTA', type: "dropdown", collection: [
+                {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
+                {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+            ]},
+            {id: 'melilla', label: 'MELILLA', type: "dropdown", collection: [
+                {id: 'mensual', label: 'MENSUAL', type: 'calendar', value: 'month'},
+                {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+            ]},  
+        ]}
+    ]},    
     
     // transporte
-    {id: 'red-transporte', label: 'RED_TRANSPORTE', categoryId: 'transporte'},
-    {id: 'energia-no-suministrada', label: 'ENERGIA_NO_SUMINISTRADA', categoryId: 'transporte'},
-    {id: 'tiempo-interrupcion-medio', label: 'TIEMPO_INTERRUPCION_MEDIO', categoryId: 'transporte'},
-    {id: 'indisponibilidad-red', label: 'INDISPONIBILIDAD_RED', categoryId: 'transporte'},
-    {id: 'disponibilidad-red', label: 'DISPONIBILIDAD_RED', categoryId: 'transporte'},
-    {id: 'numero-cortes', label: 'NUMERO_CORTES', categoryId: 'transporte'}
+    {id: 'red-transporte', label: 'RED_TRANSPORTE', categoryId: 'transporte', type: "dropdown", collection: [
+        {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},
+        {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},
+    ]},
+    {id: 'energia-no-suministrada', label: 'ENERGIA_NO_SUMINISTRADA', categoryId: 'transporte', type: "dropdown", collection: [
+        {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},
+        {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},        
+    ]},
+    {id: 'tiempo-interrupcion-medio', label: 'TIEMPO_INTERRUPCION_MEDIO', categoryId: 'transporte', type: "dropdown", collection: [
+        {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},
+        {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},        
+    ]},
+    {id: 'indisponibilidad-red', label: 'INDISPONIBILIDAD_RED', categoryId: 'transporte', type: "dropdown", collection: [
+        {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},
+        {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},        
+    ]},
+    {id: 'disponibilidad-red', label: 'DISPONIBILIDAD_RED', categoryId: 'transporte', type: "dropdown", collection: [
+        {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},
+        {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},        
+    ]},
+    {id: 'numero-cortes', label: 'NUMERO_CORTES', categoryId: 'transporte', type: "dropdown", collection: [
+        {id: 'nacional', label: 'NACIONAL', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'peninsular', label: 'PENINSULAR', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}
+        ]},
+        {id: 'baleares', label: 'BALEARES', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},
+        {id: 'canarias', label: 'CANARIAS', type: "dropdown", collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', value: 'year'}                    
+        ]},        
+    ]}
 ]    
 
 export const TIME_TRUNCS: any[] = [

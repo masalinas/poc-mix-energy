@@ -223,5 +223,6 @@
     "PRECIO_MEDIO_ENERGIA": "Average price and final energy",
     "SERVICIOS_AJUSTE": "Fitting Services",
     "COMPORTAMIENTO_PRECIO_FINAL": "Final price components and closing energy",
-    "ENERGIA_GESTIONADA": "Energy managed in adjustment services"        
+    "ENERGIA_GESTIONADA": "Energy managed in adjustment services",
+    "PRECIO_MEDIO_DEMANDA": "Average asking price"        
 }

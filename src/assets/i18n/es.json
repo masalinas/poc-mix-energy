@@ -226,5 +226,6 @@
     "PRECIO_MEDIO_ENERGIA": "Precio medio y energía final",
     "SERVICIOS_AJUSTE": "Servicios de ajuste",
     "COMPORTAMIENTO_PRECIO_FINAL": "Componentes de precio final y energia del cierre",
-    "ENERGIA_GESTIONADA": "Energía gestionada en los servicios de ajuste"
+    "ENERGIA_GESTIONADA": "Energía gestionada en los servicios de ajuste",
+    "PRECIO_MEDIO_DEMANDA": "Precio medio de la demanda"
 }
