@@ -168,14 +168,14 @@ export class MixFilterComponent implements OnChanges {
 
         if (widget[0] !== null && widget[1] !== null) {
           this.widgetFilters.push({
-            id: widget.id,
+            id: 'start_date',
             level: this.lastWidgetFilterLevel,
             filterId: 'start_date',
             value: widget[0]
           });
         
           this.widgetFilters.push({
-            id: widget.id,
+            id: 'end_date',
             level: this.lastWidgetFilterLevel,
             filterId: 'end_date',
             value: widget[1]
