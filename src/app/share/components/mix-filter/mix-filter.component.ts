@@ -173,14 +173,14 @@ export class MixFilterComponent implements OnChanges {
             id: 'start_date',
             level: this.lastWidgetFilterLevel,
             filterId: 'start_date',
-            value: widget[0].toISOString()
+            value: widget[0].toISOString().slice(0, 16)
           });
         
           this.widgetFilters.push({
             id: 'end_date',
             level: this.lastWidgetFilterLevel,
             filterId: 'end_date',
-            value: widget[1].toISOString()
+            value: widget[1].toISOString().slice(0, 16)
           });
 
           this.filterChange.emit(this.widgetFilters);          

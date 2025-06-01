@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { CATEGORIES, WIDGETS, TECHNOLOGIES, TIME_TRUNCS, TYPES } from '../models/mix-domain.model';
+import { CATEGORIES, WIDGETS, TECHNOLOGIES, TYPES } from '../models/mix-domain.model';
 
 @Injectable({
   providedIn: 'root'

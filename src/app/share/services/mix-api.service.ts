@@ -12,15 +12,17 @@ import { WidgetFilter } from '../../share/models/mix-filter.model';
 export class MixApiService {
   constructor(private http: HttpClient) { }
 
+  /* API definition 
+    GET /{lang}/datos/{category}/{widget}?[query]
+  */  
   getMixFiltered(
         categoryId: string,
         widgetId: string,
         widgetFilters: WidgetFilter[]): Observable<any> {
     // contruct the mix url
-    //let url = `https://apidatos.ree.es/es/datos/${categoryId}/${widgetId}`;
     let url = `https://apidatos.ree.es/es/datos/${categoryId}`;
     
-    // construct the mix url params
+    // construct the mix url path and params
     let params = new HttpParams()
     
     widgetFilters.forEach(widgetFilter => {
@@ -29,23 +31,16 @@ export class MixApiService {
       }
 
       if (widgetFilter.filterId) {
-        params = params.set(widgetFilter.filterId, widgetFilter.value);
+        if (Array.isArray(widgetFilter.filterId)) {
+          for (let i = 0; i < widgetFilter.filterId.length; i++) {
+             params = params.set(widgetFilter.filterId[i], widgetFilter.value[i]);
+          }          
+        } else {
+          params = params.set(widgetFilter.filterId, widgetFilter.value);
+        }
       }      
     });
 
-    /*if (startDate) params = params.set('start_date', startDate);
-    if (endDate) params = params.set('end_date', endDate);
-    if (timeTruncId) params = params.set('time_trunc', timeTruncId);
-    if (geoTruncId) params = params.set('geo_trunc', geoTruncId);
-    if (geoLimitId) params = params.set('geo_limit', geoLimitId);
-    if (geoIds) params = params.set('geo_ids', geoIds);*/
-
-    /* API definition 
-       GET /{lang}/datos/{category}/{widget}?[query]
-       lang: es,en
-       category: balance,demanda,generacion,intercambios,transporte,mercados
-       widget: balance[balance-electrico],
-    */
     return this.http.get<any>(url, { params }).pipe(
       mergeMap((response) => response.included),
       mergeMap((item: any) => {

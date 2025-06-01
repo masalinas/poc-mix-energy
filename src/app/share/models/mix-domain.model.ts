@@ -150,50 +150,50 @@ export const WIDGETS: any[] = [
             ]}            
         ]},
         {id: 'demanda-maxima-horaria', label: 'DEMANDA_MAXIMA_HORARIA', type: 'dropdown', pathId: 'demanda-maxima-horaria', placeholder: 'SISTEMA_ELECTRICO', collection: [
-            {id: 'penindular', label: 'PENINSULAR', type: 'dropdown', collection: [
+            {id: 'penindular', label: 'PENINSULAR', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'peninsular', '8741'], collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
             ]},
-            {id: 'baleares', label: 'BALEARES', type: 'dropdown', filterId: 'geo_limit', value: 'baleares', collection: [
+            {id: 'baleares', label: 'BALEARES', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'baleares', '8743'], collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},    
             ]},
-            {id: 'canarias', label: 'CANARIAS', type: 'dropdown', filterId: 'geo_limit', value: 'canarias', collection: [
+            {id: 'canarias', label: 'CANARIAS', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'canarias', '8742'], collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
             ]}, 
-            {id: 'ceuta', label: 'CEUTA', type: 'dropdown', filterId: 'geo_limit', value: 'ceuta', collection: [
+            {id: 'ceuta', label: 'CEUTA', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'ceuta', '8744'], collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},      
             ]}, 
-            {id: 'melilla', label: 'MELILLA', type: 'dropdown', filterId: 'geo_limit', value: 'melilla', collection: [
+            {id: 'melilla', label: 'MELILLA', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'melilla', '8745'], collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
             ]},                                   
         ]},
         {id: 'demanda-maxima-diaria', label: 'DEMANDA_MAXIMA_DIARIA', type: 'dropdown', pathId: 'demanda-maxima-diaria', placeholder: 'SISTEMA_ELECTRICO', collection: [
-            {id: 'penindular', label: 'PENINSULAR', type: 'dropdown', collection: [
+            {id: 'penindular', label: 'PENINSULAR', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'peninsular', '8741'], collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
             ]},
-            {id: 'baleares', label: 'BALEARES', type: 'dropdown', filterId: 'geo_limit', value: 'baleares', collection: [
+            {id: 'baleares', label: 'BALEARES', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'baleares', '8743'], collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},    
             ]},
-            {id: 'canarias', label: 'CANARIAS',type: 'dropdown', filterId: 'geo_limit', value: 'canarias', collection: [
+            {id: 'canarias', label: 'CANARIAS',type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'canarias', '8742'], collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
             ]}, 
-            {id: 'ceuta', label: 'CEUTA', type: 'dropdown', filterId: 'geo_limit', value: 'ceuta', collection: [
+            {id: 'ceuta', label: 'CEUTA', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'ceuta', '8744'], collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},      
             ]}, 
-            {id: 'melilla', label: 'MELILLA', type: 'dropdown', filterId: 'geo_limit', value: 'melilla', collection: [
+            {id: 'melilla', label: 'MELILLA', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'melilla', '8745'], collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
             ]},               
         ]},
-        {id: 'potencia-maxima-instantanea', label: 'POTENCIA_MAXIMA_INSTANTANEA', type: 'dropdown', pathId: 'potencia-maxima-instantanea', placeholder: 'RANGO_TEMPORAL', collection: [
+        {id: 'potencia-maxima-instantanea', label: 'POTENCIA_MAXIMA_INSTANTANEA', type: 'dropdown', pathId: 'potencia-maxima-instantanea', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'peninsular', '8741'], placeholder: 'RANGO_TEMPORAL', collection: [
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'},
         ]}                        
@@ -15434,12 +15434,6 @@ export const WIDGETS: any[] = [
         ]},        
     ]}
 ]    
-
-export const TIME_TRUNCS: any[] = [
-    {id: 'day', label: 'DAYS'},
-    {id: 'month', label: 'MONTHS'},
-    {id: 'year', label: 'YEARS'},
-]
 
 export const TECHNOLOGIES: any[] = [
     {id: 'Hidráulica', label: 'HYDRAULIC'},
