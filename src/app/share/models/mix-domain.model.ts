@@ -199,17 +199,17 @@ export const WIDGETS: any[] = [
         ]}                        
     ]},
     {id: 'perdidas-transporte', label: 'PERDIDAS_TRANSPORTE', categoryId: 'demanda', type: 'dropdown', pathId: 'perdidas-transporte', placeholder: 'SISTEMA_ELECTRICO', collection: [
-        {id: 'peninsular', label: 'PENINSULAR', type: 'dropdown', filterId: 'geo_limit', value: 'peninsular', placeholder: 'RANGO_TEMPORAL', collection: [
+        {id: 'peninsular', label: 'PENINSULAR', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'peninsular', '8741'], placeholder: 'RANGO_TEMPORAL', collection: [
             {id: 'diario', label: 'DIARIO', type: 'calendar', filterId: 'time_trunc', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
         ]},
-        {id: 'baleares', label: 'BALEARES', type: 'dropdown', filterId: 'geo_limit', value: 'baleares', placeholder: 'RANGO_TEMPORAL', collection: [
+        {id: 'baleares', label: 'BALEARES', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'baleares', '8743'], placeholder: 'RANGO_TEMPORAL', collection: [
             {id: 'diario', label: 'DIARIO', type: 'calendar', filterId: 'time_trunc', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}  
         ]},
-        {id: 'canarias', label: 'CANARIAS', type: 'dropdown', filterId: 'geo_limit', value: 'canarias', placeholder: 'RANGO_TEMPORAL', collection: [
+        {id: 'canarias', label: 'CANARIAS', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'canarias', '8742'], placeholder: 'RANGO_TEMPORAL', collection: [
             {id: 'diario', label: 'DIARIO', type: 'calendar', filterId: 'time_trunc', value: 'day'},
             {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
@@ -217,25 +217,25 @@ export const WIDGETS: any[] = [
     ]},
     {id: 'demanda-final', label: 'DEMANDA_FINAL', categoryId: 'demanda', type: 'dropdown', placeholder: 'SELECCIONE_OPTION', collection: [
         {id: 'indice-red-electrica', label: 'INDICE_RED_ELECTRICA', type: 'dropdown', placeholder: 'SELECCIONE_OPTION', collection: [
-            {id: 'general', label: 'GENERAL', type: 'dropdown', pathId: 'ire-general', placeholder: 'RANGO_TEMPORAL', collection: [
-                {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
-                {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
-                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'},
+            {id: 'general', label: 'GENERAL', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'peninsular', '8741'], placeholder: 'RANGO_TEMPORAL', collection: [
+                {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', pathId: 'ire-general', filterId: 'time_trunc', value: 'month'},
+                {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', pathId: 'ire-general-anual', filterId: 'time_trunc', value: 'month'},
+                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', pathId: 'ire-general-movil', filterId: 'time_trunc', value: 'month'},
             ]},
-            {id: 'industria', label: 'INDUSTRIA', type: 'dropdown', pathId: 'ire-industria', placeholder: 'RANGO_TEMPORAL', collection: [
-                {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
-                {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
-                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'},
+            {id: 'industria', label: 'INDUSTRIA', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'peninsular', '8741'], placeholder: 'RANGO_TEMPORAL', collection: [
+                {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', pathId: 'ire-industria', filterId: 'time_trunc', value: 'month'},
+                {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', pathId: 'ire-industria-anual', filterId: 'time_trunc', value: 'month'},
+                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', pathId: 'ire-industria-movil', filterId: 'time_trunc', value: 'month'},
             ]},
-            {id: 'servicios', label: 'SERVICIOS', type: 'dropdown', pathId: 'ire-servicios', placeholder: 'RANGO_TEMPORAL', collection: [
-                {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
-                {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
-                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'},                
+            {id: 'servicios', label: 'SERVICIOS', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'peninsular', '8741'], placeholder: 'RANGO_TEMPORAL', collection: [
+                {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', pathId: 'ire-servicios', filterId: 'time_trunc', value: 'month'},
+                {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', pathId: 'ire-servicios-anual', filterId: 'time_trunc', value: 'month'},
+                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', pathId: 'ire-servicios-movil', filterId: 'time_trunc', value: 'month'},                
             ]},
-            {id: 'otras-actividades', label: 'OTRAS_ACTIVIDADES', pathId: 'ire-otras', type: 'dropdown', placeholder: 'RANGO_TEMPORAL', collection: [
-                {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', value: 'month'},
-                {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', value: 'year'},
-                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', value: 'year'},                
+            {id: 'otras-actividades', label: 'OTRAS_ACTIVIDADES', type: 'dropdown', filterId: ['geo_trunc', 'geo_limit', 'geo_ids'], value: ['electric_system', 'peninsular', '8741'], placeholder: 'RANGO_TEMPORAL', collection: [
+                {id: 'acumulado-mes', label: 'ACUMULADO_MES', type: 'calendar', pathId: 'ire-otras', filterId: 'time_trunc', value: 'month'},
+                {id: 'acumulado-ano', label: 'ACUMULADO_ANO', type: 'calendar', pathId: 'ire-otras-anual', filterId: 'time_trunc', value: 'month'},
+                {id: 'acumulado-ano-mobile', label: 'ACUMULADO_ANO_MOVIL', type: 'calendar', pathId: 'ire-otras-movil', filterId: 'time_trunc', value: 'month'},                
             ]},
         ]},
     ]},

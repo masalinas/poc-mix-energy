@@ -231,10 +231,7 @@ export class AppComponent implements AfterViewInit {
 
     this.loading = true;
 
-    this.mixApiService.getMixFiltered(
-      this.category.id,
-      this.widget.id,
-      this.widgetFilters)
+    this.mixApiService.getMixFiltered(this.category, this.widget, this.widgetFilters)
       .subscribe((mix: any) => {
         this.loading = false;
 

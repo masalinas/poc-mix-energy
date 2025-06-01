@@ -15,13 +15,14 @@ export class MixApiService {
   /* API definition 
     GET /{lang}/datos/{category}/{widget}?[query]
   */  
-  getMixFiltered(
-        categoryId: string,
-        widgetId: string,
-        widgetFilters: WidgetFilter[]): Observable<any> {
+  getMixFiltered(category: any, widget: any, widgetFilters: WidgetFilter[]): Observable<any> {
     // contruct the mix url
-    let url = `https://apidatos.ree.es/es/datos/${categoryId}`;
+    let url = `https://apidatos.ree.es/es/datos/${category.id}`;
     
+    if (widget.pathId) {
+      url = url + "/" + widget.pathId;
+    }
+        
     // construct the mix url path and params
     let params = new HttpParams()
     
