@@ -106,7 +106,7 @@ export class MixFilterComponent implements OnChanges {
         id: widget.id,
         level: this.lastWidgetFilterLevel,
         filterId: widget.filterId,
-        value: widget.id
+        value: widget.value
       });
 
       this.createFilterWidget(widget);  
@@ -136,7 +136,7 @@ export class MixFilterComponent implements OnChanges {
           id: widget.id,
           level: this.lastWidgetFilterLevel,
           filterId: widget.filterId,
-          value: widget.id
+          value: widget.value
         });
 
         this.createFilterWidget(widget);

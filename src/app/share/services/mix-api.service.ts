@@ -24,7 +24,7 @@ export class MixApiService {
     
     widgetFilters.forEach(widgetFilter => {
       if (widgetFilter.filterId) {
-        params.set(widgetFilter.filterId, widgetFilter.value);
+        params = params.set(widgetFilter.filterId, widgetFilter.value);
       }      
     });
 
