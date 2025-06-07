@@ -97,8 +97,8 @@
     "EVOLUCION_GENERACION_CON_SIN_EMISIONES_CO2": "Evolución de la generación con/sin emisiones CO2 eq.",
     "EMISIONES_GENERACION": "Emisiones de la generación",
     "MAXIMA_GENERACION_RENOVABLES": "Máxima generación renovable",
-    "EVOLUCION_POTENCIA_INSTALADA_RENOVABLE_NO_RENOVABLE": "Evolución de la potencia instalda renovable y no renovable",
-    "ESTRUCTURA_POTENCIA_INSTALADA_RENOVABLE": "Estructura potencia instalda renovable",
+    "EVOLUCION_POTENCIA_INSTALADA_RENOVABLE_NO_RENOVABLE": "Evolución de la potencia instalada renovable y no renovable",
+    "ESTRUCTURA_POTENCIA_INSTALADA_RENOVABLE": "Estructura potencia instalada renovable",
     "ESTRUCTURA_POTENCIA_INSTALADA_CON_SIN_EMISIONES_CO2": "Estructura potencia instalada con/sin CO2 eq.",
     "EVOLUCION_POTENCIA_INSTALADA_CON_SIN_EMISIONES_CO2": "Evolución de la potencia instalada con/sin CO2 eq.",
     "RESERVA_HIDRAULICA": "Reservas hidraúlicas",
@@ -228,5 +228,9 @@
     "SERVICIOS_AJUSTE": "Servicios de ajuste",
     "COMPORTAMIENTO_PRECIO_FINAL": "Componentes de precio final y energia del cierre",
     "ENERGIA_GESTIONADA": "Energía gestionada en los servicios de ajuste",
-    "PRECIO_MEDIO_DEMANDA": "Precio medio de la demanda"
+    "PRECIO_MEDIO_DEMANDA": "Precio medio de la demanda",
+    "TURBINA_BOMBEO": "Turbinación bombeo",
+    "ENTREGA_BATERIA": "Entrega batería",
+    "CONSUMO_BOMBEO": "Consumo bombeo",
+    "CARGA_BATERIA": "Carga batería"
 }

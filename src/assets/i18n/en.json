@@ -225,5 +225,9 @@
     "SERVICIOS_AJUSTE": "Fitting Services",
     "COMPORTAMIENTO_PRECIO_FINAL": "Final price components and closing energy",
     "ENERGIA_GESTIONADA": "Energy managed in adjustment services",
-    "PRECIO_MEDIO_DEMANDA": "Average asking price"        
+    "PRECIO_MEDIO_DEMANDA": "Average asking price",
+    "TURBINA_BOMBEO": "Turbination pumping",
+    "ENTREGA_BATERIA": "Battery delivery",
+    "CONSUMO_BOMBEO": "Pumping consumption",
+    "CARGA_BATERIA": "Battery charge"        
 }
