@@ -139,9 +139,6 @@
     "ENERGIA_RESTRICCIONES": "Energy restrictions",
     "PRECIOS_RESTRICCIONES": "Prices restrictions",
     "RESERVA_POTENCIA_ADICIONAL": "Additional power reserve",
-    "BANDA_REGULACION_SECUNDARIA": "Secondary regulation band",
-    "ENERGIA_PRECIOS_REGULACION_SECUNDARIA": "Energy secondary regulation prices",
-    "ENERGIA_PRECIOS_REGULACION_TERCIARIA": "Energy tertiary regulation prices",
     "ENERGIA_PRECIOS_GESTION_DESVIOS": "Energy prices deviation management",
     "COSTE_SERVICIOS_AJUSTE": "Services cost adjustment",
     "VOLUMEN_ENERGIA_SERVICIOS_AJUSTE_VARIACION": "Energy services volume adjustment variation",
@@ -229,5 +226,15 @@
     "TURBINA_BOMBEO": "Turbination pumping",
     "ENTREGA_BATERIA": "Battery delivery",
     "CONSUMO_BOMBEO": "Pumping consumption",
-    "CARGA_BATERIA": "Battery charge"        
+    "CARGA_BATERIA": "Battery charge",
+    "ENERGIA_RESTRICCIONES_PDBF": "Energy due to PDF and real-time restrictions",
+    "PRECIOS_MEDIOS_PONDERADOS": "Weighted average prices by PDBF restrictions and in real time",    
+    "ENERGIA_PROGRAMDA_SEGURIDAD": "Power programmed for safety",    
+    "MERCADOS_RESERVA": "Reserve markets",
+    "ENERGIA_BALANCE": "Balance energy",    
+    "BANDA_REGULACION_SECUNDARIA": "Secondary regulation band",    
+    "ENERGIA_PRECIOS_REGULACION_SECUNDARIA": "EEnergy and secondary regulation prices",
+    "ENERGIA_PRECIOS_REGULACION_TERCIARIA": "Energy and tertiary regulation prices",
+    "ENERGIA_PRECIOS_RESERVAS": "Energy and Replacement Reserve (RR) Prices",
+    "ENERGIA_INTERCAMBIADA": "Energy exchanged between IGCC and SEPE"            
 }

@@ -14955,24 +14955,52 @@ export const WIDGETS: any[] = [
     ]},    
 
     // mercados
-    {id: 'sistema-peninsular', label: 'SISTEMA_PENINSULAR', categoryId: 'mercados', type: 'dropdown', collection: [
-        {id: 'precio-medio-energia', label: 'PRECIO_MEDIO_ENERGIA', type: 'dropdown', collection: [
-            {id: 'comportamiento-precio-final', label: 'COMPORTAMIENTO_PRECIO_FINAL', type: 'dropdown', collection: [
+    {id: 'sistema-peninsular', label: 'SISTEMA_PENINSULAR', categoryId: 'mercados', type: 'dropdown', filterId: 'geo_limit', value:'peninsular', collection: [
+        {id: 'precio-medio-energia-final', label: 'PRECIO_MEDIO_ENERGIA', type: 'dropdown', collection: [
+            {id: 'comportamiento-precio-final', label: 'COMPORTAMIENTO_PRECIO_FINAL', type: 'dropdown', pathId: 'componentes-precio-energia-cierre-desglose', collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
             ]},
-            {id: 'energia-gestionada', label: 'ENERGIA_GESTIONADA', type: 'dropdown', collection: [
+            {id: 'energia-gestionada', label: 'ENERGIA_GESTIONADA', type: 'dropdown', pathId: 'energia-gestionada-servicios-ajuste', collection: [
                 {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
                 {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                
             ]},
         ]},
         {id: 'servicios-ajuste', label: 'SERVICIOS_AJUSTE', type: 'dropdown', collection: [
-            {id: 'energia-restricciones', label: 'ENERGIA_RESTRICIONES', type: 'dropdown', collection: [
-            {id: 'precios-medios-ponderados', label: 'PRESIOS_MEDIOS_PONDERADOS', type: 'dropdown', collection: []},
+            {id: 'energia-programada-seguridad', label: 'ENERGIA_PROGRAMDA_SEGURIDAD', type: 'dropdown', collection: [
+                {id: 'energia-restricciones-pdbf', label: 'ENERGIA_RESTRICCIONES_PDBF', type: 'dropdown', collection: [
+                    {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
+                    {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}  
+                ]},
+                {id: 'precios-medios-ponderados', label: 'PRECIOS_MEDIOS_PONDERADOS', type: 'dropdown', collection: [
+                    {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
+                    {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}  
+                ]},
             ]},
-
-            {id: 'mercados-reserva', label: 'MERCADOS_RESERVA', type: 'dropdown', collection: []},
-            {id: 'energia-balance', label: 'ENERGIA_BALANCE', type: 'dropdown', collection: []},
+            {id: 'mercados-reserva', label: 'MERCADOS_RESERVA', type: 'dropdown', collection: [
+                {id: 'banda-regulacion-secundaria', label: 'BANDA_REGULACION_SECUNDARIA', type: 'dropdown', collection: [
+                    {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
+                    {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}  
+                ]},                
+            ]},
+            {id: 'energia-balance', label: 'ENERGIA_BALANCE', type: 'dropdown', collection: [
+                {id: 'energia-precios-regulacion_secundaria', label: 'ENERGIA_PRECIOS_REGULACION_SECUNDARIA', type: 'dropdown', collection: [
+                    {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
+                    {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}  
+                ]},
+                {id: 'energia-precios-regulacion-terciaria', label: 'ENERGIA_PRECIOS_REGULACION_TERCIARIA', type: 'dropdown', collection: [
+                    {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
+                    {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                      
+                ]},
+                {id: 'energia-precios-reserva', label: 'ENERGIA_PRECIOS_RESERVAS', type: 'dropdown', collection: [
+                    {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
+                    {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                      
+                ]},
+                {id: 'energia-intercambiadad', label: 'ENERGIA_INTERCAMBIADA', type: 'dropdown', collection: [
+                    {id: 'mensual', label: 'MENSUAL', type: 'calendar', filterId: 'time_trunc', value: 'month'},
+                    {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}  
+                ]}
+            ]},
         ]}
     ]},
     {id: 'sistema-no-peninsular', label: 'SISTEMA_NO_PENINSULAR', categoryId: 'mercados', type: 'dropdown', collection: [
@@ -14997,7 +15025,7 @@ export const WIDGETS: any[] = [
     ]},    
     
     // transporte
-    {id: 'red-transporte', label: 'RED_TRANSPORTE', categoryId: 'transporte', type: 'dropdown', collection: [
+    {id: 'red-transporte', label: 'RED_TRANSPORTE', categoryId: 'transporte', type: 'dropdown', pathId: 'kilometros-lineas', collection: [
         {id: 'nacional', label: 'NACIONAL', type: 'dropdown', collection: [
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
         ]},
@@ -15011,21 +15039,7 @@ export const WIDGETS: any[] = [
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                    
         ]},
     ]},
-    {id: 'energia-no-suministrada', label: 'ENERGIA_NO_SUMINISTRADA', categoryId: 'transporte', type: 'dropdown', collection: [
-        {id: 'nacional', label: 'NACIONAL', type: 'dropdown', collection: [
-            {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
-        ]},
-        {id: 'peninsular', label: 'PENINSULAR', type: 'dropdown', filterId: 'geo_limit', value: 'peninsular', collection: [
-            {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
-        ]},
-        {id: 'baleares', label: 'BALEARES', type: 'dropdown', filterId: 'geo_limit', value: 'baleares', collection: [
-            {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                    
-        ]},
-        {id: 'canarias', label: 'CANARIAS', type: 'dropdown', filterId: 'geo_limit', value: 'canarias', collection: [
-            {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                    
-        ]},        
-    ]},
-    {id: 'tiempo-interrupcion-medio', label: 'TIEMPO_INTERRUPCION_MEDIO', categoryId: 'transporte', type: 'dropdown', collection: [
+    {id: 'energia-no-suministrada', label: 'ENERGIA_NO_SUMINISTRADA', categoryId: 'transporte', type: 'dropdown', pathId: 'energia-no-suministrada-ens', collection: [
         {id: 'nacional', label: 'NACIONAL', type: 'dropdown', collection: [
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
         ]},
@@ -15039,7 +15053,7 @@ export const WIDGETS: any[] = [
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                    
         ]},        
     ]},
-    {id: 'indisponibilidad-red', label: 'INDISPONIBILIDAD_RED', categoryId: 'transporte', type: 'dropdown', collection: [
+    {id: 'tiempo-interrupcion-medio', label: 'TIEMPO_INTERRUPCION_MEDIO', categoryId: 'transporte', type: 'dropdown', pathId: 'tiempo-interrupcion-medio-tim', collection: [
         {id: 'nacional', label: 'NACIONAL', type: 'dropdown', collection: [
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
         ]},
@@ -15053,7 +15067,7 @@ export const WIDGETS: any[] = [
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                    
         ]},        
     ]},
-    {id: 'disponibilidad-red', label: 'DISPONIBILIDAD_RED', categoryId: 'transporte', type: 'dropdown', collection: [
+    {id: 'indisponibilidad-red', label: 'INDISPONIBILIDAD_RED', categoryId: 'transporte', type: 'dropdown', pathId: 'indice-indisponibilidad', collection: [
         {id: 'nacional', label: 'NACIONAL', type: 'dropdown', collection: [
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
         ]},
@@ -15067,7 +15081,21 @@ export const WIDGETS: any[] = [
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                    
         ]},        
     ]},
-    {id: 'numero-cortes', label: 'NUMERO_CORTES', categoryId: 'transporte', type: 'dropdown', collection: [
+    {id: 'disponibilidad-red', label: 'DISPONIBILIDAD_RED', categoryId: 'transporte', type: 'dropdown', pathId: 'indice-disponibilidad', collection: [
+        {id: 'nacional', label: 'NACIONAL', type: 'dropdown', collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
+        ]},
+        {id: 'peninsular', label: 'PENINSULAR', type: 'dropdown', filterId: 'geo_limit', value: 'peninsular', collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
+        ]},
+        {id: 'baleares', label: 'BALEARES', type: 'dropdown', filterId: 'geo_limit', value: 'baleares', collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                    
+        ]},
+        {id: 'canarias', label: 'CANARIAS', type: 'dropdown', filterId: 'geo_limit', value: 'canarias', collection: [
+            {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}                    
+        ]},        
+    ]},
+    {id: 'numero-cortes', label: 'NUMERO_CORTES', categoryId: 'transporte', type: 'dropdown', pathId: 'numero-cortes', collection: [
         {id: 'nacional', label: 'NACIONAL', type: 'dropdown', collection: [
             {id: 'anual', label: 'ANUAL', type: 'calendar', filterId: 'time_trunc', value: 'year'}
         ]},

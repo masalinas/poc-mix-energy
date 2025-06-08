@@ -135,9 +135,6 @@
     "ENERGIA_RESTRICCIONES": "Energía restricciones",
     "PRECIOS_RESTRICCIONES": "Precios restricciones",
     "RESERVA_POTENCIA_ADICIONAL": "Reserva potencia adicional",
-    "BANDA_REGULACION_SECUNDARIA": "Banda regulación secundaria",
-    "ENERGIA_PRECIOS_REGULACION_SECUNDARIA": "Energía precios regulación secundaria",
-    "ENERGIA_PRECIOS_REGULACION_TERCIARIA": "Energía precios regulación Terciaria",
     "ENERGIA_PRECIOS_GESTION_DESVIOS": "Energía precios gestión desvíos",
     "COSTE_SERVICIOS_AJUSTE": "Coste servicios ajuste",
     "VOLUMEN_ENERGIA_SERVICIOS_AJUSTE_VARIACION": "Volumen energía servicios ajuste variación",
@@ -232,5 +229,15 @@
     "TURBINA_BOMBEO": "Turbinación bombeo",
     "ENTREGA_BATERIA": "Entrega batería",
     "CONSUMO_BOMBEO": "Consumo bombeo",
-    "CARGA_BATERIA": "Carga batería"
+    "CARGA_BATERIA": "Carga batería",
+    "ENERGIA_RESTRICCIONES_PDBF": "Energía por restricciones al PDBF y en tiempo real",
+    "PRECIOS_MEDIOS_PONDERADOS": "Precios medios ponderados por restricciones al PDBF y en tiempo real",
+    "ENERGIA_PROGRAMDA_SEGURIDAD": "Energía programada por seguridad",
+    "MERCADOS_RESERVA": "Mercados de reserva",
+    "ENERGIA_BALANCE": "Energía de balance",
+    "BANDA_REGULACION_SECUNDARIA": "Banda regulación secundaria",
+    "ENERGIA_PRECIOS_REGULACION_SECUNDARIA": "Energía y precios de regulación secundaria",
+    "ENERGIA_PRECIOS_REGULACION_TERCIARIA": "Energía y precios de regulación terciaria",
+    "ENERGIA_PRECIOS_RESERVAS": "Energía y precios de reserva de sustitución (RR)",
+    "ENERGIA_INTERCAMBIADA": "Energía intercambiada entre IGCC y SEPE"
 }
