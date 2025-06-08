@@ -44,9 +44,11 @@
         "SELECT_TIME_TRUNC": "Time trunc"
     },        
     "TABLE_COLUMNS": {
+        "GROUP": "Group",
         "TECHNOLOGY": "Technology",
         "TYPE": "Type",
         "GENERATION": "Generation",
+        "VALUE": "Value",
         "PERTENTAGE": "Percentage",
         "DATETIME": "Date"
     },

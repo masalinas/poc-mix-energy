@@ -44,9 +44,11 @@
         "SELECT_TIME_TRUNC": "Agrupación fecha"
     },
     "TABLE_COLUMNS": {
+        "GROUP": "Grupo",
         "TECHNOLOGY": "Tecnología",
         "TYPE": "Tipo",
         "GENERATION": "Generación",
+        "VALUE": "Valor",
         "PERTENTAGE": "Porcentaje",
         "DATETIME": "Fecha"
     },
